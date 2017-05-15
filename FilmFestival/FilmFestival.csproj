@@ -226,6 +226,8 @@
     <Content Include="Content\CustomFonts\Thunder Thighs.ttf" />
     <Content Include="Content\CustomFonts\UPJOHN ROUGH DEMO.ttf" />
     <Content Include="Content\CustomFonts\MyGirlIsRetroDEMO.ttf" />
+    <None Include="Properties\PublishProfiles\filmfestival - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\filmfestival - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

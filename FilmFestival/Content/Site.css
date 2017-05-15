@@ -1,5 +1,7 @@
 ﻿body {
-    padding-bottom: 20px;
+    background-color: white;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -28,10 +30,12 @@ textarea {
 }
 
 .homeTextField {
-    background-color: rgb(0, 0, 0, .3);
-    color: white;
+    background-color: rgba(17, 17, 17, 0.80);
+    height: 800px;
+    width: 550px;
     padding-top: 30px;
     padding-left: 45px;
+    padding-right: 45px;
     position: absolute;
     left: 0;
     top: 0;
@@ -44,9 +48,48 @@ textarea {
     list-style:none;
 }
 
-.homeTextField h1{
+.homeTextField h1 {
     font-family: Impact;
     font-size: 120px;
+    color: rgb(159, 9, 9);
+}
+
+.logo span {
+    font-size: 25px;
+    color: rgb(207, 180, 34);
+}
+
+.homeTextField ul {
+    padding-top: 0;
+    margin-top: 50px;
+}
+
+.homeTextField li {
+    color: white;
+    font-size: 30px;
+    font-family: Arial;
+    width: 120px;
+    padding: 8px;
+    padding-top: 0;
+    cursor: pointer;
+    border-bottom: 1px solid;
+    }
+
+.festDate {
+    color: rgb(159, 9, 9);
+    font-family: Impact;
+    font-size: 60px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 120px;
+    padding-left: 90px;
+}
+
+.littleSmaller {
+    font-size: 18px;
+    margin-top: 30px;
+    color: rgb(207, 180, 34); 
 }
 
 .homeImageField {

@@ -1,7 +1,5 @@
 ﻿body {
     background-color: white;
-    padding-left: 10%;
-    padding-right: 10%;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -25,71 +23,113 @@ textarea {
     max-width: 280px;
 }
 
+/*
+    ///
+    Home page styling
+    ///
+*/
+
 .homeContent {
     position: relative;
 }
 
 .homeTextField {
-    background-color: rgba(17, 17, 17, 0.80);
-    height: 800px;
+    background-color: rgba(17, 17, 17, 0.75);
+    height: 795px;
     width: 550px;
-    padding-top: 30px;
+    padding-top: 15px;
     padding-left: 45px;
-    padding-right: 45px;
     position: absolute;
     left: 0;
     top: 0;
     z-index: 2;
 }
 
-.homeTextField ul{
-    margin-top: 30px;
-    padding-left: 0;
-    list-style:none;
+#homeLogin {
+    font-size: 18px;
+    font-family: 'Kanit';
+}
+
+#homeLogin a{
+    color: white;
+}
+
+#homeLogin a:hover {
+    color: rgb(179, 19,19);
 }
 
 .homeTextField h1 {
-    font-family: Impact;
-    font-size: 120px;
-    color: rgb(159, 9, 9);
+    font-family: 'Piedra';
+    font-size: 105px;
+    font-weight: 500;
+    color: rgb(179, 19,19);
+    margin-top: 30px;
 }
 
 .logo span {
-    font-size: 25px;
-    color: rgb(207, 180, 34);
+    font-size: 24px;
+    font-family: 'Kanit';
+    font-style: italic;
+    color: rgb(228, 232, 60);
 }
 
 .homeTextField ul {
     padding-top: 0;
-    margin-top: 50px;
+    margin-top: 40px;
+    padding-left: 0;
+    list-style: none;
 }
 
 .homeTextField li {
     color: white;
-    font-size: 30px;
-    font-family: Arial;
+    font-size: 25px;
+    font-family: 'Kanit';
     width: 120px;
-    padding: 8px;
-    padding-top: 0;
+    padding-top: 8px;
     cursor: pointer;
     border-bottom: 1px solid;
     }
 
+.homeTextField a{
+    color: white;
+    text-decoration: none;
+}
+
+.homeTextField a:hover {
+    color: rgb(179, 19,19);
+}
+
 .festDate {
-    color: rgb(159, 9, 9);
-    font-family: Impact;
-    font-size: 60px;
+    color: rgb(179, 19,19);
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-top: 120px;
+    margin-top: 100px;
     padding-left: 90px;
 }
 
+#month {
+    font-family: "Kanit";
+    font-size: 40px;
+}
+
+#dateRange {
+    font-family: 'Kanit';
+    font-size: 65px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#year {
+    font-family: 'Kanit';
+    font-size: 30px;
+}
+
 .littleSmaller {
-    font-size: 18px;
-    margin-top: 30px;
-    color: rgb(207, 180, 34); 
+    font-size: 15px;
+    font-family: 'Kanit';
+    margin-top: 40px;
+    color: rgb(228, 232, 60);
 }
 
 .homeImageField {

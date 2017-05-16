@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>Fantastic Fest - @ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <link href="https://fonts.googleapis.com/css?family=Piedra" rel="stylesheet">
@@ -13,8 +13,33 @@
 </head>
 <body>
     <div class="body-content">
+        <div class="navbar-fixed-top">
+            <h1>
+                Fantastic Fest
+            </h1>
+            <ul class="navList">
+                <li><a href="~/Home/Index">Home</a></li>
+                <li><a href="~/Home/About">About</a></li>
+                <li><a href="">Tickets</a></li>
+                <li><a href="">Films</a></li>
+                <li><a href="">News</a></li>
+                <li><a href="">Submit</a></li>
+                <li><a href="">Travel</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <img id="filmStripBackground" src="~/Content/Images/grungeFilmStrip.jpg" />
+        </div> 
+        
+        <div id="pageHeading">
+            <img id="leftEye" src="~/Content/Images/eyeClipart.jpg" />
+            <h1>@ViewBag.Title</h1>
+            <img id="rightEye" src="~/Content/Images/eyeClipart.jpg" />
+        </div>
         @RenderBody()
-    </div>  
+    </div> 
+    
     <footer>
     </footer>
 

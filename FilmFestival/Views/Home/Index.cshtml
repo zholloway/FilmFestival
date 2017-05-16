@@ -1,4 +1,9 @@
-﻿<div class="homeContent">
+﻿@{
+    Layout = "~/Views/Shared/_homeLayout.cshtml";
+    ViewBag.Title = "Home";
+}
+
+<div class="homeContent">
     <div>
         <img id="homeBackgroundImage" src="https://ak8.picdn.net/shutterstock/videos/160342/thumb/1.jpg" />
     </div>
@@ -13,7 +18,7 @@
             <div class="navBar col-md-3">
                 <ul>
                     <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
+                    <li><a href="~/Home/About">About</a></li>
                     <li><a href="">Tickets</a></li>
                     <li><a href="">Films</a></li>
                     <li><a href="">News</a></li>

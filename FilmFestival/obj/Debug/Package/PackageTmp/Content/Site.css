@@ -1,0 +1,153 @@
+﻿body {
+    background-color: white;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-right: 15px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/*
+    ///
+    Home page styling
+    ///
+*/
+
+.homeContent {
+    position: relative;
+}
+
+.homeTextField {
+    height: 795px;
+    width: 550px;
+    padding-top: 15px;
+    padding-left: 45px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+}
+
+#homeBackgroundImage {
+    opacity: .8;
+    position: absolute;
+    height: 795px;
+    width: 550px;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+
+.homeTextField::after {
+    background-image: url(https://ak8.picdn.net/shutterstock/videos/160342/thumb/1.jpg);
+    opacity: .5;
+}
+
+#homeLogin {
+    font-size: 18px;
+    font-family: 'Kanit';
+}
+
+#homeLogin a{
+    color: white;
+}
+
+#homeLogin a:hover {
+    color: rgb(179, 19,19);
+}
+
+.homeTextField h1 {
+    font-family: 'Piedra';
+    font-size: 105px;
+    font-weight: 500;
+    color: rgb(179, 19,19);
+    margin-top: 30px;
+}
+
+.logo strong {
+    font-size: 23px;
+    font-family: 'Trade Winds';
+    font-style: italic;
+    color: rgb(228, 232, 60);
+}
+
+.homeTextField ul {
+    padding-top: 0;
+    margin-top: 40px;
+    padding-left: 0;
+    list-style: none;
+}
+
+.homeTextField li {
+    color: white;
+    font-size: 25px;
+    font-family: 'Kanit';
+    width: 120px;
+    padding-top: 8px;
+    cursor: pointer;
+    border-bottom: 1px solid;
+    }
+
+.homeTextField a{
+    color: white;
+    text-decoration: none;
+}
+
+    .homeTextField a:hover {
+        color: rgb(179, 19,19);
+    }
+
+.festDate {
+    color: rgb(179, 19,19);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 100px;
+}
+
+#month {
+    font-family: "Trade Winds";
+    font-size: 40px;
+}
+
+#dateRange {
+    font-family: 'Trade Winds';
+    font-size: 65px;
+    margin-top: 10px;
+}
+
+#year {
+    font-family: 'Trade Winds';
+    font-size: 30px;
+}
+
+.littleSmaller {
+    font-size: 15px;
+    font-family: 'Kanit';
+    margin-top: 40px;
+    color: rgb(228, 232, 60);
+}
+
+.homeImageField {
+    float: left;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}

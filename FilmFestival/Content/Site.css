@@ -99,7 +99,7 @@
     margin-left: 10px;
     padding-bottom: 0;
 }
-    
+
 .pageContent {
     position: absolute;
     top: 0;
@@ -108,6 +108,13 @@
     margin-left: 15%;
     margin-right: 15.8%;
     margin-top: 230px;
+    border: 3px solid black;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding-top: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 15px;
 }
 
 #filmStripBackground {
@@ -264,13 +271,114 @@ textarea {
 
 /*
     ///
+    About
+    ///
+*/
+
+#aboutImage {
+    margin-left: 100px;
+}
+
+#aboutImage img{
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+/*
+    ///
     Shared elements
     ///
 */
 
-
-.newsBody {
-border: 5px black solid;
-background-color: white;
+.socialMediaBar {
+    display: flex;
+    flex-direction: row;
+    background-color: lightgrey;
+    border: 2px solid;
+    border-radius: 3px;
+    border-color: darkgrey;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    width: 
 }
 
+.socialMediaBar a{
+    color: white;
+    height: 24px;
+}
+
+#tweetButton {
+    display: flex;
+    flex-direction: row;
+    font-size: 13px;
+    padding: 0;
+    border: 2px solid;
+    border-color: deepskyblue;
+    border-radius: 3px;
+    background-color: deepskyblue;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+#tweetButton img{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#tweetButton span{
+    margin-right: 5px;
+}
+
+#facebookLikeButton {
+    display: flex;
+    flex-direction: row;
+    font-size: 13px;
+    padding: 0;
+    border: 2px solid;
+    border-color: royalblue;
+    border-radius: 3px;
+    background-color: royalblue;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#facebookLikeButton img{
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+}
+
+#likeCount {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#facebookShareButton {
+    display: flex;
+    flex-direction: row;
+    font-size: 13px;
+    padding: 0;
+    border: 2px solid;
+    border-color: royalblue;
+    border-radius: 3px;
+    background-color: royalblue;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#facebookShareButton span{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.newsBody {
+    margin-left: 55px;
+    margin-right: 55px;
+    font-family: "Helvetica Neue";
+}
+
+.newsParagraph {
+    margin-top: 13px;
+    font-size: 18px;
+}

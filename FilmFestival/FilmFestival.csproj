@@ -214,6 +214,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\eyeClipart.jpg" />
+    <Content Include="Content\Images\eyeClipart2.jpg" />
     <Content Include="Content\Images\filmReelClipart.jpg" />
     <Content Include="Content\Images\grungeFilmStrip.jpg" />
     <Content Include="Content\Images\scratchyFilmBackground.jpg" />

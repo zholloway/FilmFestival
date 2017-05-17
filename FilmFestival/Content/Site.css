@@ -292,6 +292,7 @@ textarea {
     border: 3px solid black;
     border-radius: 5px;
     max-height: 300px;
+    max-width: 800px;
 }
 
 .socialMediaBar {
@@ -386,6 +387,10 @@ textarea {
     margin-top: 13px;
     margin-bottom: 10px;
     font-size: 18px;
+}
+
+.newsParagraph h3{
+    font-style: italic;
 }
 
 /*
@@ -503,4 +508,132 @@ textarea {
 
 .pageNumbers a:hover{
     text-decoration: none;
+}
+
+/*
+    ///
+    Film Details
+    ///
+*/
+
+.filmDetails {
+    font-size: 13px;
+    margin-bottom: 10px;
+    font-family: "Kanit";
+}
+
+.newsFilmTitle {
+    font-family: "Kanit";
+    font-size: 35px;
+}
+
+/*
+    ///
+    News Showtimes
+    ///
+*/
+
+#newsShowtimesHeader {
+    font-style: italic;
+}
+
+.showtimesAndReservationsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-flow: nowrap;
+}
+
+.newsWednesdayShowings {
+    margin-bottom: 20px;
+}
+
+.newsShowtimesDate {
+    font-size: 20px;
+}
+
+.newsShowtimesTheatre {
+    font-size: 20px;
+    margin-left: 50px;
+    margin-top: 8px;
+}
+
+.newsShowtimesTheatre span{
+    border-bottom: 1px solid black;
+}
+
+.newsShowtimesTimes {
+    font-size: 20px;
+    margin-left: 50px;
+}
+
+.newsShowtimesTimes a:hover {
+    text-decoration: none;
+    color: rgb(179, 19, 19);
+}
+
+.newsSeatReservation {
+    width: 400px;
+    margin-left: 100px;
+}
+
+/*
+    ///
+    News Seat Reservation
+    ///
+*/
+
+.newsSeatReservation span {
+    font-size: 18px;
+}
+
+#holder {
+    height: 200px;
+    width: 500px;
+    background-color: #F5F5F5;
+    border: 1px solid #A4A4A4;
+}
+
+#place {
+    position: relative;
+    margin: 7px;
+}
+
+    #place a {
+        font-size: 0.6em;
+    }
+
+    #place li {
+        list-style: none outside none;
+        position: absolute;
+    }
+
+        #place li:hover {
+            background-color: yellow;
+        }
+
+    #place .seat {
+        background: url("/Content/Images/cinemaChairGreen.jpg") no-repeat scroll 0 0 transparent;
+        height: 33px;
+        width: 33px;
+        display: block;
+    }
+
+    #place .selectedSeat {
+        background-image: url("/Content/Images/cinemaChairRed.jpg");
+    }
+
+    #place .selectingSeat {
+        background-image: url("/Content/Images/cinemaChairBlue.jpg");
+    }
+
+    #place .row-3, #place .row-4 {
+        margin-top: 10px;
+    }
+
+#seatDescription li {
+    vertical-align: middle;
+    list-style: none outside none;
+    padding-left: 35px;
+    height: 35px;
+    float: left;
 }

@@ -216,6 +216,10 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\austinSkyline.jpeg" />
+    <Content Include="Content\Images\cinemaChairBlue.jpg" />
+    <Content Include="Content\Images\cinemaChairRed.jpg" />
+    <Content Include="Content\Images\cinemaChairGreen.jpg" />
+    <Content Include="Content\Images\cinemaChairBW.jpg" />
     <Content Include="Content\Images\eyeClipart.jpg" />
     <Content Include="Content\Images\facebookLikeicon.png" />
     <Content Include="Content\Images\filmReelClipart.jpg" />
@@ -286,6 +290,7 @@
     <Content Include="Views\Travel\Index.cshtml" />
     <Content Include="Views\Shared\_pageHeading.cshtml" />
     <Content Include="Views\Film\Index.cshtml" />
+    <Content Include="Views\Film\Info.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

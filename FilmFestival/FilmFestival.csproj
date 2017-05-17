@@ -199,8 +199,10 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\FilmController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\TravelController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -213,12 +215,12 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\austinSkyline.jpeg" />
     <Content Include="Content\Images\eyeClipart.jpg" />
     <Content Include="Content\Images\facebookLikeicon.png" />
     <Content Include="Content\Images\filmReelClipart.jpg" />
     <Content Include="Content\Images\grungeFilmStrip.jpg" />
     <Content Include="Content\Images\scratchyFilmBackground.jpg" />
-    <Content Include="Content\Images\twitterIcon.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -280,6 +282,10 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_homeLayout.cshtml" />
+    <Content Include="Views\Shared\_socialMediaBar.cshtml" />
+    <Content Include="Views\Travel\Index.cshtml" />
+    <Content Include="Views\Shared\_pageHeading.cshtml" />
+    <Content Include="Views\Film\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

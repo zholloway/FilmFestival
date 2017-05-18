@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "News";
+}
+
+@Html.Partial("_pageHeading")
+
+<div class="pageContent">
+    <div class="newsPreviewContainer">
+        <div class="newsPreviewCell">
+            <div class="newsPreviewImage">
+                <img src="http://s3.fantasticfest.com/_uploads/galleries/41753/anne-header__index.jpeg" />
+            </div>
+
+            <div class="newsPreviewDateAndAuthor">
+                <span>APRIL 10, 2017 || ADMIN</span>
+                <h4><a href="~/News/Story">THE MANY FACES OF ANNE HATHAWAY</a></h4>
+            </div>
+
+            <p>You can’t stuff this princess, queen, fashionista, burglar, astronaut, drunk, crazy person in a box.</p>
+
+            @Html.Partial("_socialMediaBar")
+        </div>
+
+        <div class="newsPreviewCell">
+            <div class="newsPreviewImage">
+                <img src="http://s3.fantasticfest.com/_uploads/galleries/41752/godzilla-pub__index.jpeg" />
+            </div>
+
+            <div class="newsPreviewDateAndAuthor">
+                <span>APRIL 10, 2017 || ADMIN</span>
+                <h4><a href="">GODZILLA HAS RANSACKED TOKYO! PUB TRIVIA IS STILL THURSDAY</a></h4>
+            </div>
+
+            <p>Day to day life in a world where giant monsters go on rampages.</p>
+
+            @Html.Partial("_socialMediaBar")
+        </div>
+    </div>
+
+    @Html.Partial("_pageList")
+</div>

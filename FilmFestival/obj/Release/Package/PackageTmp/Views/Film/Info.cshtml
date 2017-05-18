@@ -1,0 +1,123 @@
+﻿@{
+    ViewBag.Title = "Film Info";
+}
+
+@Html.Partial("_pageHeading")
+
+<div class="pageContent">
+    <div class="newsBody">
+        <div class="newsImage">
+            <img src="https://bostonhassle.com/wp-content/uploads/2017/03/MacReady_and_Clark_approach_the_kennels_-_The_Thing_1982.png" />
+        </div>
+
+        <h2 class="newsFilmTitle"><strong>The Thing</strong></h2>
+        <div class="filmDetails">
+            <span><strong>1982 || DIR. - JOHN CARPENTER || UNITED STATES || 109 MIN.</strong></span>
+        </div>      
+
+        @Html.Partial("_socialMediaBar")
+
+        <div class="newsParagraph">
+            <h3>Brief Summary</h3>
+            <p>
+                A research facility in Antarctica comes across an alien force that can become anything it touches with 100% accuracy. 
+                The members must now find out who's human and who's not before it's too late.
+            </p>
+
+            <h3>Full Description</h3>
+            <p>
+                The Thing is horror master John Carpenter’s remake of the 1951 film The Thing from Another World, which stars James Arness as a Frankenstein-esque alien menacing a scientific expedition. 
+                While The Thing from Another World is an undisputed horror classic, Carpenter did not want to merely repeat its shocks. 
+                No longer a tale of a monster attacking from the outside, it is now a story of a threat coming from within, not without. 
+                Instead of “Keep watching the skies” (the last line from The Thing from Another World), the tagline for this film could be “Keep watching the guy next to you.” 
+                What John Carpenter has created is a magnificent tale of fear of paranoia, without even the comfort of knowing that the threat “is out there.” 
+                In The Thing, the danger is among us.
+            </p>
+            <p>
+                The Thing introduces us to the twelve members of an isolated US Outpost in the Antarctic, which has been invaded by an ancient alien being. 
+                However, unlike the easily recognizable creatures of yore, this alien can perfectly copies any life form it encounters, blending in perfectly with its surroundings. 
+                Not even the audience is always aware of who the alien and who isn't... 
+                Paranoia soon grips the camp and it is up to R.J. MacReady (Kurt Russell) to discover the alien's true identity and protect the future of mankind.
+            </p>
+        </div>
+        
+        <h3 id="newsShowtimesHeader">Showtimes</h3>
+        <div class="showtimesAndReservationsContainer">
+            <div class="newsShowtimesContainer">
+                <div class="newsShowtimesDate">
+                    <span><strong>Wednesday, September 27<sup>th</sup></strong></span>
+                </div>
+                <div class="newsWednesdayShowings">
+                    <div class="newsShowtimesTheatre">
+                        <span>Alamo Drafthouse South Lamar</span>
+                    </div>
+                    <div class="newsShowtimesTimes">
+                        <a href=""><span>8:00,</span></a>
+                        <a href=""><span>9:30,</span></a>
+                        <a href=""><span>11:00,</span></a>
+                        <a href=""><span>1:45,</span></a>
+                        <a href=""><span>3:30</span></a>
+                    </div>
+
+                    <div class="newsShowtimesTheatre">
+                        <span>Alamo Drafthouse East Central</span>
+                    </div>
+                    <div class="newsShowtimesTimes">
+                        <a href=""><span>8:00,</span></a>
+                        <a href=""><span>9:30,</span></a>
+                        <a href=""><span>11:00,</span></a>
+                        <a href=""><span>1:45,</span></a>
+                        <a href=""><span>3:30</span></a>
+                    </div>
+                </div>
+
+                <div class="newsShowtimesDate">
+                    <span><strong>Thursday, September 28<sup>th</sup></strong></span>
+                </div>
+                <div class="newsThursdayShowings">
+                    <div class="newsShowtimesTheatre">
+                        <span>Alamo Drafthouse South Lamar</span>
+                    </div>
+                    <div class="newsShowtimesTimes">
+                        <a href=""><span>8:00,</span></a>
+                        <a href=""><span>9:30,</span></a>
+                        <a href=""><span>11:00,</span></a>
+                        <a href=""><span>1:45,</span></a>
+                        <a href=""><span>3:30</span></a>
+                    </div>
+                    <div class="newsShowtimesTheatre">
+                        <span>Alamo Drafthouse East Central</span>
+                    </div>
+                    <div class="newsShowtimesTimes">
+                        <a href=""><span>8:00,</span></a>
+                        <a href=""><span>9:30,</span></a>
+                        <a href=""><span>11:00,</span></a>
+                        <a href=""><span>1:45,</span></a>
+                        <a href=""><span>3:30</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="newsSeatReservation">
+                <span><strong>Click your desired seat for the selected showtime:</strong></span>
+                <div id="holder">
+                    <ul id="place">
+                        <li class="seat"></li>
+                    </ul>
+                </div>
+                <div style="float:left;">
+                    <ul id="seatDescription">
+                        <li style="background:url('/Content/Images/cinemaChairGreen.jpg') no-repeat scroll 0 0 transparent;">Available Seat</li>
+                        <li style="background:url('/Content/Images/cinemaChairRed.jpg') no-repeat scroll 0 0 transparent;">Booked Seat</li>
+                        <li style="background:url('/Content/Images/cinemaChairBlue.jpg') no-repeat scroll 0 0 transparent;">Selected Seat</li>
+                    </ul>
+                </div>
+                <div style="clear:both;width:100%">
+                    <input type="button" id="btnShowNew" value="Show Selected Seats" />
+                    <input type="button" id="btnShow" value="Show All" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

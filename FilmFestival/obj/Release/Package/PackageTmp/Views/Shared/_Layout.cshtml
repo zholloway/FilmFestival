@@ -17,26 +17,22 @@
             <h1>
                 Fantastic Fest
             </h1>
+
             <ul class="navList">
                 <li><a href="~/Home/Index">Home</a></li>
                 <li><a href="~/Home/About">About</a></li>
-                <li><a href="">Tickets</a></li>
-                <li><a href="">Films</a></li>
-                <li><a href="">News</a></li>
-                <li><a href="">Submit</a></li>
-                <li><a href="">Travel</a></li>
+                <li><a href="~/Attend">Badges</a></li>
+                <li><a href="~/Film">Films</a></li>
+                <li><a href="~/News">News</a></li>
+                <li><a href="~/Home/Submit">Submit</a></li>
+                <li><a href="~/Travel">Travel</a></li>
             </ul>
-        </div>
 
-        <div>
-            <img id="filmStripBackground" src="~/Content/Images/grungeFilmStrip.jpg" />
-        </div> 
-        
-        <div id="pageHeading">
-            <img id="leftEye" src="~/Content/Images/eyeClipart.jpg" />
-            <h1>@ViewBag.Title</h1>
-            <img id="rightEye" src="~/Content/Images/eyeClipart.jpg" />
-        </div>
+            <div class="navLoginLink">
+                <a href="~/Account/Login">[ Login ]</a>
+            </div>
+        </div>     
+
         @RenderBody()
     </div> 
     

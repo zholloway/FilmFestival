@@ -1,9 +1,22 @@
 ﻿body {
     background-color: white;
     width: 100%;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    background-image: url('/Content/Images/grungeFilmStrip.jpg');
+    background-clip: border-box;
+    background-size: cover;
 }
 
 .body-content {
+}
+
+.ital {
+    font-style: italic;
+}
+
+a {
+    cursor: pointer;
 }
 
 .navbar-fixed-top {
@@ -16,7 +29,7 @@
     background-color: white;
     margin-left: 10.2%;
     margin-right: 11%;
-    height: 80px;
+    height: 90px;
     background-image: url('/Content/Images/scratchyFilmBackground.jpg')
 }
 
@@ -24,7 +37,7 @@
     font-family: Piedra;
     font-size: 56px;
     color: rgb(179, 19,19);
-    margin-top: 10px;
+    margin-top: 20px;
     margin-left: 15px;
     margin-right: 0px;
     padding-right: 0px;
@@ -34,9 +47,11 @@
     display: flex;
     flex-direction: row;
     list-style: none;
-    width: 750px;
-    padding-top: 25px;
-    padding-left: 60px;
+    width: 65%;
+    margin-top: 35px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-left: 0px;
     justify-content: space-around;
 }
 
@@ -52,6 +67,16 @@
     color: rgb(228, 232, 60);
     cursor: pointer;
 }
+
+.navLoginLink {
+    position: absolute;
+    left: 93.8%;
+    top: 3px;
+}
+
+    .navLoginLink a {
+        color: white;
+    }
 
 .navbar-fixed-top a:hover {
     color: rgb(179, 19,19);
@@ -70,24 +95,24 @@
     background-color: rgba(255, 255, 255, 0.75);
     border: 3px solid black;
     border-radius: 5px;
-    display: flex;
-    flex-direction: row;
-    flex-flow: nowrap;
-    justify-content: space-around
+    text-align: center;
 }
 
 #pageHeading img {
     height: 60px;
     width: 70px;
-
 }
 
 #leftEye {
-    margin-right: 200px;
+    position: absolute;
+    left: 10%;
+    top: 1%;
 }
 
 #rightEye {
-    margin-left: 200px;
+    position: absolute;
+    right: 10%;
+    top: 1%;
 }
 
 #pageHeading h1 {
@@ -105,9 +130,11 @@
     top: 0;
     left: 0;
     z-index: 1;
+    width: 69%;
     margin-left: 15%;
     margin-right: 15.8%;
-    margin-top: 230px;
+    margin-top: 220px;
+    margin-bottom: 4%;
     border: 3px solid black;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.75);
@@ -115,14 +142,6 @@
     padding-right: 10px;
     padding-left: 10px;
     padding-bottom: 15px;
-}
-
-#filmStripBackground {
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 0;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -181,13 +200,13 @@ textarea {
     font-family: 'Kanit';
 }
 
-#homeLogin a{
-    color: white;
-}
+    #homeLogin a {
+        color: white;
+    }
 
-#homeLogin a:hover {
-    color: rgb(179, 19,19);
-}
+        #homeLogin a:hover {
+            color: rgb(179, 19,19);
+        }
 
 .homeTextField h1 {
     font-family: 'Piedra';
@@ -219,9 +238,9 @@ textarea {
     padding-top: 8px;
     cursor: pointer;
     border-bottom: 1px solid;
-    }
+}
 
-.homeTextField a{
+.homeTextField a {
     color: white;
     text-decoration: none;
 }
@@ -271,24 +290,20 @@ textarea {
 
 /*
     ///
-    About
+    News elements
     ///
 */
 
-#aboutImage {
-    margin-left: 100px;
+.newsImage {
+    text-align: center;
 }
 
-#aboutImage img{
-    border: 3px solid black;
-    border-radius: 5px;
-}
-
-/*
-    ///
-    Shared elements
-    ///
-*/
+    .newsImage img {
+        border: 3px solid black;
+        border-radius: 5px;
+        max-height: 300px;
+        max-width: 800px;
+    }
 
 .socialMediaBar {
     display: flex;
@@ -299,13 +314,13 @@ textarea {
     border-color: darkgrey;
     padding-top: 3px;
     padding-bottom: 3px;
-    width: 
+    width:
 }
 
-.socialMediaBar a{
-    color: white;
-    height: 24px;
-}
+    .socialMediaBar a {
+        color: white;
+        height: 24px;
+    }
 
 #tweetButton {
     display: flex;
@@ -320,14 +335,14 @@ textarea {
     margin-right: 5px;
 }
 
-#tweetButton img{
-    margin-left: 5px;
-    margin-right: 5px;
-}
+    #tweetButton img {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
 
-#tweetButton span{
-    margin-right: 5px;
-}
+    #tweetButton span {
+        margin-right: 5px;
+    }
 
 #facebookLikeButton {
     display: flex;
@@ -342,12 +357,12 @@ textarea {
     margin-right: 5px;
 }
 
-#facebookLikeButton img{
-    margin-left: 5px;
-    margin-right: 5px;
-    width: 15px;
-    height: 15px;
-}
+    #facebookLikeButton img {
+        margin-left: 5px;
+        margin-right: 5px;
+        width: 15px;
+        height: 15px;
+    }
 
 #likeCount {
     padding-left: 5px;
@@ -367,18 +382,383 @@ textarea {
     margin-right: 5px;
 }
 
-#facebookShareButton span{
-    margin-left: 5px;
-    margin-right: 5px;
-}
+    #facebookShareButton span {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
 
 .newsBody {
-    margin-left: 55px;
-    margin-right: 55px;
+    margin-left: 25px;
+    margin-right: 25px;
     font-family: "Helvetica Neue";
+}
+
+.newsBody h2{
+    font-family: "Kanit";
+    font-size: 35px;
 }
 
 .newsParagraph {
     margin-top: 13px;
+    margin-bottom: 10px;
     font-size: 18px;
+}
+
+    .newsParagraph h3 {
+        font-style: italic;
+    }
+
+/*
+    ///
+    Hotel
+    ///
+*/
+
+#hotelList {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.hotelCell {
+    width: 30%;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2%;
+}
+
+.hotelName {
+    color: rgb(179, 19,19);
+}
+
+/*
+    ///
+    Film List
+    ///
+*/
+
+#filmList {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: space-around;
+}
+
+.filmCell {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid black;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+}
+
+    .filmCell img {
+        height: 190px;
+        width: 290px;
+    }
+
+    .filmCell h2 {
+        padding-top: 0;
+        margin-top: 10px;
+        margin-left: 10px;
+        font-family: "Kanit";
+    }
+
+    .filmCell a {
+        color: black;
+    }
+
+        .filmCell a:hover {
+            text-decoration: none;
+        }
+
+    .filmCell strong:hover {
+        border-bottom: 2px solid black;
+    }
+
+    .filmCell span {
+        margin-left: 10px;
+        font-family: "Kanit";
+    }
+
+/*
+    ///
+    Page List
+    ///
+*/
+
+.pageList {
+    display: flex;
+    flex-direction: row;
+    flex-flow: nowrap;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.pageNumbers {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.pageNumbers span {
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+    .pageNumbers span:hover {
+        background-color: rgb(179, 19, 19);
+        color: white;
+        cursor: pointer;
+    }
+
+.pageNumbers a {
+    color: black;
+}
+
+    .pageNumbers a:hover {
+        text-decoration: none;
+    }
+
+/*
+    ///
+    Film Details
+    ///
+*/
+
+.filmDetails {
+    font-size: 13px;
+    margin-bottom: 10px;
+    font-family: "Kanit";
+}
+
+.newsFilmTitle {
+    font-family: "Kanit";
+    font-size: 35px;
+}
+
+/*
+    ///
+    News Showtimes
+    ///
+*/
+
+#newsShowtimesHeader {
+    font-style: italic;
+}
+
+.showtimesAndReservationsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-flow: nowrap;
+}
+
+.newsWednesdayShowings {
+    margin-bottom: 20px;
+}
+
+.newsShowtimesDate {
+    font-size: 20px;
+}
+
+.newsShowtimesTheatre {
+    font-size: 20px;
+    margin-left: 50px;
+    margin-top: 8px;
+}
+
+    .newsShowtimesTheatre span {
+        border-bottom: 1px solid black;
+    }
+
+.newsShowtimesTimes {
+    font-size: 20px;
+    margin-left: 50px;
+}
+
+    .newsShowtimesTimes a:hover {
+        text-decoration: none;
+        color: rgb(179, 19, 19);
+    }
+
+.newsSeatReservation {
+    width: 400px;
+    margin-left: 100px;
+}
+
+    /*
+    ///
+    News Seat Reservation
+    ///
+*/
+
+    .newsSeatReservation span {
+        font-size: 18px;
+    }
+
+#holder {
+    height: 200px;
+    width: 500px;
+    background-color: #F5F5F5;
+    border: 1px solid #A4A4A4;
+}
+
+#place {
+    position: relative;
+    margin: 7px;
+}
+
+    #place a {
+        font-size: 0.6em;
+    }
+
+    #place li {
+        list-style: none outside none;
+        position: absolute;
+    }
+
+        #place li:hover {
+            background-color: yellow;
+        }
+
+    #place .seat {
+        background: url("/Content/Images/cinemaChairGreen.jpg") no-repeat scroll 0 0 transparent;
+        height: 33px;
+        width: 33px;
+        display: block;
+    }
+
+    #place .selectedSeat {
+        background-image: url("/Content/Images/cinemaChairRed.jpg");
+    }
+
+    #place .selectingSeat {
+        background-image: url("/Content/Images/cinemaChairBlue.jpg");
+    }
+
+    #place .row-3, #place .row-4 {
+        margin-top: 10px;
+    }
+
+#seatDescription li {
+    vertical-align: middle;
+    list-style: none outside none;
+    padding-left: 35px;
+    height: 35px;
+    float: left;
+}
+
+/*
+    ///
+    Story 
+    ///
+*/
+
+.storyHeading {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-family: "Kanit";
+}
+
+#dateAndAuthor {
+    font-size: 15px;
+    font-style: italic;
+    color: #858585;
+}
+
+.storyHeading h2 {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+#subHeading {
+    font-size: 23px;
+}
+
+.storyLink {
+    color: rgb(179, 19, 19);
+}
+
+.storyLink:hover {
+    text-decoration: none;
+    color: rgb(228, 232, 60);
+}
+
+/*
+    ///
+    News Preview
+    ///
+*/
+.newsPreviewContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.newsPreviewCell {
+    border-bottom: 3px solid black;
+    padding-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.newsPreviewImage {
+    text-align: center;
+}
+
+.newsPreviewImage img {
+    border: 3px solid black;
+    border-radius: 5px;
+    max-width: 84%;
+}
+
+.newsPreviewDateAndAuthor {
+    margin-top: 5px;
+    font-family: "Kanit";
+}
+
+.newsPreviewDateAndAuthor span {
+    font-size: 15px;
+    font-style: italic;
+    color: #858585;
+    margin-left: 8%;
+}
+
+.newsPreviewDateAndAuthor h4 {
+    margin-top: 0;
+    margin-left: 8%;
+    max-width: 84%;
+}
+
+.newsPreviewDateAndAuthor h4 a {
+    font-family: "Kanit";
+    font-size: 23px;
+    color: black;
+}
+
+.newsPreviewCell p{
+    margin-left: 8%;
+    max-width: 84%;
+}
+
+.newsPreviewCell .socialMediaBar {
+    margin-left: 8%;
+    margin-right: 8%;
+    max-width: 84%;
+}
+
+/*
+    ///
+    Submit
+    ///
+*/
+
+#submitTM {
+    font-size: 15px;
+    color: #858585;
 }

@@ -219,10 +219,8 @@
     <Content Include="Content\Images\cinemaChairBlue.jpg" />
     <Content Include="Content\Images\cinemaChairRed.jpg" />
     <Content Include="Content\Images\cinemaChairGreen.jpg" />
-    <Content Include="Content\Images\cinemaChairBW.jpg" />
     <Content Include="Content\Images\eyeClipart.jpg" />
     <Content Include="Content\Images\facebookLikeicon.png" />
-    <Content Include="Content\Images\filmReelClipart.jpg" />
     <Content Include="Content\Images\grungeFilmStrip.jpg" />
     <Content Include="Content\Images\scratchyFilmBackground.jpg" />
     <Content Include="favicon.ico" />

@@ -706,9 +706,9 @@ textarea {
 .newsPreviewCell {
     border-bottom: 3px solid black;
     padding-bottom: 15px;
-    margin-top: 15px;
     margin-left: 15px;
     margin-right: 15px;
+    margin-bottom: 15px;
 }
 
 .newsPreviewImage {
@@ -754,4 +754,15 @@ textarea {
     margin-left: 8%;
     margin-right: 8%;
     max-width: 84%;
+}
+
+/*
+    ///
+    Submit
+    ///
+*/
+
+#submitTM {
+    font-size: 15px;
+    color: #858585;
 }

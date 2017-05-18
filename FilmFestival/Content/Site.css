@@ -8,6 +8,10 @@
 .body-content {
 }
 
+.ital {
+    font-style: italic;
+}
+
 a {
     cursor: pointer;
 }
@@ -26,40 +30,40 @@ a {
     background-image: url('/Content/Images/scratchyFilmBackground.jpg')
 }
 
-.navbar-fixed-top h1 {
-    font-family: Piedra;
-    font-size: 56px;
-    color: rgb(179, 19,19);
-    margin-top: 20px;
-    margin-left: 15px;
-    margin-right: 0px;
-    padding-right: 0px;
-}
+    .navbar-fixed-top h1 {
+        font-family: Piedra;
+        font-size: 56px;
+        color: rgb(179, 19,19);
+        margin-top: 20px;
+        margin-left: 15px;
+        margin-right: 0px;
+        padding-right: 0px;
+    }
 
-.navbar-fixed-top ul {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    width: 65%;
-    margin-top: 35px;
-    margin-left: 30px;
-    margin-right: 30px;
-    padding-left: 0px;
-    justify-content: space-around;
-}
+    .navbar-fixed-top ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        width: 65%;
+        margin-top: 35px;
+        margin-left: 30px;
+        margin-right: 30px;
+        padding-left: 0px;
+        justify-content: space-around;
+    }
 
-.navbar-fixed-top li {
-    font-size: 25px;
-    color: rgb(228, 232, 60);
-    border-bottom: 1px solid;
-    height: 35px;
-}
+    .navbar-fixed-top li {
+        font-size: 25px;
+        color: rgb(228, 232, 60);
+        border-bottom: 1px solid;
+        height: 35px;
+    }
 
-.navbar-fixed-top a {
-    font-family: 'Kanit';
-    color: rgb(228, 232, 60);
-    cursor: pointer;
-}
+    .navbar-fixed-top a {
+        font-family: 'Kanit';
+        color: rgb(228, 232, 60);
+        cursor: pointer;
+    }
 
 .navLoginLink {
     position: absolute;
@@ -67,9 +71,9 @@ a {
     top: 3px;
 }
 
-.navLoginLink a{
-    color: white;
-}
+    .navLoginLink a {
+        color: white;
+    }
 
 .navbar-fixed-top a:hover {
     color: rgb(179, 19,19);
@@ -91,10 +95,10 @@ a {
     text-align: center;
 }
 
-#pageHeading img {
-    height: 60px;
-    width: 70px;
-}
+    #pageHeading img {
+        height: 60px;
+        width: 70px;
+    }
 
 #leftEye {
     position: absolute;
@@ -200,13 +204,13 @@ textarea {
     font-family: 'Kanit';
 }
 
-#homeLogin a{
-    color: white;
-}
+    #homeLogin a {
+        color: white;
+    }
 
-#homeLogin a:hover {
-    color: rgb(179, 19,19);
-}
+        #homeLogin a:hover {
+            color: rgb(179, 19,19);
+        }
 
 .homeTextField h1 {
     font-family: 'Piedra';
@@ -238,9 +242,9 @@ textarea {
     padding-top: 8px;
     cursor: pointer;
     border-bottom: 1px solid;
-    }
+}
 
-.homeTextField a{
+.homeTextField a {
     color: white;
     text-decoration: none;
 }
@@ -298,12 +302,12 @@ textarea {
     text-align: center;
 }
 
-.newsImage img {
-    border: 3px solid black;
-    border-radius: 5px;
-    max-height: 300px;
-    max-width: 800px;
-}
+    .newsImage img {
+        border: 3px solid black;
+        border-radius: 5px;
+        max-height: 300px;
+        max-width: 800px;
+    }
 
 .socialMediaBar {
     display: flex;
@@ -314,13 +318,13 @@ textarea {
     border-color: darkgrey;
     padding-top: 3px;
     padding-bottom: 3px;
-    width: 
+    width:
 }
 
-.socialMediaBar a{
-    color: white;
-    height: 24px;
-}
+    .socialMediaBar a {
+        color: white;
+        height: 24px;
+    }
 
 #tweetButton {
     display: flex;
@@ -335,14 +339,14 @@ textarea {
     margin-right: 5px;
 }
 
-#tweetButton img{
-    margin-left: 5px;
-    margin-right: 5px;
-}
+    #tweetButton img {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
 
-#tweetButton span{
-    margin-right: 5px;
-}
+    #tweetButton span {
+        margin-right: 5px;
+    }
 
 #facebookLikeButton {
     display: flex;
@@ -357,12 +361,12 @@ textarea {
     margin-right: 5px;
 }
 
-#facebookLikeButton img{
-    margin-left: 5px;
-    margin-right: 5px;
-    width: 15px;
-    height: 15px;
-}
+    #facebookLikeButton img {
+        margin-left: 5px;
+        margin-right: 5px;
+        width: 15px;
+        height: 15px;
+    }
 
 #likeCount {
     padding-left: 5px;
@@ -382,15 +386,20 @@ textarea {
     margin-right: 5px;
 }
 
-#facebookShareButton span{
-    margin-left: 5px;
-    margin-right: 5px;
-}
+    #facebookShareButton span {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
 
 .newsBody {
     margin-left: 25px;
     margin-right: 25px;
     font-family: "Helvetica Neue";
+}
+
+.newsBody h2{
+    font-family: "Kanit";
+    font-size: 35px;
 }
 
 .newsParagraph {
@@ -399,9 +408,9 @@ textarea {
     font-size: 18px;
 }
 
-.newsParagraph h3{
-    font-style: italic;
-}
+    .newsParagraph h3 {
+        font-style: italic;
+    }
 
 /*
     ///
@@ -453,34 +462,34 @@ textarea {
     margin-right: 2.5px;
 }
 
-.filmCell img{
-    height: 190px;
-    width: 290px;
-}
+    .filmCell img {
+        height: 190px;
+        width: 290px;
+    }
 
-.filmCell h2 {
-    padding-top: 0;
-    margin-top: 10px;
-    margin-left: 10px;
-    font-family: "Kanit";
-}
+    .filmCell h2 {
+        padding-top: 0;
+        margin-top: 10px;
+        margin-left: 10px;
+        font-family: "Kanit";
+    }
 
-.filmCell a{
-    color: black;
-}
+    .filmCell a {
+        color: black;
+    }
 
-.filmCell a:hover {
-    text-decoration: none;
-}
+        .filmCell a:hover {
+            text-decoration: none;
+        }
 
-.filmCell strong:hover {
-    border-bottom: 2px solid black;
-}
+    .filmCell strong:hover {
+        border-bottom: 2px solid black;
+    }
 
-.filmCell span {
-    margin-left: 10px;
-    font-family: "Kanit";
-}
+    .filmCell span {
+        margin-left: 10px;
+        font-family: "Kanit";
+    }
 
 /*
     ///
@@ -506,19 +515,19 @@ textarea {
     padding-right: 7px;
 }
 
-.pageNumbers span:hover {
-    background-color: rgb(179, 19, 19);
-    color: white;
-    cursor: pointer;
-}
+    .pageNumbers span:hover {
+        background-color: rgb(179, 19, 19);
+        color: white;
+        cursor: pointer;
+    }
 
-.pageNumbers a{
+.pageNumbers a {
     color: black;
 }
 
-.pageNumbers a:hover{
-    text-decoration: none;
-}
+    .pageNumbers a:hover {
+        text-decoration: none;
+    }
 
 /*
     ///
@@ -567,34 +576,34 @@ textarea {
     margin-top: 8px;
 }
 
-.newsShowtimesTheatre span{
-    border-bottom: 1px solid black;
-}
+    .newsShowtimesTheatre span {
+        border-bottom: 1px solid black;
+    }
 
 .newsShowtimesTimes {
     font-size: 20px;
     margin-left: 50px;
 }
 
-.newsShowtimesTimes a:hover {
-    text-decoration: none;
-    color: rgb(179, 19, 19);
-}
+    .newsShowtimesTimes a:hover {
+        text-decoration: none;
+        color: rgb(179, 19, 19);
+    }
 
 .newsSeatReservation {
     width: 400px;
     margin-left: 100px;
 }
 
-/*
+    /*
     ///
     News Seat Reservation
     ///
 */
 
-.newsSeatReservation span {
-    font-size: 18px;
-}
+    .newsSeatReservation span {
+        font-size: 18px;
+    }
 
 #holder {
     height: 200px;
@@ -646,4 +655,40 @@ textarea {
     padding-left: 35px;
     height: 35px;
     float: left;
+}
+
+/*
+    ///
+    Story 
+    ///
+*/
+
+.storyHeading {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-family: "Kanit";
+}
+
+#dateAndAuthor {
+    font-size: 15px;
+    font-style: italic;
+    color: #858585;
+}
+
+.storyHeading h2 {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+#subHeading {
+    font-size: 23px;
+}
+
+.storyLink {
+    color: rgb(179, 19, 19);
+}
+
+.storyLink:hover {
+    text-decoration: none;
+    color: rgb(228, 232, 60);
 }

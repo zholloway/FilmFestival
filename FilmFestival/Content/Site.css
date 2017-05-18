@@ -3,6 +3,9 @@
     width: 100%;
     font-family: "Helvetica Neue", sans-serif;
     font-size: 16px;
+    background-image: url('/Content/Images/grungeFilmStrip.jpg');
+    background-clip: border-box;
+    background-size: cover;
 }
 
 .body-content {
@@ -30,40 +33,40 @@ a {
     background-image: url('/Content/Images/scratchyFilmBackground.jpg')
 }
 
-    .navbar-fixed-top h1 {
-        font-family: Piedra;
-        font-size: 56px;
-        color: rgb(179, 19,19);
-        margin-top: 20px;
-        margin-left: 15px;
-        margin-right: 0px;
-        padding-right: 0px;
-    }
+.navbar-fixed-top h1 {
+    font-family: Piedra;
+    font-size: 56px;
+    color: rgb(179, 19,19);
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 0px;
+    padding-right: 0px;
+}
 
-    .navbar-fixed-top ul {
-        display: flex;
-        flex-direction: row;
-        list-style: none;
-        width: 65%;
-        margin-top: 35px;
-        margin-left: 30px;
-        margin-right: 30px;
-        padding-left: 0px;
-        justify-content: space-around;
-    }
+.navbar-fixed-top ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    width: 65%;
+    margin-top: 35px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-left: 0px;
+    justify-content: space-around;
+}
 
-    .navbar-fixed-top li {
-        font-size: 25px;
-        color: rgb(228, 232, 60);
-        border-bottom: 1px solid;
-        height: 35px;
-    }
+.navbar-fixed-top li {
+    font-size: 25px;
+    color: rgb(228, 232, 60);
+    border-bottom: 1px solid;
+    height: 35px;
+}
 
-    .navbar-fixed-top a {
-        font-family: 'Kanit';
-        color: rgb(228, 232, 60);
-        cursor: pointer;
-    }
+.navbar-fixed-top a {
+    font-family: 'Kanit';
+    color: rgb(228, 232, 60);
+    cursor: pointer;
+}
 
 .navLoginLink {
     position: absolute;
@@ -95,10 +98,10 @@ a {
     text-align: center;
 }
 
-    #pageHeading img {
-        height: 60px;
-        width: 70px;
-    }
+#pageHeading img {
+    height: 60px;
+    width: 70px;
+}
 
 #leftEye {
     position: absolute;
@@ -131,6 +134,7 @@ a {
     margin-left: 15%;
     margin-right: 15.8%;
     margin-top: 230px;
+    margin-bottom: 4%;
     border: 3px solid black;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.75);

@@ -29,5 +29,10 @@ namespace FilmFestival.Models
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<Hotel> Hotels { get; set; }
+        public DbSet<NewsStory> NewsStories { get; set; }
+        public DbSet<Film> Films { get; set; }
+        public DbSet<Showtime> Showtimes { get; set; }
     }
 }

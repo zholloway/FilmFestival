@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<FilmFestival.Models.Hotel>
+@{
     ViewBag.Title = "Travel";
 }
 
@@ -25,45 +26,8 @@
                 Car2Go is readily available in the downtown area and if you choose to use that system for transportation while you are in Austin, 
                 it is roughly an 8-10 minute drive from any of these hotels to the main festival venue.
             </p>
-            <div id="hotelList">
-                <div class="hotelCell">
-                    <span class="hotelName"><strong>Holiday Inn - Town Lake</strong></span>
-                    <span>20 N IH-35</span>
-                    <span>Austin TX 78701</span>
-                    <span>1-888-615-0509</span>
-                    <span><strong>Discount Code: FAN</strong></span>
-                </div>
-                <div class="hotelCell">
-                    <span class="hotelName"><strong>The Embassy Suites Downtown/Town Lake</strong></span>
-                    <span>300 South Congress Avenue</span>
-                    <span>Austin TX 78704</span>
-                    <span>512-469-9000</span>
-                </div>
-                <div class="hotelCell">
-                    <span class="hotelName"><strong>DoubleTree Suites by Hilton Austin</strong></span>
-                    <span>303 West 15th Street</span>
-                    <span>Austin, Texas 78701</span>
-                    <span>800-222-8733</span>
-                </div>
-                <div class="hotelCell">
-                    <span class="hotelName"><strong>The Radisson Hotel & Suites Downtown</strong></span>
-                    <span>111 Cesar Chavez</span>
-                    <span>Austin TX 78701</span>
-                    <span>512-478-9611</span>
-                </div>
-                <div class="hotelCell">
-                    <span class="hotelName"><strong>The InterContinental</strong></span>
-                    <span>700 Congress Avenue</span>
-                    <span>Austin TX 78701</span>
-                    <span>512-457-8800</span>
-                </div>
-                <div class="hotelCell">
-                    <span class="hotelName"><strong>Extended Stay - Downtown</strong></span>
-                    <span>600 Guadalupe Street</span>
-                    <span>Austin TX 78701</span>
-                    <span>512-457-9994</span>
-                </div>
-            </div>
+            
+            @Html.Partial("_hotelList", Model)
         </div>      
     </div>  
 </div>

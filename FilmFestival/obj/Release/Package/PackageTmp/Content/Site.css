@@ -8,7 +8,9 @@
     background-size: cover;
 }
 
-.body-content {
+#homeBody {
+    background-image: url('http://intuitiveconsumer.com/blog/wp-content/uploads/2014/04/movie-theater-sudience.jpg');
+    background-size: cover;
 }
 
 .ital {
@@ -181,14 +183,15 @@ textarea {
 }
 
 #homeBackgroundImage {
-    opacity: .8;
-    position: absolute;
-    height: 795px;
-    width: 550px;
-    left: 0;
-    top: 0;
-    z-index: 2;
+opacity: .8;
+position: absolute;
+height: 795px;
+width: 550px;
+left: 0;
+top: 0;
+z-index: 2;
 }
+
 
 .homeTextField::after {
     background-image: url(https://ak8.picdn.net/shutterstock/videos/160342/thumb/1.jpg);
@@ -761,4 +764,86 @@ textarea {
 #submitTM {
     font-size: 15px;
     color: #858585;
+}
+
+/*
+    ///Login///
+*/
+
+#loginImg img{
+    max-width: 100%;
+    height: 260px;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+/*
+    ///
+    Media Queries
+    ///
+*/
+
+/* iPhone */
+@media (max-width: 414px) {
+    #homeBody {
+        background-size: 736px 770px;
+        background-clip: border-box;
+    }
+
+    #homeBackgroundImage {
+        width: 100%;
+        height: 770px;
+        opacity: .93;
+    }
+
+    .homeTextField {
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+        height: 770px;
+    }
+    
+
+    .logo {
+        margin-left: 10px;
+        width: 100%;
+    }
+
+    .logo h1 {
+        font-size: 75px;
+        width: 100%;
+    }
+
+    .logo strong {
+        font-size: 17px;
+    }
+
+    .linkAndDate {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .navBar {
+        padding: 0;
+    }
+
+    .navBar ul {
+        display: flex;
+        flex-direction: row;
+        flex-flow: wrap;
+        justify-content: space-around;
+        padding: 0;
+        margin-top: 40px;
+    }
+
+    .navBar li {
+        width: 110px;
+    }
+
+    .festDate {
+        text-align: center;
+        margin-top: 40px;
+        padding: 0;
+    }
 }

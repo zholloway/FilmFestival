@@ -100,3 +100,5 @@ C:\Users\Zack Holloway\Documents\Visual Studio 2017\Projects\FilmFestival\FilmFe
 C:\Users\Zack Holloway\Documents\Visual Studio 2017\Projects\FilmFestival\FilmFestival\obj\Release\FilmFestival.csprojResolveAssemblyReference.cache
 C:\Users\Zack Holloway\Documents\Visual Studio 2017\Projects\FilmFestival\FilmFestival\obj\Release\FilmFestival.dll
 C:\Users\Zack Holloway\Documents\Visual Studio 2017\Projects\FilmFestival\FilmFestival\obj\Release\FilmFestival.pdb
+C:\Users\Zack Holloway\documents\visual studio 2017\Projects\FilmFestival\FilmFestival\obj\Release\FilmFestival.Migrations.dbcreate.resources
+C:\Users\Zack Holloway\documents\visual studio 2017\Projects\FilmFestival\FilmFestival\obj\Release\FilmFestival.csproj.GenerateResource.Cache

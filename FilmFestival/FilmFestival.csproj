@@ -305,7 +305,6 @@
     <Content Include="Views\Home\Submit.cshtml" />
     <Content Include="Views\Shared\_pageList.cshtml" />
     <Content Include="Views\Attend\Index.cshtml" />
-    <Content Include="Views\Shared\_hotelList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -27,7 +27,17 @@
                 it is roughly an 8-10 minute drive from any of these hotels to the main festival venue.
             </p>
             
-            @Html.Partial("_hotelList", Model)
+            <div id="hotelList">
+                @foreach (var hotel in Model)
+                {
+                    <div class="hotelCell">
+                        <span class="hotelName"><strong>@hotel.Name</strong></span>
+                        <span>@hotel.Street</span>
+                        <span>@hotel.City @hotel.StateAbbreviation @hotel.ZipCode</span>
+                        <span>@hotel.PhoneNumber</span>
+                    </div>
+                }
+            </div>
         </div>      
     </div>  
 </div>

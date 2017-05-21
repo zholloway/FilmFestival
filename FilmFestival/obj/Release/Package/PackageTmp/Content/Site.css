@@ -299,14 +299,16 @@ z-index: 2;
 
 .newsImage {
     text-align: center;
+    max-height: 300px;
+    max-width: 800px;
 }
 
-    .newsImage img {
-        border: 3px solid black;
-        border-radius: 5px;
-        max-height: 300px;
-        max-width: 800px;
-    }
+.newsImage img {
+    border: 3px solid black;
+    border-radius: 5px;
+    max-height: 100%;
+    max-width: 100%;
+}
 
 .socialMediaBar {
     display: flex;
@@ -713,7 +715,7 @@ z-index: 2;
 .newsPreviewImage {
     text-align: center;
 }
-
+/*//////////////////////////////////////////////////////*/
 .newsPreviewImage img {
     border: 3px solid black;
     border-radius: 5px;
@@ -783,8 +785,11 @@ z-index: 2;
     ///
 */
 
-/* iPhone */
+/* iPhone 6+*/
 @media (max-width: 414px) {
+    /*
+        Home
+    */
     #homeBody {
         background-size: 736px 770px;
         background-clip: border-box;
@@ -811,7 +816,6 @@ z-index: 2;
 
     .logo h1 {
         font-size: 75px;
-        width: 100%;
     }
 
     .logo strong {
@@ -845,5 +849,110 @@ z-index: 2;
         text-align: center;
         margin-top: 40px;
         padding: 0;
+    }
+
+    /*
+        _Layout and newsBody
+    */
+    .navbar-fixed-top {
+        height: 70px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar-fixed-top h1{
+        font-size: 30px;
+        margin-top: 3px;
+        margin-bottom: 0;
+    }
+
+    .navbar-fixed-top ul {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar-fixed-top li {
+        font-size: 15px;
+        height: 20px;
+    }
+
+    .navLoginLink {
+        font-size: 12px;
+        left: 85%;
+    }
+
+    #pageHeading {
+        margin-top: 90px;
+    }
+
+    #pageHeading h1 {
+        font-size: 40px;
+    }
+
+    #pageHeading img {
+        height: 40px;
+        width: 50px;
+    }
+
+    #leftEye {
+        top: 12%;
+        left: 2%;
+    }
+
+    #rightEye {
+        top:12%;
+        right: 2%;
+    }
+
+    .pageContent {
+        margin-top: 40%;
+        margin-left: 10.2%;
+        width: 79%;
+        padding-top: 10px;
+    }
+
+    .newsBody {
+        margin: 0;
+    }
+
+    .newsBody h2 {
+        margin-top: 5px;
+    }
+
+    .newsBody h2 strong{
+        font-size: 30px;
+    }
+
+    /*
+        newsIndex
+    */
+    .newsPreviewImage img {
+        max-width: 100%;
+    }
+
+    .newsPreviewCell {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .newsPreviewDateAndAuthor span {
+        margin-left: 0;
+    }
+
+    .newsPreviewDateAndAuthor h4 {
+        margin-left: 0;
+    }
+
+    .newsPreviewCell p {
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+    }
+
+    .newsPreviewCell .socialMediaBar {
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
     }
 }

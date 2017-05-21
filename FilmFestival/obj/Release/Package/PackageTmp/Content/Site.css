@@ -302,11 +302,11 @@ z-index: 2;
     max-height: 300px;
     max-width: 800px;
 }
-
+/*//////////////////////////////////////////////////////////////////////////////////////*/
 .newsImage img {
     border: 3px solid black;
     border-radius: 5px;
-    max-height: 100%;
+    max-height: 300px;
     max-width: 100%;
 }
 
@@ -715,7 +715,7 @@ z-index: 2;
 .newsPreviewImage {
     text-align: center;
 }
-/*//////////////////////////////////////////////////////*/
+
 .newsPreviewImage img {
     border: 3px solid black;
     border-radius: 5px;
@@ -777,6 +777,11 @@ z-index: 2;
     height: 260px;
     border: 3px solid black;
     border-radius: 5px;
+}
+
+#loginSubmit {
+    background-color: rgb(179, 19,19);
+    color: white;
 }
 
 /*
@@ -928,6 +933,7 @@ z-index: 2;
         newsIndex
     */
     .newsPreviewImage img {
+        max-height: 100%;
         max-width: 100%;
     }
 
@@ -954,5 +960,46 @@ z-index: 2;
         margin-left: 0;
         margin-right: 0;
         max-width: 100%;
+    }
+
+    /*
+        Showtimes
+    */
+    .showtimesAndReservationsContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .newsShowtimesTheatre {
+        margin-left: 0;
+    }
+
+    .newsShowtimesTimes {
+        margin-left: 0;
+    }
+
+    .newsSeatReservation {
+        margin-left: 0;
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    #holder {
+        width: 100%;
+    }
+
+    /*
+        Login
+    */
+    #loginForm {
+        font-size: 20px;
+    }
+
+    #loginHeaders h4{
+        font-size: 20px;
+    }
+
+    #loginImg {
+        display: none;
     }
 }

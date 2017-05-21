@@ -302,11 +302,11 @@ z-index: 2;
     max-height: 300px;
     max-width: 800px;
 }
-
+/*//////////////////////////////////////////////////////////////////////////////////////*/
 .newsImage img {
     border: 3px solid black;
     border-radius: 5px;
-    max-height: 100%;
+    max-height: 300px;
     max-width: 100%;
 }
 
@@ -933,6 +933,7 @@ z-index: 2;
         newsIndex
     */
     .newsPreviewImage img {
+        max-height: 100%;
         max-width: 100%;
     }
 

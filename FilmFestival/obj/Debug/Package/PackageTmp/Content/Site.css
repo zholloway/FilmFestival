@@ -1,12 +1,149 @@
 ﻿body {
     background-color: white;
+    width: 100%;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    background-image: url('/Content/Images/grungeFilmStrip.jpg');
+    background-clip: border-box;
+    background-size: cover;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-right: 15px;
-    margin-left: 0;
-    margin-right: 0;
+#homeBody {
+    background-image: url('http://intuitiveconsumer.com/blog/wp-content/uploads/2014/04/movie-theater-sudience.jpg');
+    background-size: cover;
+}
+
+.ital {
+    font-style: italic;
+}
+
+a {
+    cursor: pointer;
+}
+
+.navbar-fixed-top {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin-left: 10.2%;
+    margin-right: 11%;
+    height: 90px;
+    background-image: url('/Content/Images/scratchyFilmBackground.jpg')
+}
+
+.navbar-fixed-top h1 {
+    font-family: Piedra;
+    font-size: 56px;
+    color: rgb(179, 19,19);
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 0px;
+    padding-right: 0px;
+}
+
+.navbar-fixed-top ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    width: 65%;
+    margin-top: 35px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-left: 0px;
+    justify-content: space-around;
+}
+
+.navbar-fixed-top li {
+    font-size: 25px;
+    color: rgb(228, 232, 60);
+    border-bottom: 1px solid;
+    height: 35px;
+}
+
+.navbar-fixed-top a {
+    font-family: 'Kanit';
+    color: rgb(228, 232, 60);
+    cursor: pointer;
+}
+
+.navLoginLink {
+    position: absolute;
+    left: 93.8%;
+    top: 3px;
+}
+
+    .navLoginLink a {
+        color: white;
+    }
+
+.navbar-fixed-top a:hover {
+    color: rgb(179, 19,19);
+    text-decoration: none;
+}
+
+#pageHeading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    margin-top: 120px;
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 69%;
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 3px solid black;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#pageHeading img {
+    height: 60px;
+    width: 70px;
+}
+
+#leftEye {
+    position: absolute;
+    left: 10%;
+    top: 1%;
+}
+
+#rightEye {
+    position: absolute;
+    right: 10%;
+    top: 1%;
+}
+
+#pageHeading h1 {
+    font-family: 'Trade Winds';
+    font-size: 50px;
+    color: rgb(179, 19,19);
+    margin-bottom: 0;
+    margin-top: 7px;
+    margin-left: 10px;
+    padding-bottom: 0;
+}
+
+.pageContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 69%;
+    margin-left: 15%;
+    margin-right: 15.8%;
+    margin-top: 220px;
+    margin-bottom: 4%;
+    border: 3px solid black;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding-top: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 15px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -38,6 +175,7 @@ textarea {
     width: 550px;
     padding-top: 15px;
     padding-left: 45px;
+    padding-right: 15px;
     position: absolute;
     left: 0;
     top: 0;
@@ -45,14 +183,15 @@ textarea {
 }
 
 #homeBackgroundImage {
-    opacity: .8;
-    position: absolute;
-    height: 795px;
-    width: 550px;
-    left: 0;
-    top: 0;
-    z-index: 2;
+opacity: .8;
+position: absolute;
+height: 795px;
+width: 550px;
+left: 0;
+top: 0;
+z-index: 2;
 }
+
 
 .homeTextField::after {
     background-image: url(https://ak8.picdn.net/shutterstock/videos/160342/thumb/1.jpg);
@@ -64,13 +203,13 @@ textarea {
     font-family: 'Kanit';
 }
 
-#homeLogin a{
-    color: white;
-}
+    #homeLogin a {
+        color: white;
+    }
 
-#homeLogin a:hover {
-    color: rgb(179, 19,19);
-}
+        #homeLogin a:hover {
+            color: rgb(179, 19,19);
+        }
 
 .homeTextField h1 {
     font-family: 'Piedra';
@@ -102,9 +241,9 @@ textarea {
     padding-top: 8px;
     cursor: pointer;
     border-bottom: 1px solid;
-    }
+}
 
-.homeTextField a{
+.homeTextField a {
     color: white;
     text-decoration: none;
 }
@@ -150,4 +289,716 @@ textarea {
     left: 0;
     top: 0;
     z-index: 1;
+}
+
+/*
+    ///
+    News elements
+    ///
+*/
+
+.newsImage {
+    text-align: center;
+    max-height: 300px;
+    max-width: 800px;
+}
+
+.newsImage img {
+    border: 3px solid black;
+    border-radius: 5px;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.socialMediaBar {
+    display: flex;
+    flex-direction: row;
+    background-color: lightgrey;
+    border: 2px solid;
+    border-radius: 3px;
+    border-color: darkgrey;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    width:
+}
+
+    .socialMediaBar a {
+        color: white;
+        height: 24px;
+    }
+
+#tweetButton {
+    display: flex;
+    flex-direction: row;
+    font-size: 13px;
+    padding: 0;
+    border: 2px solid;
+    border-color: deepskyblue;
+    border-radius: 3px;
+    background-color: deepskyblue;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+    #tweetButton img {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    #tweetButton span {
+        margin-right: 5px;
+    }
+
+#facebookLikeButton {
+    display: flex;
+    flex-direction: row;
+    font-size: 13px;
+    padding: 0;
+    border: 2px solid;
+    border-color: royalblue;
+    border-radius: 3px;
+    background-color: royalblue;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+    #facebookLikeButton img {
+        margin-left: 5px;
+        margin-right: 5px;
+        width: 15px;
+        height: 15px;
+    }
+
+#likeCount {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#facebookShareButton {
+    display: flex;
+    flex-direction: row;
+    font-size: 13px;
+    padding: 0;
+    border: 2px solid;
+    border-color: royalblue;
+    border-radius: 3px;
+    background-color: royalblue;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+    #facebookShareButton span {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+.newsBody {
+    margin-left: 25px;
+    margin-right: 25px;
+    font-family: "Helvetica Neue";
+}
+
+.newsBody h2{
+    font-family: "Kanit";
+    font-size: 35px;
+}
+
+.newsParagraph {
+    margin-top: 13px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+    .newsParagraph h3 {
+        font-style: italic;
+    }
+
+/*
+    ///
+    Hotel
+    ///
+*/
+
+#hotelList {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.hotelCell {
+    width: 30%;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2%;
+}
+
+.hotelName {
+    color: rgb(179, 19,19);
+}
+
+/*
+    ///
+    Film List
+    ///
+*/
+
+#filmList {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: space-around;
+}
+
+.filmCell {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid black;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+}
+
+    .filmCell img {
+        height: 190px;
+        width: 290px;
+    }
+
+    .filmCell h2 {
+        padding-top: 0;
+        margin-top: 10px;
+        margin-left: 10px;
+        font-family: "Kanit";
+    }
+
+    .filmCell a {
+        color: black;
+    }
+
+        .filmCell a:hover {
+            text-decoration: none;
+        }
+
+    .filmCell strong:hover {
+        border-bottom: 2px solid black;
+    }
+
+    .filmCell span {
+        margin-left: 10px;
+        font-family: "Kanit";
+    }
+
+/*
+    ///
+    Page List
+    ///
+*/
+
+.pageList {
+    display: flex;
+    flex-direction: row;
+    flex-flow: nowrap;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.pageNumbers {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.pageNumbers span {
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+    .pageNumbers span:hover {
+        background-color: rgb(179, 19, 19);
+        color: white;
+        cursor: pointer;
+    }
+
+.pageNumbers a {
+    color: black;
+}
+
+    .pageNumbers a:hover {
+        text-decoration: none;
+    }
+
+/*
+    ///
+    Film Details
+    ///
+*/
+
+.filmDetails {
+    font-size: 13px;
+    margin-bottom: 10px;
+    font-family: "Kanit";
+}
+
+.newsFilmTitle {
+    font-family: "Kanit";
+    font-size: 35px;
+}
+
+/*
+    ///
+    News Showtimes
+    ///
+*/
+
+#newsShowtimesHeader {
+    font-style: italic;
+}
+
+.showtimesAndReservationsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-flow: nowrap;
+}
+
+.newsWednesdayShowings {
+    margin-bottom: 20px;
+}
+
+.newsShowtimesDate {
+    font-size: 20px;
+}
+
+.newsShowtimesTheatre {
+    font-size: 20px;
+    margin-left: 50px;
+    margin-top: 8px;
+}
+
+    .newsShowtimesTheatre span {
+        border-bottom: 1px solid black;
+    }
+
+.newsShowtimesTimes {
+    font-size: 20px;
+    margin-left: 50px;
+}
+
+    .newsShowtimesTimes a:hover {
+        text-decoration: none;
+        color: rgb(179, 19, 19);
+    }
+
+.newsSeatReservation {
+    width: 400px;
+    margin-left: 100px;
+}
+
+    /*
+    ///
+    News Seat Reservation
+    ///
+*/
+
+    .newsSeatReservation span {
+        font-size: 18px;
+    }
+
+#holder {
+    height: 200px;
+    width: 500px;
+    background-color: #F5F5F5;
+    border: 1px solid #A4A4A4;
+}
+
+#place {
+    position: relative;
+    margin: 7px;
+}
+
+    #place a {
+        font-size: 0.6em;
+    }
+
+    #place li {
+        list-style: none outside none;
+        position: absolute;
+    }
+
+        #place li:hover {
+            background-color: yellow;
+        }
+
+    #place .seat {
+        background: url("/Content/Images/cinemaChairGreen.jpg") no-repeat scroll 0 0 transparent;
+        height: 33px;
+        width: 33px;
+        display: block;
+    }
+
+    #place .selectedSeat {
+        background-image: url("/Content/Images/cinemaChairRed.jpg");
+    }
+
+    #place .selectingSeat {
+        background-image: url("/Content/Images/cinemaChairBlue.jpg");
+    }
+
+    #place .row-3, #place .row-4 {
+        margin-top: 10px;
+    }
+
+#seatDescription li {
+    vertical-align: middle;
+    list-style: none outside none;
+    padding-left: 35px;
+    height: 35px;
+    float: left;
+}
+
+/*
+    ///
+    Story 
+    ///
+*/
+
+.storyHeading {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-family: "Kanit";
+}
+
+#dateAndAuthor {
+    font-size: 15px;
+    font-style: italic;
+    color: #858585;
+}
+
+.storyHeading h2 {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+#subHeading {
+    font-size: 23px;
+}
+
+.storyLink {
+    color: rgb(179, 19, 19);
+}
+
+.storyLink:hover {
+    text-decoration: none;
+    color: rgb(228, 232, 60);
+}
+
+/*
+    ///
+    News Preview
+    ///
+*/
+.newsPreviewContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.newsPreviewCell {
+    border-bottom: 3px solid black;
+    padding-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.newsPreviewImage {
+    text-align: center;
+}
+
+.newsPreviewImage img {
+    border: 3px solid black;
+    border-radius: 5px;
+    max-width: 84%;
+}
+
+.newsPreviewDateAndAuthor {
+    margin-top: 5px;
+    font-family: "Kanit";
+}
+
+.newsPreviewDateAndAuthor span {
+    font-size: 15px;
+    font-style: italic;
+    color: #858585;
+    margin-left: 8%;
+}
+
+.newsPreviewDateAndAuthor h4 {
+    margin-top: 0;
+    margin-left: 8%;
+    max-width: 84%;
+}
+
+.newsPreviewDateAndAuthor h4 a {
+    font-family: "Kanit";
+    font-size: 23px;
+    color: black;
+}
+
+.newsPreviewCell p{
+    margin-left: 8%;
+    max-width: 84%;
+}
+
+.newsPreviewCell .socialMediaBar {
+    margin-left: 8%;
+    margin-right: 8%;
+    max-width: 84%;
+}
+
+/*
+    ///
+    Submit
+    ///
+*/
+
+#submitTM {
+    font-size: 15px;
+    color: #858585;
+}
+
+/*
+    ///Login///
+*/
+
+#loginImg img{
+    max-width: 100%;
+    height: 260px;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+#loginSubmit {
+    background-color: rgb(179, 19,19);
+    color: white;
+}
+
+/*
+    ///
+    Media Queries
+    ///
+*/
+
+/* iPhone 6+*/
+@media (max-width: 414px) {
+    /*
+        Home
+    */
+    #homeBody {
+        background-size: 736px 770px;
+        background-clip: border-box;
+    }
+
+    #homeBackgroundImage {
+        width: 100%;
+        height: 770px;
+        opacity: .93;
+    }
+
+    .homeTextField {
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+        height: 770px;
+    }
+    
+
+    .logo {
+        margin-left: 10px;
+        width: 100%;
+    }
+
+    .logo h1 {
+        font-size: 75px;
+    }
+
+    .logo strong {
+        font-size: 17px;
+    }
+
+    .linkAndDate {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .navBar {
+        padding: 0;
+    }
+
+    .navBar ul {
+        display: flex;
+        flex-direction: row;
+        flex-flow: wrap;
+        justify-content: space-around;
+        padding: 0;
+        margin-top: 40px;
+    }
+
+    .navBar li {
+        width: 110px;
+    }
+
+    .festDate {
+        text-align: center;
+        margin-top: 40px;
+        padding: 0;
+    }
+
+    /*
+        _Layout and newsBody
+    */
+    .navbar-fixed-top {
+        height: 70px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar-fixed-top h1{
+        font-size: 30px;
+        margin-top: 3px;
+        margin-bottom: 0;
+    }
+
+    .navbar-fixed-top ul {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar-fixed-top li {
+        font-size: 15px;
+        height: 20px;
+    }
+
+    .navLoginLink {
+        font-size: 12px;
+        left: 85%;
+    }
+
+    #pageHeading {
+        margin-top: 90px;
+    }
+
+    #pageHeading h1 {
+        font-size: 40px;
+    }
+
+    #pageHeading img {
+        height: 40px;
+        width: 50px;
+    }
+
+    #leftEye {
+        top: 12%;
+        left: 2%;
+    }
+
+    #rightEye {
+        top:12%;
+        right: 2%;
+    }
+
+    .pageContent {
+        margin-top: 40%;
+        margin-left: 10.2%;
+        width: 79%;
+        padding-top: 10px;
+    }
+
+    .newsBody {
+        margin: 0;
+    }
+
+    .newsBody h2 {
+        margin-top: 5px;
+    }
+
+    .newsBody h2 strong{
+        font-size: 30px;
+    }
+
+    /*
+        newsIndex
+    */
+    .newsPreviewImage img {
+        max-width: 100%;
+    }
+
+    .newsPreviewCell {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .newsPreviewDateAndAuthor span {
+        margin-left: 0;
+    }
+
+    .newsPreviewDateAndAuthor h4 {
+        margin-left: 0;
+    }
+
+    .newsPreviewCell p {
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+    }
+
+    .newsPreviewCell .socialMediaBar {
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+    }
+
+    /*
+        Showtimes
+    */
+    .showtimesAndReservationsContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .newsShowtimesTheatre {
+        margin-left: 0;
+    }
+
+    .newsShowtimesTimes {
+        margin-left: 0;
+    }
+
+    .newsSeatReservation {
+        margin-left: 0;
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    #holder {
+        width: 100%;
+    }
+
+    /*
+        Login
+    */
+    #loginForm {
+        font-size: 20px;
+    }
+
+    #loginHeaders h4{
+        font-size: 20px;
+    }
+
+    #loginImg {
+        display: none;
+    }
 }

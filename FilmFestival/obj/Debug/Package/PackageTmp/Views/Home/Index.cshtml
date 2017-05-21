@@ -1,10 +1,15 @@
-﻿<div class="homeContent">
+﻿@{
+    Layout = "~/Views/Shared/_homeLayout.cshtml";
+    ViewBag.Title = "Home";
+}
+
+<div class="homeContent">
     <div>
         <img id="homeBackgroundImage" src="https://ak8.picdn.net/shutterstock/videos/160342/thumb/1.jpg" />
     </div>
 
     <div class="homeTextField">
-        <span id="homeLogin"><a href="">[ Login ]</a></span>
+        <span id="homeLogin"><a href="~/Account/Login">[ Login ]</a></span>
         <div class="logo">
             <h1>FANTASTIC FEST</h1>
             <span><strong>"The world's greatest genre film festival!"</strong></span>
@@ -12,13 +17,12 @@
         <div class="linkAndDate row">
             <div class="navBar col-md-3">
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Tickets</a></li>
-                    <li><a href="">Films</a></li>
-                    <li><a href="">News</a></li>
-                    <li><a href="">Submit</a></li>
-                    <li><a href="">Travel</a></li>
+                    <li><a href="~/Home/About">About</a></li>
+                    <li><a href="~/Attend">Badges</a></li>
+                    <li><a href="~/Film">Films</a></li>
+                    <li><a href="~/News">News</a></li>
+                    <li><a href="~/Home/Submit">Submit</a></li>
+                    <li><a href="~/Travel">Travel</a></li>
                 </ul>
             </div>
             <div class="festDate col-md-9">
@@ -32,11 +36,6 @@
             <span>1120 S Lamar Blvd | | </span>
             <span>Austin, TX 78704</span>
         </div>   
-    </div>
-
-    <div class="homeImageField">
-        <img height="795px" width="1425px" 
-             src="http://intuitiveconsumer.com/blog/wp-content/uploads/2014/04/movie-theater-sudience.jpg" />
     </div>
 </div>
 

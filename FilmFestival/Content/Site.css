@@ -72,7 +72,8 @@ a {
 
 .navLoginLink {
     position: absolute;
-    left: 93.8%;
+    text-align: right;
+    right: 1%;
     top: 3px;
 }
 

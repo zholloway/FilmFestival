@@ -11,6 +11,7 @@ namespace FilmFestival.Controllers
     public class FilmController : Controller
     {
         static ApplicationDbContext db = new ApplicationDbContext();
+        
         FilmServices filmServices = new FilmServices(db);
 
         public ActionResult Index()
@@ -20,7 +21,7 @@ namespace FilmFestival.Controllers
 
         public ActionResult Info(int filmID)
         {
-            return View(db.Films.First(f => f.ID == filmID));
+            return View(filmServices.GetIndividualFilm(filmID));
         }
     }
 }

@@ -36,5 +36,24 @@ namespace FilmFestival.Services
 
             return returnList;
         }
+
+        public FilmInfo GetIndividualFilm(int filmID)
+        {
+            var film = DB.Films.First(f => f.ID == filmID);
+
+            var returnFilm = new FilmInfo {
+                BriefSummary = film.BriefSummary,
+                Country = film.Country,
+                Director = film.Director,
+                FullDescription = film.FullDescription,
+                ID = film.ID,
+                InfoImgPath = film.InfoImgPath,
+                Runtime = film.Runtime,
+                Title = film.Title,
+                YearReleased = film.YearReleased
+            };
+
+            return returnFilm;
+        }
     }
 }

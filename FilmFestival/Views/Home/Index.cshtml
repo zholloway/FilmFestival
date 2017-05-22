@@ -1,4 +1,5 @@
-﻿@{
+﻿@using Microsoft.AspNet.Identity
+@{
     Layout = "~/Views/Shared/_homeLayout.cshtml";
     ViewBag.Title = "Home";
 }
@@ -9,7 +10,23 @@
     </div>
 
     <div class="homeTextField">
-        <span id="homeLogin"><a href="~/Account/Login">[ Login ]</a></span>
+        <span id="homeLogin">
+            @if (User.Identity.IsAuthenticated)
+            {
+                if (User.IsInRole("user"))
+                {
+                    <a href="~/Account/UserDashboard/@User.Identity.GetUserId()">@User.Identity.GetUserName()</a>
+                }
+                else
+                {
+                    <a href="~/Account/AdminDashboard">@User.Identity.GetUserName()</a>
+                }
+            }
+            else
+            {
+                <a href="~/Account/Login">[ Login ]</a>
+            }
+        </span>
         <div class="logo">
             <h1>FANTASTIC FEST</h1>
             <span><strong>"The world's greatest genre film festival!"</strong></span>

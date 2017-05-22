@@ -3,20 +3,16 @@
     ViewBag.Title = "Films";
 }
 
-@Html.Partial("_pageHeading")
-
-<div class="pageContent">
-    <div id="filmList">
-        @foreach (var film in Model)
-        {
-            <div class="filmCell">
-                <img src="@film.PreviewImgPath" />
-                <h2><a href="/Film/Info?@film.ID"><strong>@film.Title</strong></a></h2>
-                <span>Dir. - @film.Director</span>
-            </div>
-        }       
-    </div>
-
-    @Html.Partial("_pageList")
+<div id="filmList">
+    @foreach (var film in Model)
+    {
+        <div class="filmCell">
+            <img src="@film.PreviewImgPath" />
+            <h2><a href="/Film/Info?@film.ID"><strong>@film.Title</strong></a></h2>
+            <span>Dir. - @film.Director</span>
+        </div>
+    }       
 </div>
+
+@Html.Partial("_pageList")
 

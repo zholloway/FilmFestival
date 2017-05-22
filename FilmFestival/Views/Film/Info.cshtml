@@ -3,106 +3,102 @@
     ViewBag.Title = "Films";
 }
 
-@Html.Partial("_pageHeading")
+<div class="newsBody">
+    <div class="newsImage">
+        <img src="@Model.InfoImgPath" />
+    </div>
 
-<div class="pageContent">
-    <div class="newsBody">
-        <div class="newsImage">
-            <img src="@Model.InfoImgPath" />
-        </div>
+    <h2 class="newsFilmTitle"><strong>@Model.Title</strong></h2>
+    <div class="filmDetails">
+        <span><strong>@Model.YearReleased || DIR. - @Model.Director || @Model.Country || @Model.Runtime MIN.</strong></span>
+    </div>      
 
-        <h2 class="newsFilmTitle"><strong>@Model.Title</strong></h2>
-        <div class="filmDetails">
-            <span><strong>@Model.YearReleased || DIR. - @Model.Director || @Model.Country || @Model.Runtime MIN.</strong></span>
-        </div>      
+    @Html.Partial("_socialMediaBar")
 
-        @Html.Partial("_socialMediaBar")
+    <div class="newsParagraph">
+        <h3>Brief Summary</h3>
+        <p>
+            @Model.BriefSummary
+        </p>
 
-        <div class="newsParagraph">
-            <h3>Brief Summary</h3>
-            <p>
-                @Model.BriefSummary
-            </p>
-
-            <h3>Full Description</h3>
-            @Model.FullDescription
-        </div>
+        <h3>Full Description</h3>
+        @Model.FullDescription
+    </div>
         
-        <h3 id="newsShowtimesHeader">Showtimes</h3>
-        <div class="showtimesAndReservationsContainer">
-            <div class="newsShowtimesContainer">
-                <div class="newsShowtimesDate">
-                    <span><strong>Wednesday, September 27<sup>th</sup></strong></span>
+    <h3 id="newsShowtimesHeader">Showtimes</h3>
+    <div class="showtimesAndReservationsContainer">
+        <div class="newsShowtimesContainer">
+            <div class="newsShowtimesDate">
+                <span><strong>Wednesday, September 27<sup>th</sup></strong></span>
+            </div>
+            <div class="newsWednesdayShowings">
+                <div class="newsShowtimesTheatre">
+                    <span>Alamo Drafthouse South Lamar</span>
                 </div>
-                <div class="newsWednesdayShowings">
-                    <div class="newsShowtimesTheatre">
-                        <span>Alamo Drafthouse South Lamar</span>
-                    </div>
-                    <div class="newsShowtimesTimes">
-                        <a href=""><span>8:00,</span></a>
-                        <a href=""><span>9:30,</span></a>
-                        <a href=""><span>11:00,</span></a>
-                        <a href=""><span>1:45,</span></a>
-                        <a href=""><span>3:30</span></a>
-                    </div>
-
-                    <div class="newsShowtimesTheatre">
-                        <span>Alamo Drafthouse East Central</span>
-                    </div>
-                    <div class="newsShowtimesTimes">
-                        <a href=""><span>8:00,</span></a>
-                        <a href=""><span>9:30,</span></a>
-                        <a href=""><span>11:00,</span></a>
-                        <a href=""><span>1:45,</span></a>
-                        <a href=""><span>3:30</span></a>
-                    </div>
+                <div class="newsShowtimesTimes">
+                    <a href=""><span>8:00,</span></a>
+                    <a href=""><span>9:30,</span></a>
+                    <a href=""><span>11:00,</span></a>
+                    <a href=""><span>1:45,</span></a>
+                    <a href=""><span>3:30</span></a>
                 </div>
 
-                <div class="newsShowtimesDate">
-                    <span><strong>Thursday, September 28<sup>th</sup></strong></span>
+                <div class="newsShowtimesTheatre">
+                    <span>Alamo Drafthouse East Central</span>
                 </div>
-                <div class="newsThursdayShowings">
-                    <div class="newsShowtimesTheatre">
-                        <span>Alamo Drafthouse South Lamar</span>
-                    </div>
-                    <div class="newsShowtimesTimes">
-                        <a href=""><span>8:00,</span></a>
-                        <a href=""><span>9:30,</span></a>
-                        <a href=""><span>11:00,</span></a>
-                        <a href=""><span>1:45,</span></a>
-                        <a href=""><span>3:30</span></a>
-                    </div>
-                    <div class="newsShowtimesTheatre">
-                        <span>Alamo Drafthouse East Central</span>
-                    </div>
-                    <div class="newsShowtimesTimes">
-                        <a href=""><span>8:00,</span></a>
-                        <a href=""><span>9:30,</span></a>
-                        <a href=""><span>11:00,</span></a>
-                        <a href=""><span>1:45,</span></a>
-                        <a href=""><span>3:30</span></a>
-                    </div>
+                <div class="newsShowtimesTimes">
+                    <a href=""><span>8:00,</span></a>
+                    <a href=""><span>9:30,</span></a>
+                    <a href=""><span>11:00,</span></a>
+                    <a href=""><span>1:45,</span></a>
+                    <a href=""><span>3:30</span></a>
                 </div>
             </div>
 
-            <div class="newsSeatReservation">
-                <span><strong>Click your desired seat for the selected showtime:</strong></span>
-                <div id="holder">
-                    <ul id="place">
-                        <li class="seat"></li>
-                    </ul>
+            <div class="newsShowtimesDate">
+                <span><strong>Thursday, September 28<sup>th</sup></strong></span>
+            </div>
+            <div class="newsThursdayShowings">
+                <div class="newsShowtimesTheatre">
+                    <span>Alamo Drafthouse South Lamar</span>
                 </div>
-                <div style="float:left;">
-                    <ul id="seatDescription">
-                        <li style="background:url('/Content/Images/cinemaChairGreen.jpg') no-repeat scroll 0 0 transparent;">Available Seat</li>
-                        <li style="background:url('/Content/Images/cinemaChairRed.jpg') no-repeat scroll 0 0 transparent;">Booked Seat</li>
-                        <li style="background:url('/Content/Images/cinemaChairBlue.jpg') no-repeat scroll 0 0 transparent;">Selected Seat</li>
-                    </ul>
+                <div class="newsShowtimesTimes">
+                    <a href=""><span>8:00,</span></a>
+                    <a href=""><span>9:30,</span></a>
+                    <a href=""><span>11:00,</span></a>
+                    <a href=""><span>1:45,</span></a>
+                    <a href=""><span>3:30</span></a>
                 </div>
-                <div style="clear:both;width:100%">
-                    <input type="button" id="btnShowNew" value="Show Selected Seats" />
-                    <input type="button" id="btnShow" value="Show All" />
+                <div class="newsShowtimesTheatre">
+                    <span>Alamo Drafthouse East Central</span>
                 </div>
+                <div class="newsShowtimesTimes">
+                    <a href=""><span>8:00,</span></a>
+                    <a href=""><span>9:30,</span></a>
+                    <a href=""><span>11:00,</span></a>
+                    <a href=""><span>1:45,</span></a>
+                    <a href=""><span>3:30</span></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="newsSeatReservation">
+            <span><strong>Click your desired seat for the selected showtime:</strong></span>
+            <div id="holder">
+                <ul id="place">
+                    <li class="seat"></li>
+                </ul>
+            </div>
+            <div style="float:left;">
+                <ul id="seatDescription">
+                    <li style="background:url('/Content/Images/cinemaChairGreen.jpg') no-repeat scroll 0 0 transparent;">Available Seat</li>
+                    <li style="background:url('/Content/Images/cinemaChairRed.jpg') no-repeat scroll 0 0 transparent;">Booked Seat</li>
+                    <li style="background:url('/Content/Images/cinemaChairBlue.jpg') no-repeat scroll 0 0 transparent;">Selected Seat</li>
+                </ul>
+            </div>
+            <div style="clear:both;width:100%">
+                <input type="button" id="btnShowNew" value="Show Selected Seats" />
+                <input type="button" id="btnShow" value="Show All" />
             </div>
         </div>
     </div>

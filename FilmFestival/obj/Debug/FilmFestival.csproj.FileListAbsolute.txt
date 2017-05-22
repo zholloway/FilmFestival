@@ -104,3 +104,4 @@ C:\Users\Zack Holloway\Documents\Visual Studio 2017\Projects\FilmFestival\FilmFe
 C:\Users\Zack Holloway\Documents\Visual Studio 2017\Projects\FilmFestival\FilmFestival\obj\Debug\FilmFestival.csproj.GenerateResource.Cache
 C:\Users\Zack Holloway\Documents\Visual Studio 2017\Projects\FilmFestival\FilmFestival\obj\Debug\FilmFestival.Migrations.NewsStorypreviewImgdeletedandBodytovarcharMAX.resources
 C:\Users\Zack Holloway\Documents\Visual Studio 2017\Projects\FilmFestival\FilmFestival\obj\Debug\FilmFestival.Migrations.newsStorybodysettonvarchar.resources
+C:\Users\Zack Holloway\Documents\Visual Studio 2017\Projects\FilmFestival\FilmFestival\obj\Debug\FilmFestival.Migrations.userandadminrolescreation.resources

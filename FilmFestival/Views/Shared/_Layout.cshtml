@@ -33,7 +33,12 @@
             </div>
         </div>     
 
-        @RenderBody()
+        @Html.Partial("_pageHeading")
+
+        <div class="pageContent">
+            @RenderBody()
+        </div>
+       
     </div> 
     
     <footer>

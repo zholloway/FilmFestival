@@ -403,6 +403,11 @@ namespace FilmFestival.Controllers
             return View();
         }
 
+        public ActionResult AdminDashboard()
+        {
+            return View();
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)

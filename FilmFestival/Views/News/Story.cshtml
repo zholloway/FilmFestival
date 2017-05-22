@@ -3,34 +3,29 @@
     ViewBag.Title = "News";
 }
 
-@Html.Partial("_pageHeading")
+<div class="newsBody">
+    <div class="newsImage">
+        <img src="@Model.StoryImgPath" />
+    </div>
 
-<div class="pageContent">
-
-    <div class="newsBody">
-        <div class="newsImage">
-            <img src="@Model.StoryImgPath" />
-        </div>
-
-        <div class="storyHeading">
-            <div id="dateAndAuthor">
-                <span>@Model.Date || @Model.Author</span>
-            </div>          
-            <h2><strong>@Model.Title</strong></h2>
-            <div id="subHeading">
-                <span class="subHeading">@Model.SubTitle</span>
-            </div>       
+    <div class="storyHeading">
+        <div id="dateAndAuthor">
+            <span>@Model.Date || @Model.Author</span>
+        </div>          
+        <h2><strong>@Model.Title</strong></h2>
+        <div id="subHeading">
+            <span class="subHeading">@Model.SubTitle</span>
         </div>       
+    </div>       
 
-        @Html.Partial("_socialMediaBar")
+    @Html.Partial("_socialMediaBar")
 
-        <div class="newsParagraph">
-            @Model.StoryBody
+    <div class="newsParagraph">
+        @Model.StoryBody
 
-            <hr />
+        <hr />
 
-            <h3>Comments</h3>
-            <span>Discus stuff here.</span>
-        </div>
+        <h3>Comments</h3>
+        <span>Discus stuff here.</span>
     </div>
 </div>

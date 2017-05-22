@@ -3,28 +3,24 @@
     ViewBag.Title = "News";
 }
 
-@Html.Partial("_pageHeading")
-
-<div class="pageContent">
-    <div class="newsPreviewContainer">
-        @foreach (var story in Model)
-        {
-            <div class="newsPreviewCell">
-            <div class="newsPreviewImage">
-                <img src="@story.StoryImgPath" />
-            </div>
-
-            <div class="newsPreviewDateAndAuthor">
-                <span>@story.Date || @story.Author</span>
-                <h4><a href="~/News/Story?@story.ID">@story.Title</a></h4>
-            </div>
-
-            <p>@story.SubTitle</p>
-
-            @Html.Partial("_socialMediaBar")
+<div class="newsPreviewContainer">
+    @foreach (var story in Model)
+    {
+        <div class="newsPreviewCell">
+        <div class="newsPreviewImage">
+            <img src="@story.StoryImgPath" />
         </div>
-        }
-    </div>
 
-    @Html.Partial("_pageList")
+        <div class="newsPreviewDateAndAuthor">
+            <span>@story.Date || @story.Author</span>
+            <h4><a href="~/News/Story?@story.ID">@story.Title</a></h4>
+        </div>
+
+        <p>@story.SubTitle</p>
+
+        @Html.Partial("_socialMediaBar")
+    </div>
+    }
 </div>
+
+@Html.Partial("_pageList")

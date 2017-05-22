@@ -2,6 +2,13 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "Dashboard";
 }
+
+<div class="col-md-offset-9">
+    <form method="POST" action="~/Account/LogOff">
+        @Html.AntiForgeryToken()
+        <input type="submit" value="Logout" />
+    </form>   
+</div>
    
 <div class="row">
     <div class="actionCell col-md-4">

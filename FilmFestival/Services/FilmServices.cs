@@ -31,7 +31,9 @@ namespace FilmFestival.Services
                     ID = film.ID,
                     PreviewImgPath = film.PreviewImgPath,
                     Title = film.Title
-                }; 
+                };
+
+                returnList.Add(returnFilm);
             }
 
             return returnList;

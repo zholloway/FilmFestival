@@ -1,4 +1,5 @@
 ﻿using FilmFestival.Models;
+using FilmFestival.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,16 +10,18 @@ namespace FilmFestival.Controllers
 {
     public class NewsController : Controller
     {
-        ApplicationDbContext db = new ApplicationDbContext();
+        static ApplicationDbContext db = new ApplicationDbContext();
+
+        NewsServices newsServices = new NewsServices(db);
 
         public ActionResult Index()
         {
-            return View(db.NewsStories);
+            return View(newsServices.GetAllNews());
         }
 
         public ActionResult Story(int storyID)
         {
-            return View(db.NewsStories.First(f => f.ID == storyID));
+            return View(newsServices.GetIndividualStory(storyID));
         }
     }
 }

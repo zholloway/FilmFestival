@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<FilmFestival.Models.View_Models.FilmIndex>
+@{
     ViewBag.Title = "Films";
 }
 
@@ -6,68 +7,14 @@
 
 <div class="pageContent">
     <div id="filmList">
-        <div class="filmCell">
-            <img src="https://fathersonholygore.files.wordpress.com/2015/10/the-thing-original-1.jpg"/>
-            <h2><a href="/Film/Info"><strong>The Thing</strong></a></h2>
-            <span>Dir. - John Carpenter</span>
-        </div>
-        <div class="filmCell">
-            <img src="https://www.wired.com/wp-content/uploads/2016/02/TheWitch.jpg" />
-            <h2><a href=""><strong>The Witch</strong></a></h2>
-            <span>Dir. - Robert Eggers</span>
-        </div>
-        <div class="filmCell">
-            <img src="http://geekandsundry.com/wp-content/uploads/2015/05/Ex-Machina-Download-Wallpapers.jpg" />
-            <h2><a href=""><strong>Ex Machina</strong></a></h2>
-            <span>Dir. - Alex Garland</span>
-        </div>
-        <div class="filmCell">
-            <img src="http://2016.miamifilmfestival.com/wp-content/uploads/sites/8/2016/01/the-lobster-6.jpg" />
-            <h2><a href=""><strong>The Lobster</strong></a></h2>
-            <span>Dir. - Yorgos Lanthimos</span>
-        </div>
-        <div class="filmCell">
-            <img src="https://suntimesmedia.files.wordpress.com/2016/06/swiss-army-man-_02_3681_rgb-e1467313839148.jpg?w=1200&h=630&crop=1" />
-            <h2><a href=""><strong>Swiss Army Man</strong></a></h2>
-            <span>Dir. - Daniel Kwan & Daniel Scheinert</span>
-            <span> </span>
-        </div>
-        <div class="filmCell">
-            <img src="http://dailygrindhouse.com/wp-content/uploads/2016/04/alien.jpg" />
-            <h2><a href=""><strong>Alien</strong></a></h2>
-            <span>Dir. - Ridley Scott</span>
-        </div>
-        <div class="filmCell">
-            <img src="https://fathersonholygore.files.wordpress.com/2015/10/the-thing-original-1.jpg" />
-            <h2><a href=""><strong>The Thing</strong></a></h2>
-            <span>Dir. - John Carpenter</span>
-        </div>
-        <div class="filmCell">
-            <img src="https://www.wired.com/wp-content/uploads/2016/02/TheWitch.jpg" />
-            <h2><a href=""><strong>The Witch</strong></a></h2>
-            <span>Dir. - Robert Eggers</span>
-        </div>
-        <div class="filmCell">
-            <img src="http://geekandsundry.com/wp-content/uploads/2015/05/Ex-Machina-Download-Wallpapers.jpg" />
-            <h2><a href=""><strong>Ex Machina</strong></a></h2>
-            <span>Dir. - Alex Garland</span>
-        </div>
-        <div class="filmCell">
-            <img src="http://2016.miamifilmfestival.com/wp-content/uploads/sites/8/2016/01/the-lobster-6.jpg" />
-            <h2><a href=""><strong>The Lobster</strong></a></h2>
-            <span>Dir. - Yorgos Lanthimos</span>
-        </div>
-        <div class="filmCell">
-            <img src="https://suntimesmedia.files.wordpress.com/2016/06/swiss-army-man-_02_3681_rgb-e1467313839148.jpg?w=1200&h=630&crop=1" />
-            <h2><a href=""><strong>Swiss Army Man</strong></a></h2>
-            <span>Dir. - Daniel Kwan & Daniel Scheinert</span>
-            <span> </span>
-        </div>
-        <div class="filmCell">
-            <img src="http://dailygrindhouse.com/wp-content/uploads/2016/04/alien.jpg" />
-            <h2><a href=""><strong>Alien</strong></a></h2>
-            <span>Dir. - Ridley Scott</span>
-        </div>
+        @foreach (var film in Model)
+        {
+            <div class="filmCell">
+                <img src="@film.PreviewImgPath" />
+                <h2><a href="/Film/Info?@film.ID"><strong>@film.Title</strong></a></h2>
+                <span>Dir. - @film.Director</span>
+            </div>
+        }       
     </div>
 
     @Html.Partial("_pageList")

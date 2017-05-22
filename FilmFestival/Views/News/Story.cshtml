@@ -1,4 +1,5 @@
-﻿@{
+﻿@model FilmFestival.Models.NewsStory
+@{
     ViewBag.Title = "News";
 }
 
@@ -8,68 +9,23 @@
 
     <div class="newsBody">
         <div class="newsImage">
-            <img src="http://s3.fantasticfest.com/_uploads/galleries/41754/colossal-hand__full.jpeg" />
+            <img src="@Model.StoryImgPath" />
         </div>
 
         <div class="storyHeading">
             <div id="dateAndAuthor">
-                <span>APRIL 17, 2017 || ADMIN</span>
+                <span>@Model.Date || @Model.Author</span>
             </div>          
-            <h2><strong>COLOSSAL And The Damage Done</strong></h2>
+            <h2><strong>@Model.Title</strong></h2>
             <div id="subHeading">
-                <span class="subHeading">Nacho Vigalondo’s latest is GASLIGHT with kaiju.</span>
+                <span class="subHeading">@Model.SubTitle</span>
             </div>       
         </div>       
 
         @Html.Partial("_socialMediaBar")
 
         <div class="newsParagraph">
-            <p>
-                COLOSSAL <span class="ital">is out now! <a href="~/Film/Info" class="storyLink">Get your tickets here!</a></span>
-            </p>
-            <p class="ital">Warning! <strong>Spoilers</strong> to follow:</p>
-            <p>
-                Damage is a universal expectation of the monster-movie genre. 
-                Whether Godzilla in Tokyo or Kong in New York, monsters in movies invariably rain destruction down on their cities of choice, flattening buildings and people alike. 
-                The death tolls and property losses number in the thousands and the billions.
-            </p>
-            <p>
-                There is much damage wrought in Nacho Vigalondo's COLOSSAL, but though its skyscraper-tall monsters do much of the wreaking, the damage that hits hardest doesn’t involve toppled office blocks, crashed helicopters, or crushed passers-by. 
-                The worst kind of damage, asserts COLOSSAL, is psychological: the kind that can’t be measured in dollars, and can only be wrought on one individual by another.
-            </p>
-            <p>
-                COLOSSAL's two lead characters, Gloria (Anne Hathaway) and Oscar (Jason Sudeikis), both follow predictable patterns of damaging others and themselves. 
-                Gloria, an alcoholic, alienates her boyfriend and ends up on the floor of her parents’ old house thanks to her addiction. 
-                Largely refusing to take responsibility, any moments of self-awareness are quickly subsumed by the comfortable “here we go again” embrace of the bottle. 
-                She’ll wake up in the morning, the previous night a drunken blur, instantly aware she probably fucked something up, waiting only to discover what it was.
-            </p>
-            <p>
-                It’s a pattern familiar to many, and Gloria’s discovery that she’s been controlling a giant monster over Seoul in her drunkenness only exacerbates it. It’s a simple metaphor, turning addiction into a literal monster, amplifying drunken fuckups into city-destroying calamity. “How did I make an idiot of myself this time?” turns into “How many people did I kill?” - a potent rock bottom if ever there was one. Or, at least, it seems like it, until Oscar’s own destructive behaviour begins to manifest.
-            </p>
-            <p>
-                The alarm bells start sounding faintly but early, when Oscar begins treating Gloria's monster troubles as fun and hilarious; like his online counterparts, he's abusing a genuine problem for the lulz, for the memes. But Oscar doesn’t stop with unthinking callousness; he goes further into conscious, directed cruelty. When Gloria ceases showing interest in him, he truly transforms, his inner rage manifesting in a whirlwind of petty, spiteful behaviours. He orders people around, drinks heavily, passive-aggressively threatens people, active-aggressively threatens people, and exploits Gloria’s alcoholism, all with the goal of getting her under his thumb. Scariest of all, when he discovers his own Korean giant alter ego, he uses it as a cudgel, a tool for threatening Gloria into submission. His threats of city-wide destruction echo many a threat of violence or self-harm in many a toxic relationship, and they’re ultimately what drive the film’s story. 
-            </p>
-            <p>
-                But just as dangerous as Oscar’s robot antics are his subtler toxic behaviours that go unremarked on. For half the movie, he's actually pretty charming, thanks in no small part to the affability of Jason Sudeikis. He seems genuinely supportive toward Gloria, helping her set up house, giving her a job, being a friend when she really needs one. To those who don't know what to look for, his heel turn might seem jarring, but Oscar's abusive tactics are seeded throughout the movie, almost from their first interactions. His unsolicited gifting of furniture, housewares and a television puts unspoken pressure on her to repay the kindness. It's never acknowledged, but he likely exploits Gloria's penchant for blackout drunkenness from early on, convincing her that she asked for a job but just didn't remember, and subtly inferring that she’s only good enough for him, his bar, and his town in the process. It also wouldn't surprise me if Oscar was, in fact, one of the “haters,” mentioned only in passing, from the comments sections on Gloria's articles. It’s truly terrifying seeing him transform Gloria from a free-spirited fuckup to a put-upon captive, taking orders from a simple glance.
-            </p>
-            <p>
-                Misogyny and sexism never appear in COLOSSAL's text but they’re written all over it in invisible ink; it’s pretty clear Oscar sees women as vehicles for his own fulfillment. To him, Gloria represents the life he could have led, had he ever thought bigger than himself and his own circumstances; she does not represent an actual human being. Hence, he acts as though he's entitled to Gloria - especially, he'd assert, after he's put in all this work to help her out. Hell, even Gloria’s boyfriend Tim’s (Dan Stevens) attempts to force rehabilitation on her play heavy-handed enough as to make her see it as bullying. There’s just no escaping the men in her life, it seems.
-            </p>
-            <p>
-                This stuff hurts to watch, largely because it’s so recognisable. None of us have monsters mirroring our movements, but many of us have encountered - or even been - monsters in human form. Vigalondo’s film presents toxic masculinity in all its rancid awfulness, but it’s not without empathy either. Gloria is right on the money when tells Oscar “you can’t stand that your life feels so small” - whether it’s his unfinished bar renovations, his failed relationships with women, or his stagnant direction in life, he’s constantly under the impression that people are out to impugn or undermine him. His persecution complex drives him to attack others’ weaknesses, like Gloria’s alcoholism or his friend Garth’s own history of substance abuse. So desperate is he to view anyone as lower than himself, it’s little wonder he revels in the power of his robot avatar.
-            </p>
-            <p>
-                Over the years, I’ve had a fair bit of contact with Nacho Vigalondo (#bias, #collusion, etc). He was as invested as I was in the GamerGate saga, and COLOSSAL is a perfect reflection of how much he cares about issues of abuse and misogyny, continuing a thread from his previous film OPEN WINDOWS. COLOSSAL's high-concept conceit exists purely to serve the relationship drama at its heart. You could take the monsters out and the story would still fundamentally work - but to do that would be to remove all the fun from its first half, and the catharsis from its second. The monster stuff exists for Oscar to have something to hold over Gloria - where stamping around in a playground becomes an act of petty revenge and devastating tragedy all at once - but it also ultimately grants Gloria her redemption, as she seizes ownership of her problems in a rousing, fist-pumping ending.
-            </p>
-            <p>
-                Any number of people would tell you COLOSSAL is about something different, whether booze, guilt, regret, or toxic masculinity. But maybe it’s simply about toxicity itself, in all its forms: how we exhibit it, and how we deal with it when we are made aware of it. Do we run from it, ignore it, double down, or face it? Gloria takes control of her monster. Could you?
-            </p>
-            <p class="ital">
-                <a href="~/Film/Info" class="storyLink">Get your Colossal tickets here!</a>
-            </p>
-            <p class="ital">
-                (Note: The post was written by Andrew Todd and originally appeared on <strong>Birth.Movies.Death</strong>.)
-            </p>
+            @Model.StoryBody
 
             <hr />
 

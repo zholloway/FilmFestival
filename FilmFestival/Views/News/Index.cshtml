@@ -7,19 +7,19 @@
     @foreach (var story in Model)
     {
         <div class="newsPreviewCell">
-        <div class="newsPreviewImage">
-            <img src="@story.StoryImgPath" />
+            <div class="newsPreviewImage">
+                <img src="@story.StoryImgPath" />
+            </div>
+
+            <div class="newsPreviewDateAndAuthor">
+                <span>@story.Date.ToShortDateString() || @story.Author</span>
+                <h4><a href="~/News/Story?storyID=@story.ID">@story.Title</a></h4>
+            </div>
+
+            <p>@story.SubTitle</p>
+
+            @Html.Partial("_socialMediaBar")
         </div>
-
-        <div class="newsPreviewDateAndAuthor">
-            <span>@story.Date || @story.Author</span>
-            <h4><a href="~/News/Story?@story.ID">@story.Title</a></h4>
-        </div>
-
-        <p>@story.SubTitle</p>
-
-        @Html.Partial("_socialMediaBar")
-    </div>
     }
 </div>
 

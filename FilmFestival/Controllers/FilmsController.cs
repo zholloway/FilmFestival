@@ -11,121 +11,121 @@ using FilmFestival.Services;
 
 namespace FilmFestival.Controllers
 {
-    public class NewsController : Controller
+    public class FilmsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
         static ApplicationDbContext DB = new ApplicationDbContext();
 
-        NewsServices newsServices = new NewsServices(DB);
+        FilmServices filmServices = new FilmServices(DB);
 
-        // GET: News
+        // GET: Films
         public ActionResult Index()
         {
-            return View(newsServices.GetAllNews());
+            return View(filmServices.GetAllFilms());
         }
 
-        public ActionResult Story(int storyID)
+        public ActionResult Info(int filmID)
         {
-            return View(newsServices.GetIndividualStory(storyID));
+            return View(filmServices.GetIndividualFilm(filmID));
         }
 
-        public ActionResult NewsList()
+        public ActionResult FilmList()
         {
-            return View(db.NewsStories);
+            return View(db.Films.ToList());
         }
 
-        // GET: News/Details/5
+        // GET: Films/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            NewsStory newsStory = db.NewsStories.Find(id);
-            if (newsStory == null)
+            Film film = db.Films.Find(id);
+            if (film == null)
             {
                 return HttpNotFound();
             }
-            return View(newsStory);
+            return View(film);
         }
 
-        // GET: News/Create
+        // GET: Films/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: News/Create
+        // POST: Films/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Title,SubTitle,Author,Date,StoryImgPath,StoryBody")] NewsStory newsStory)
+        public ActionResult Create([Bind(Include = "ID,Title,Director,PreviewImgPath,InfoImgPath,YearReleased,Country,Runtime,BriefSummary,FullDescription")] Film film)
         {
             if (ModelState.IsValid)
             {
-                db.NewsStories.Add(newsStory);
+                db.Films.Add(film);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(newsStory);
+            return View(film);
         }
 
-        // GET: News/Edit/5
+        // GET: Films/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            NewsStory newsStory = db.NewsStories.Find(id);
-            if (newsStory == null)
+            Film film = db.Films.Find(id);
+            if (film == null)
             {
                 return HttpNotFound();
             }
-            return View(newsStory);
+            return View(film);
         }
 
-        // POST: News/Edit/5
+        // POST: Films/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Title,SubTitle,Author,Date,StoryImgPath,StoryBody")] NewsStory newsStory)
+        public ActionResult Edit([Bind(Include = "ID,Title,Director,PreviewImgPath,InfoImgPath,YearReleased,Country,Runtime,BriefSummary,FullDescription")] Film film)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(newsStory).State = EntityState.Modified;
+                db.Entry(film).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(newsStory);
+            return View(film);
         }
 
-        // GET: News/Delete/5
+        // GET: Films/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            NewsStory newsStory = db.NewsStories.Find(id);
-            if (newsStory == null)
+            Film film = db.Films.Find(id);
+            if (film == null)
             {
                 return HttpNotFound();
             }
-            return View(newsStory);
+            return View(film);
         }
 
-        // POST: News/Delete/5
+        // POST: Films/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            NewsStory newsStory = db.NewsStories.Find(id);
-            db.NewsStories.Remove(newsStory);
+            Film film = db.Films.Find(id);
+            db.Films.Remove(film);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

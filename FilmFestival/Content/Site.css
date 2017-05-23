@@ -720,7 +720,8 @@ z-index: 2;
 .newsPreviewImage img {
     border: 3px solid black;
     border-radius: 5px;
-    max-width: 84%;
+    height: 300px;
+    width: 84%;
 }
 
 .newsPreviewDateAndAuthor {

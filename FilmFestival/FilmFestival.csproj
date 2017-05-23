@@ -200,7 +200,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AttendController.cs" />
-    <Compile Include="Controllers\FilmController.cs" />
+    <Compile Include="Controllers\FilmsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HotelsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -317,9 +317,9 @@
     <Content Include="Views\Shared\_socialMediaBar.cshtml" />
     <Content Include="Views\Travel\Index.cshtml" />
     <Content Include="Views\Shared\_pageHeading.cshtml" />
-    <Content Include="Views\Film\Index.cshtml" />
-    <Content Include="Views\Film\Info.cshtml" />
-    <Content Include="Views\News\Index.cshtml" />
+    <Content Include="Views\Films\Index.cshtml" />
+    <Content Include="Views\Films\Info.cshtml" />
+    <Content Include="Views\News\NewsList.cshtml" />
     <Content Include="Views\News\Story.cshtml" />
     <Content Include="Views\Home\Submit.cshtml" />
     <Content Include="Views\Shared\_pageList.cshtml" />
@@ -330,6 +330,16 @@
     <Content Include="Views\Hotels\Details.cshtml" />
     <Content Include="Views\Hotels\Edit.cshtml" />
     <Content Include="Views\Hotels\Index.cshtml" />
+    <Content Include="Views\News\Create.cshtml" />
+    <Content Include="Views\News\Delete.cshtml" />
+    <Content Include="Views\News\Details.cshtml" />
+    <Content Include="Views\News\Edit.cshtml" />
+    <Content Include="Views\News\Index.cshtml" />
+    <Content Include="Views\Films\Create.cshtml" />
+    <Content Include="Views\Films\Delete.cshtml" />
+    <Content Include="Views\Films\Details.cshtml" />
+    <Content Include="Views\Films\Edit.cshtml" />
+    <Content Include="Views\Films\FilmList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

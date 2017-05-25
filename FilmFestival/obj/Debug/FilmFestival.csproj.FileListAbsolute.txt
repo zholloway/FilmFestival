@@ -105,3 +105,6 @@ C:\Users\Zack Holloway\Documents\Visual Studio 2017\Projects\FilmFestival\FilmFe
 C:\Users\Zack Holloway\Documents\Visual Studio 2017\Projects\FilmFestival\FilmFestival\obj\Debug\FilmFestival.Migrations.NewsStorypreviewImgdeletedandBodytovarcharMAX.resources
 C:\Users\Zack Holloway\Documents\Visual Studio 2017\Projects\FilmFestival\FilmFestival\obj\Debug\FilmFestival.Migrations.newsStorybodysettonvarchar.resources
 C:\Users\Zack Holloway\Documents\Visual Studio 2017\Projects\FilmFestival\FilmFestival\obj\Debug\FilmFestival.Migrations.userandadminrolescreation.resources
+C:\Users\Zack Holloway\Documents\Visual Studio 2017\Projects\FilmFestival\FilmFestival\obj\Debug\FilmFestival.Migrations.allowHtmlforfilmsandnews.resources
+C:\Users\Zack Holloway\Documents\Visual Studio 2017\Projects\FilmFestival\FilmFestival\obj\Debug\FilmFestival.Migrations.Seattablecreation.resources
+C:\Users\Zack Holloway\Documents\Visual Studio 2017\Projects\FilmFestival\FilmFestival\obj\Debug\FilmFestival.Migrations.seatstoicollection.resources

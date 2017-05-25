@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace FilmFestival.Models
 {
@@ -23,8 +24,10 @@ namespace FilmFestival.Models
 
         public int Runtime { get; set; }
 
+        [AllowHtml]
         public string BriefSummary { get; set; }
 
+        [AllowHtml]
         public string FullDescription { get; set; }
 
         public ICollection<Showtime> Showtimes { get; set; }

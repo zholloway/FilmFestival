@@ -9,13 +9,7 @@ namespace FilmFestival.Services
 {
     public class FilmServices
     {
-        public ApplicationDbContext DB { get; set; }
-
-        //FilmServices constructor to establish database connection
-        public FilmServices(ApplicationDbContext db)
-        {
-            DB = db;
-        }
+        public ApplicationDbContext DB { get; } = new ApplicationDbContext();
 
         //get all films
         public List<FilmIndex> GetAllFilms()

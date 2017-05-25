@@ -34,5 +34,6 @@ namespace FilmFestival.Models
         public DbSet<NewsStory> NewsStories { get; set; }
         public DbSet<Film> Films { get; set; }
         public DbSet<Showtime> Showtimes { get; set; }
+        public DbSet<Seat> Seats { get; set; }
     }
 }

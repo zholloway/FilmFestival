@@ -63,6 +63,20 @@ namespace FilmFestival.Migrations
                 userManager.Create(user, password);
                 userManager.AddToRole(user.Id, adminRole);
             }
+
+            //create default user for site
+            var defaultUser = "user@fantasticfest.com";
+            var userPassword = "password";
+
+            if (!context.Users.Any(a => a.UserName == defaultUser))
+            {
+                var userStore = new UserStore<ApplicationUser>(context);
+                var userManager = new UserManager<ApplicationUser>(userStore);
+                var user = new ApplicationUser { UserName = defaultUser };
+
+                userManager.Create(user, userPassword);
+                userManager.AddToRole(user.Id, userRole);
+            }
         }
     }
 }

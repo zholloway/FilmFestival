@@ -17,12 +17,10 @@
 
     <div class="newsParagraph">
         <h3>Brief Summary</h3>
-        <p>
-            @Model.BriefSummary
-        </p>
+        @Html.Raw(Model.BriefSummary)
 
         <h3>Full Description</h3>
-        @Model.FullDescription
+        @Html.Raw(Model.FullDescription)
     </div>
         
     <h3 id="newsShowtimesHeader">Showtimes</h3>
@@ -84,21 +82,42 @@
 
         <div class="newsSeatReservation">
             <span><strong>Click your desired seat for the selected showtime:</strong></span>
-            <div id="holder">
-                <ul id="place">
-                    <li class="seat"></li>
-                </ul>
+            <div id="theatreFloorplan">
+                <form id="seatList" method="post" action="">
+                    <div class="seatRow">
+                        <div class="button1">
+                            <input type="radio" id="available1" name="available" value="available" />
+                            <label for="available1"><span class="availableSeat"></span></label>
+                        </div>  
+                        <div class="button2">
+                            <input type="radio" id="available2" name="available" value="available" />
+                            <label for="available2"><span class="availableSeat"></span></label>
+                        </div> 
+                        <div class="button3">
+                            <input type="radio" id="reserved3" name="available" value="available" />
+                            <label for="reserved3"><div class="reservedSeat"></div></label>
+                        </div> 
+                    </div>
+                </form>
             </div>
-            <div style="float:left;">
+            <script type="text/javascript">
+                $(function) {
+                    $('.availableSeat').click(function () {
+                        if ($(this).hasClass('availableSeat')) {
+                            $(this).addClass('selectedSeat').removeClass('availableSeat');
+                        }
+                        else {
+                            $(this).addClass('availableSeat').removeClass('selectedSeat');
+                        }
+                    });
+                }
+            </script>          
+            <div id="floorplanLegend">
                 <ul id="seatDescription">
-                    <li style="background:url('/Content/Images/cinemaChairGreen.jpg') no-repeat scroll 0 0 transparent;">Available Seat</li>
-                    <li style="background:url('/Content/Images/cinemaChairRed.jpg') no-repeat scroll 0 0 transparent;">Booked Seat</li>
-                    <li style="background:url('/Content/Images/cinemaChairBlue.jpg') no-repeat scroll 0 0 transparent;">Selected Seat</li>
+                    <li>Available Seat</li>
+                    <li>Booked Seat</li>
+                    <li>Selected Seat</li>
                 </ul>
-            </div>
-            <div style="clear:both;width:100%">
-                <input type="button" id="btnShowNew" value="Show Selected Seats" />
-                <input type="button" id="btnShow" value="Show All" />
             </div>
         </div>
     </div>

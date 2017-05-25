@@ -9,13 +9,7 @@ namespace FilmFestival.Services
 {
     public class NewsServices
     {
-        public ApplicationDbContext DB { get; set; }
-
-        //NewsServices constructor to establish database connection
-        public NewsServices(ApplicationDbContext db)
-        {
-            DB = db;
-        }
+        public ApplicationDbContext DB { get; } = new ApplicationDbContext();
 
         //get all news
         public List<NewsIndex> GetAllNews()

@@ -21,7 +21,7 @@
     @Html.Partial("_socialMediaBar")
 
     <div class="newsParagraph">
-        @Model.StoryBody
+        @Html.Raw(Model.StoryBody)
 
         <hr />
 

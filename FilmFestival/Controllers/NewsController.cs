@@ -15,9 +15,7 @@ namespace FilmFestival.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        static ApplicationDbContext DB = new ApplicationDbContext();
-
-        NewsServices newsServices = new NewsServices(DB);
+        NewsServices newsServices = new NewsServices();
 
         // GET: News
         public ActionResult Index()

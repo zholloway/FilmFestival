@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using FilmFestival.Models;
+using FilmFestival.Services;
 
 namespace FilmFestival.Controllers
 {
@@ -17,6 +18,7 @@ namespace FilmFestival.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        SeatServices seatServices = new SeatServices();
 
         public AccountController()
         {
@@ -406,6 +408,20 @@ namespace FilmFestival.Controllers
         public ActionResult AdminDashboard()
         {
             return View();
+        }
+
+        public ActionResult UserDashboard()
+        {
+            var userID = User.Identity.GetUserId();
+            return View(seatServices.GetSeatsForUser(userID));
+        }
+
+        [HttpPost]
+        public ActionResult SeatReserve(int seatID)
+        {
+            var userID = User.Identity.GetUserId();
+            seatServices.ReserveSeat(seatID, userID);
+            return RedirectToAction("UserDashboard");
         }
 
         protected override void Dispose(bool disposing)

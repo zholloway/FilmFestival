@@ -17,6 +17,8 @@ namespace FilmFestival.Models
             // Add custom user claims here
             return userIdentity;
         }
+
+        public ICollection<Seat> Seats { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>

@@ -1,0 +1,19 @@
+﻿@model IEnumerable<FilmFestival.Models.Seat>
+@{
+    ViewBag.Title = "Dashboard";
+}
+
+<div class="col-md-offset-9">
+    <form method="POST" action="~/Account/LogOff">
+        @Html.AntiForgeryToken()
+        <input type="submit" value="Logout" />
+    </form>
+</div>
+
+<ul>
+    @foreach (var seat in Model)
+    {
+        <li>@seat.Row@seat.SeatNumber</li>
+    }
+</ul>
+

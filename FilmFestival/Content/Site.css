@@ -701,6 +701,13 @@ label span{
     flex-direction: row;
 }
 
+#seatReserveButton {
+    border: 5px solid pink;
+    position: absolute;
+    bottom: -2px;
+    right: 402px;
+}
+
 /*
     ///
     Story 

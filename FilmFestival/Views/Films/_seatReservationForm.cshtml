@@ -8,12 +8,12 @@
             {
                 if (seat.Reserved == false)
                 {
-                    <input type="radio" id="available-@seat.ID" value="available" />
+                    <input type="radio" id="available-@seat.ID" name="seatID" value="@seat.ID" />
                     <label for="available-@seat.ID"><span class="availableSeat"></span></label>
                 }
                 else
                 {
-                    <input type="radio" id="reserved-@seat.ID" value="reserved" />
+                    <input type="radio" id="reserved-@seat.ID" name="seatID" value="@seat.ID" />
                     <label for="reserved-@seat.ID"><span class="reservedSeat"></span></label>
                 }
             }               
@@ -28,12 +28,12 @@
             {
                 if (seat.Reserved == false)
                 {
-                    <input type="radio" id="available-@seat.ID" value="available" />
+                    <input type="radio" id="available-@seat.ID" name="seatID" value="@seat.ID" />
                     <label for="available-@seat.ID"><span class="availableSeat"></span></label>
                 }
                 else
                 {
-                    <input type="radio" id="reserved-@seat.ID" value="reserved" />
+                    <input type="radio" id="reserved-@seat.ID" name="seatID" value="@seat.ID" />
                     <label for="reserved-@seat.ID"><span class="reservedSeat"></span></label>
                 }
             }
@@ -48,12 +48,12 @@
             {
                 if (seat.Reserved == false)
                 {
-                    <input type="radio" id="available-@seat.ID" value="available" />
+                    <input type="radio" id="available-@seat.ID" name="seatID" value="@seat.ID" />
                     <label for="available-@seat.ID"><span class="availableSeat"></span></label>
                 }
                 else
                 {
-                    <input type="radio" id="reserved-@seat.ID" value="reserved" />
+                    <input type="radio" id="reserved-@seat.ID" name="seatID" value="@seat.ID" />
                     <label for="reserved-@seat.ID"><span class="reservedSeat"></span></label>
                 }
             }
@@ -68,12 +68,12 @@
             {
                 if (seat.Reserved == false)
                 {
-                    <input type="radio" id="available-@seat.ID" value="available" />
+                    <input type="radio" id="available-@seat.ID" name="seatID" value="@seat.ID" />
                     <label for="available-@seat.ID"><span class="availableSeat"></span></label>
                 }
                 else
                 {
-                    <input type="radio" id="reserved-@seat.ID" value="reserved" />
+                    <input type="radio" id="reserved-@seat.ID" name="seatID" value="@seat.ID" />
                     <label for="reserved-@seat.ID"><span class="reservedSeat"></span></label>
                 }
             }
@@ -88,15 +88,16 @@
             {
                 if (seat.Reserved == false)
                 {
-                    <input type="radio" id="available-@seat.ID" value="available" />
+                    <input type="radio" id="available-@seat.ID" name="seatID" value="@seat.ID" />
                     <label for="available-@seat.ID"><span class="availableSeat"></span></label>
                 }
                 else
                 {
-                    <input type="radio" id="reserved-@seat.ID" value="reserved" />
+                    <input type="radio" id="reserved-@seat.ID" name="seatID" value="@seat.ID" />
                     <label for="reserved-@seat.ID"><span class="reservedSeat"></span></label>
                 }
             }
         </div>
     }
 </div>
+<input id="seatReserveButton" type="submit" value="Reserve" />

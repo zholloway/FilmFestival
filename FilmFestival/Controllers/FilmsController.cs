@@ -23,6 +23,7 @@ namespace FilmFestival.Controllers
             return View(filmServices.GetAllFilms());
         }
 
+        [HttpGet]
         public ActionResult Info(int filmID)
         {
             return View(filmServices.GetIndividualFilm(filmID));

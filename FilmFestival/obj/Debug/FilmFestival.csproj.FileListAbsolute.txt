@@ -111,3 +111,4 @@ C:\Users\Zack Holloway\Documents\Visual Studio 2017\Projects\FilmFestival\FilmFe
 C:\Users\Zack Holloway\Documents\Visual Studio 2017\Projects\FilmFestival\FilmFestival\obj\Debug\FilmFestival.Migrations.showtimeFK.resources
 C:\Users\Zack Holloway\Documents\Visual Studio 2017\Projects\FilmFestival\FilmFestival\obj\Debug\FilmFestival.Migrations.updateSeat.resources
 C:\Users\Zack Holloway\Documents\Visual Studio 2017\Projects\FilmFestival\FilmFestival\obj\Debug\FilmFestival.Migrations.addseatstousers.resources
+C:\Users\Zack Holloway\Documents\Visual Studio 2017\Projects\FilmFestival\FilmFestival\obj\Debug\FilmFestival.Migrations.seatsconnectionaddedtoApplicationUser.resources

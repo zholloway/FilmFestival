@@ -1,4 +1,5 @@
 ﻿@model FilmFestival.Models.View_Models.FilmInfo
+@using Microsoft.AspNet.Identity
 @{
     ViewBag.Title = "Films";
 }
@@ -81,7 +82,7 @@
             
             <span><strong>Choose your desired seat and click 'Reserve' below the theatre diagram.</strong></span>
             <div id="theatreFloorplan">
-                <form id="seatList" method="put" action="">
+                <form id="seatList" method="post" action="~/Account/SeatReserve">
                     <!-- _seatReservationForm will be rendered here using ajax -->
                 </form>
                 

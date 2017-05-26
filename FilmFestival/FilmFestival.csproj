@@ -205,6 +205,7 @@
     <Compile Include="Controllers\HotelsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
+    <Compile Include="Controllers\ShowtimesController.cs" />
     <Compile Include="Controllers\TravelController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -237,6 +238,18 @@
     <Compile Include="Migrations\201705250349013_seats to icollection.Designer.cs">
       <DependentUpon>201705250349013_seats to icollection.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705251425136_showtime FK.cs" />
+    <Compile Include="Migrations\201705251425136_showtime FK.Designer.cs">
+      <DependentUpon>201705251425136_showtime FK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705251853394_update Seat.cs" />
+    <Compile Include="Migrations\201705251853394_update Seat.Designer.cs">
+      <DependentUpon>201705251853394_update Seat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705251902540_add seats to users.cs" />
+    <Compile Include="Migrations\201705251902540_add seats to users.Designer.cs">
+      <DependentUpon>201705251902540_add seats to users.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Film.cs" />
@@ -256,9 +269,11 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="cinemaChairBlue.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\austinSkyline.jpeg" />
+    <Content Include="Content\Images\cinemaChairDarkGreen.jpg" />
     <Content Include="Content\Images\cinemaChairBlue.jpg" />
     <Content Include="Content\Images\cinemaChairRed.jpg" />
     <Content Include="Content\Images\cinemaChairGreen.jpg" />
@@ -464,6 +479,12 @@
     <Content Include="Views\Films\Details.cshtml" />
     <Content Include="Views\Films\Edit.cshtml" />
     <Content Include="Views\Films\FilmList.cshtml" />
+    <Content Include="Views\Showtimes\Create.cshtml" />
+    <Content Include="Views\Showtimes\Delete.cshtml" />
+    <Content Include="Views\Showtimes\Details.cshtml" />
+    <Content Include="Views\Showtimes\Edit.cshtml" />
+    <Content Include="Views\Showtimes\Index.cshtml" />
+    <Content Include="Views\Films\_seatReservationForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -505,6 +526,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705250349013_seats to icollection.resx">
       <DependentUpon>201705250349013_seats to icollection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705251425136_showtime FK.resx">
+      <DependentUpon>201705251425136_showtime FK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705251853394_update Seat.resx">
+      <DependentUpon>201705251853394_update Seat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705251902540_add seats to users.resx">
+      <DependentUpon>201705251902540_add seats to users.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

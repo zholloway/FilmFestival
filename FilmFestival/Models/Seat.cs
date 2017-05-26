@@ -21,8 +21,14 @@ namespace FilmFestival.Models
 
         public int ShowtimeID { get; set; }
 
+        public string UserID { get; set; }
+
         [ForeignKey("ShowtimeID")]
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public Showtime Showtime { get; set; }
+
+        [ForeignKey("UserID")]
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public ApplicationUser ApplicationUser { get; set; }
     }
 }

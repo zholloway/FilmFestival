@@ -81,6 +81,16 @@
             @Html.DisplayFor(model => model.FullDescription)
         </dd>
 
+        <dt>
+            @Html.DisplayFor(model => model.Showtimes)
+        </dt>
+
+        <dd>
+            @foreach (var showtime in Model.Showtimes)
+            {
+                <span>@showtime.Time</span>
+            }
+        </dd>
     </dl>
 </div>
 <p>

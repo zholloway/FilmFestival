@@ -35,7 +35,15 @@ namespace FilmFestival.Services
 
         public FilmInfo GetIndividualFilm(int filmID)
         {
-            var film = DB.Films.First(f => f.ID == filmID);
+            Film film = DB.Films.First(f => f.ID == filmID);
+
+            var showtimes = DB.Showtimes
+                .Where(showtime => showtime.FilmID == filmID)
+                .ToList();
+
+            var seatsForAllShowtimes = DB.Showtimes
+                .Where(showtime => showtime.FilmID == filmID)
+                .Select(s => s.Seats);
 
             var returnFilm = new FilmInfo {
                 BriefSummary = film.BriefSummary,
@@ -46,7 +54,8 @@ namespace FilmFestival.Services
                 InfoImgPath = film.InfoImgPath,
                 Runtime = film.Runtime,
                 Title = film.Title,
-                YearReleased = film.YearReleased
+                YearReleased = film.YearReleased,
+                Showtimes = showtimes,
             };
 
             return returnFilm;

@@ -24,5 +24,7 @@ namespace FilmFestival.Models.View_Models
         public string BriefSummary { get; set; }
 
         public string FullDescription { get; set; }
+
+        public List<Showtime> Showtimes { get; set; }
     }
 }

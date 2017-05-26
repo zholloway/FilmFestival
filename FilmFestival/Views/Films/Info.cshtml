@@ -24,6 +24,7 @@
     </div>
         
     <h3 id="newsShowtimesHeader">Showtimes</h3>
+    <p><strong>*Click a showtime to see available seats*</strong></p>
     <div class="showtimesAndReservationsContainer">
         <div class="newsShowtimesContainer">
             <div class="newsShowtimesDate">
@@ -34,22 +35,20 @@
                     <span>Alamo Drafthouse South Lamar</span>
                 </div>
                 <div class="newsShowtimesTimes">
-                    <a href=""><span>8:00,</span></a>
-                    <a href=""><span>9:30,</span></a>
-                    <a href=""><span>11:00,</span></a>
-                    <a href=""><span>1:45,</span></a>
-                    <a href=""><span>3:30</span></a>
+                    @foreach (var showtime in Model.Showtimes.Where(w => w.Date.ToShortDateString() == "9/27/2017").Where(w => w.Theatre == "Alamo Drafthouse South Lamar"))
+                    {
+                        <button id="@showtime.ID" class="showtimeButton" onclick="">@showtime.Time.ToShortTimeString()</button>
+                    }
                 </div>
 
                 <div class="newsShowtimesTheatre">
                     <span>Alamo Drafthouse East Central</span>
                 </div>
                 <div class="newsShowtimesTimes">
-                    <a href=""><span>8:00,</span></a>
-                    <a href=""><span>9:30,</span></a>
-                    <a href=""><span>11:00,</span></a>
-                    <a href=""><span>1:45,</span></a>
-                    <a href=""><span>3:30</span></a>
+                    @foreach (var showtime in Model.Showtimes.Where(w => w.Date.ToShortDateString() == "9/27/2017").Where(w => w.Theatre == "Alamo Drafthouse East Central"))
+                    {
+                        <button id="@showtime.ID" class="showtimeButton" onclick="">@showtime.Time.ToShortTimeString()</button>
+                    }    
                 </div>
             </div>
 
@@ -61,65 +60,82 @@
                     <span>Alamo Drafthouse South Lamar</span>
                 </div>
                 <div class="newsShowtimesTimes">
-                    <a href=""><span>8:00,</span></a>
-                    <a href=""><span>9:30,</span></a>
-                    <a href=""><span>11:00,</span></a>
-                    <a href=""><span>1:45,</span></a>
-                    <a href=""><span>3:30</span></a>
+                    @foreach (var showtime in Model.Showtimes.Where(w => w.Date.ToShortDateString() == "9/28/2017").Where(w => w.Theatre == "Alamo Drafthouse South Lamar"))
+                    {
+                        <button id="@showtime.ID" class="showtimeButton" onclick="">@showtime.Time.ToShortTimeString()</button>
+                    } 
                 </div>
                 <div class="newsShowtimesTheatre">
                     <span>Alamo Drafthouse East Central</span>
                 </div>
                 <div class="newsShowtimesTimes">
-                    <a href=""><span>8:00,</span></a>
-                    <a href=""><span>9:30,</span></a>
-                    <a href=""><span>11:00,</span></a>
-                    <a href=""><span>1:45,</span></a>
-                    <a href=""><span>3:30</span></a>
+                    @foreach (var showtime in Model.Showtimes.Where(w => w.Date.ToShortDateString() == "9/28/2017").Where(w => w.Theatre == "Alamo Drafthouse East Central"))
+                    {
+                        <button id="@showtime.ID" class="showtimeButton" onclick="">@showtime.Time.ToShortTimeString()</button>
+                    }    
                 </div>
             </div>
         </div>
 
         <div class="newsSeatReservation">
-            <span><strong>Click your desired seat for the selected showtime:</strong></span>
+            
+            <span><strong>Choose your desired seat and click 'Reserve' below the theatre diagram.</strong></span>
             <div id="theatreFloorplan">
-                <form id="seatList" method="post" action="">
-                    <div class="seatRow">
-                        <div class="button1">
-                            <input type="radio" id="available1" name="available" value="available" />
-                            <label for="available1"><span class="availableSeat"></span></label>
-                        </div>  
-                        <div class="button2">
-                            <input type="radio" id="available2" name="available" value="available" />
-                            <label for="available2"><span class="availableSeat"></span></label>
-                        </div> 
-                        <div class="button3">
-                            <input type="radio" id="reserved3" name="available" value="available" />
-                            <label for="reserved3"><div class="reservedSeat"></div></label>
-                        </div> 
-                    </div>
+                <form id="seatList" method="put" action="">
+                    <!-- _seatReservationForm will be rendered here using ajax -->
                 </form>
+                
+                <span id="filmScreen">FILM SCREEN</span>
             </div>
-            <script type="text/javascript">
-                $(function) {
-                    $('.availableSeat').click(function () {
-                        if ($(this).hasClass('availableSeat')) {
-                            $(this).addClass('selectedSeat').removeClass('availableSeat');
-                        }
-                        else {
-                            $(this).addClass('availableSeat').removeClass('selectedSeat');
-                        }
-                    });
-                }
-            </script>          
+               
             <div id="floorplanLegend">
                 <ul id="seatDescription">
-                    <li>Available Seat</li>
-                    <li>Booked Seat</li>
-                    <li>Selected Seat</li>
+                    <li><span class="availableSeat"></span> Available Seat</li>
+                    <li><span class="reservedSeat"></span> Reserved Seat</li>
+                    <li><span class="selected"></span> Selected Seat</li>
                 </ul>
-            </div>
+            </div>      
         </div>
     </div>
 </div>
 
+@section scripts{
+    <script type="text/javascript">
+        //changes selected available seat to blue chair 
+        let selectRadioButton = () => {
+            $('body').on('click', '.availableSeat', function () {
+                $(".availableSeat.selected").removeClass("selected");
+                $(this).addClass("selected");
+            });
+        }
+
+        //this function should never do anything because reserved buttons should be disabled
+        let selectReservedButton = () => {
+            $('body').on('click', '.reservedSeat', function () {
+                $(this).addClass("selected");
+            });
+        }
+
+        //disables reserves seat selection
+        document.getElementsByClassName("reservedSeat").disabled = true;
+
+        //clicking showtime button changes seatList to that showtimes seatList
+        let loadSeats = () => {
+            $('.showtimeButton').click(function () {
+                let showID = $(this).attr("id")
+                let ajaxUrl = "/Films/SeatReservationForm?showtimeID=" + showID
+                $.ajax({
+                    url: ajaxUrl
+                })
+                .done(function (partialViewResult) {
+                    $("#seatList").html(partialViewResult)
+                });
+            });
+        }
+
+        //run the functions
+        selectRadioButton();
+        selectReservedButton();
+        loadSeats();
+    </script>
+    }

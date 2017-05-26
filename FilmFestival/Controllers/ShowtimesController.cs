@@ -7,130 +7,115 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using FilmFestival.Models;
-using FilmFestival.Services;
 
 namespace FilmFestival.Controllers
 {
-    public class FilmsController : Controller
+    public class ShowtimesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        FilmServices filmServices = new FilmServices();
-
-        // GET: Films
+        // GET: Showtimes
         public ActionResult Index()
         {
-            return View(filmServices.GetAllFilms());
+            var showtimes = db.Showtimes.Include(s => s.Film);
+            return View(showtimes.ToList());
         }
 
-        public ActionResult Info(int filmID)
-        {
-            return View(filmServices.GetIndividualFilm(filmID));
-        }
-
-        public ActionResult SeatReservationForm(int showtimeID)
-        {
-            List<Seat> seats = db.Seats.Where(w => w.ShowtimeID == showtimeID).ToList();
-            return PartialView("_seatReservationForm", seats);
-        }
-
-        public ActionResult FilmList()
-        {
-            var filmList = db.Films.Include(i => i.Showtimes).ToList();
-            return View(filmList);
-        }
-
-        // GET: Films/Details/5
+        // GET: Showtimes/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Film film = db.Films.Include(i => i.Showtimes).First(f => f.ID == id);
-            if (film == null)
+            Showtime showtime = db.Showtimes.Include(i => i.Film).First(f => f.ID == id);
+            if (showtime == null)
             {
                 return HttpNotFound();
             }
-            return View(film);
+            return View(showtime);
         }
 
-        // GET: Films/Create
+        // GET: Showtimes/Create
         public ActionResult Create()
         {
+            ViewBag.FilmID = new SelectList(db.Films, "ID", "Title");
             return View();
         }
 
-        // POST: Films/Create
+        // POST: Showtimes/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Title,Director,PreviewImgPath,InfoImgPath,YearReleased,Country,Runtime,BriefSummary,FullDescription")] Film film)
+        public ActionResult Create([Bind(Include = "ID,Date,Time,Theatre,FilmID")] Showtime showtime)
         {
             if (ModelState.IsValid)
             {
-                db.Films.Add(film);
+                db.Showtimes.Add(showtime);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(film);
+            ViewBag.FilmID = new SelectList(db.Films, "ID", "Title", showtime.FilmID);
+            return View(showtime);
         }
 
-        // GET: Films/Edit/5
+        // GET: Showtimes/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Film film = db.Films.Find(id);
-            if (film == null)
+            Showtime showtime = db.Showtimes.Find(id);
+            if (showtime == null)
             {
                 return HttpNotFound();
             }
-            return View(film);
+            ViewBag.FilmID = new SelectList(db.Films, "ID", "Title", showtime.FilmID);
+            return View(showtime);
         }
 
-        // POST: Films/Edit/5
+        // POST: Showtimes/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Title,Director,PreviewImgPath,InfoImgPath,YearReleased,Country,Runtime,BriefSummary,FullDescription")] Film film)
+        public ActionResult Edit([Bind(Include = "ID,Date,Time,Theatre,FilmID")] Showtime showtime)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(film).State = EntityState.Modified;
+                db.Entry(showtime).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(film);
+            ViewBag.FilmID = new SelectList(db.Films, "ID", "Title", showtime.FilmID);
+            return View(showtime);
         }
 
-        // GET: Films/Delete/5
+        // GET: Showtimes/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Film film = db.Films.Find(id);
-            if (film == null)
+            Showtime showtime = db.Showtimes.Find(id);
+            if (showtime == null)
             {
                 return HttpNotFound();
             }
-            return View(film);
+            return View(showtime);
         }
 
-        // POST: Films/Delete/5
+        // POST: Showtimes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Film film = db.Films.Find(id);
-            db.Films.Remove(film);
+            Showtime showtime = db.Showtimes.Find(id);
+            db.Showtimes.Remove(showtime);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

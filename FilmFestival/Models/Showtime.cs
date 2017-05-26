@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -19,6 +20,9 @@ namespace FilmFestival.Models
         public ICollection<Seat> Seats { get; set; }
 
         public int FilmID { get; set; }
+
+        [ForeignKey("FilmID")]
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public Film Film { get; set; }
 
         public int AvailableSeats()

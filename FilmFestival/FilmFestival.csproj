@@ -205,6 +205,7 @@
     <Compile Include="Controllers\HotelsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
+    <Compile Include="Controllers\SeatsController.cs" />
     <Compile Include="Controllers\ShowtimesController.cs" />
     <Compile Include="Controllers\TravelController.cs" />
     <Compile Include="Global.asax.cs">
@@ -491,6 +492,7 @@
     <Content Include="Views\Showtimes\Index.cshtml" />
     <Content Include="Views\Films\_seatReservationForm.cshtml" />
     <Content Include="Views\Account\UserDashboard.cshtml" />
+    <Content Include="Views\Seats\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

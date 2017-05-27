@@ -29,5 +29,10 @@ namespace FilmFestival.Services
                            
             return seatList;
         }
+
+        public Seat GetIndividualSeat(int seatID)
+        {
+            return DB.Seats.First(seat => seat.ID == seatID);
+        }
     }
 }

@@ -10,6 +10,30 @@
 <div>
     <dl class="dl-horizontal">
         <dt>
+            Username
+        </dt>
+
+        <dd>
+            --username here--
+        </dd>
+
+        <dt>
+            Date
+        </dt>
+
+        <dd>
+            @Model.Showtime.Date.ToShortDateString()
+        </dd>
+
+        <dt>
+            Time
+        </dt>
+
+        <dd>
+            @Model.Showtime.Time.ToShortTimeString()
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.Showtime.Theatre)
         </dt>
 
@@ -35,5 +59,5 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Back to Dashboard", "Account/UserDashboard")
+    @Html.ActionLink("Back to Dashboard", "UserDashboard", "Account")
 </p>

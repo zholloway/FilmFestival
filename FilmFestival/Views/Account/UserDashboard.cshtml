@@ -47,8 +47,8 @@
                         @item.Showtime.Time.ToShortTimeString()
                     </td>
                     <td>
-                        @Html.ActionLink("Details", "Seats/Details", new { id = item.ID }) |
-                        @Html.ActionLink("Delete", "CancelSeatReservation", new { id = item.ID })
+                        @Html.ActionLink("Details", "Details", "Seats", new { seatID = item.ID }, null) |
+                        @Html.ActionLink("Delete", "CancelSeatReservation", "Seats", new { seatID = item.ID }, null)
                     </td>
                 </tr>
             }
@@ -81,8 +81,8 @@
                             @item.Showtime.Time.ToShortTimeString()
                         </td>
                         <td>
-                            @Html.ActionLink("Details", "Seats/Details", new { id = item.ID }) |
-                            @Html.ActionLink("Delete", "CancelSeatReservation", new { id = item.ID })
+                            @Html.ActionLink("Details", "Details", "Seats", new { seatID = item.ID }, null) |
+                            @Html.ActionLink("Delete", "CancelSeatReservation", "Seats", new { seatID = item.ID }, null)
                         </td>
                     </tr>
                 }

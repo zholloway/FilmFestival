@@ -32,7 +32,17 @@ namespace FilmFestival.Services
 
         public Seat GetIndividualSeat(int seatID)
         {
-            return DB.Seats.First(seat => seat.ID == seatID);
+            return DB.Seats.Include(i => i.Showtime).First(seat => seat.ID == seatID);
+        }
+
+        public Seat CancelSeatReservation(int seatID)
+        {
+            var seat = DB.Seats.First(f => f.ID == seatID);
+            seat.Reserved = false;
+            seat.UserID = null;
+            DB.SaveChanges();
+
+            return seat;
         }
     }
 }

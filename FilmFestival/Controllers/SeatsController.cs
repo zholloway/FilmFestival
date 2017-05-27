@@ -15,5 +15,11 @@ namespace FilmFestival.Controllers
         {
             return View(seatServices.GetIndividualSeat(seatID));
         }
+
+        public ActionResult CancelSeatReservation(int seatID)
+        {
+            var seat = seatServices.CancelSeatReservation(seatID);
+            return RedirectToAction("UserDashboard", "Account");
+        }
     }
 }

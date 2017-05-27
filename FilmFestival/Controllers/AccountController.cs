@@ -413,6 +413,7 @@ namespace FilmFestival.Controllers
         public ActionResult UserDashboard()
         {
             var userID = User.Identity.GetUserId();
+            var list = seatServices.GetSeatsForUser(userID);
             return View(seatServices.GetSeatsForUser(userID));
         }
 

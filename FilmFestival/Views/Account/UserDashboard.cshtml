@@ -10,10 +10,82 @@
     </form>
 </div>
 
-<ul>
-    @foreach (var seat in Model)
-    {
-        <li>@seat.Row@seat.SeatNumber</li>
-    }
-</ul>
+<p>
+    Welcome to your dashboard! Here you can see what film reservations you've made.
+</p>
+<p>
+    Clicking <strong>Details</strong> will take you to a page with your seat's QR code. 
+    Please show this to the attendant at the theatre door to make the check-in process faster for each movie. 
+</p>
+<p>
+    If you would like to cancel your reservation for a specific showtime, click <strong>Delete</strong>.
+</p>
+
+<h3>
+    Wednesday, September 27<sup>th</sup>
+</h3>
+    <table class="table">
+        <tr>
+            <th>
+                Film Title
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Showtime.Time)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            if (item.Showtime.Date.ToShortDateString() == "9/27/2017")
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Showtime.Film.Title)
+                    </td>
+                    <td>
+                        @item.Showtime.Time.ToShortTimeString()
+                    </td>
+                    <td>
+                        @Html.ActionLink("Details", "Showtimes/Details", new { id = item.ID }) |
+                        @Html.ActionLink("Delete", "CancelSeatReservation", new { id = item.ID })
+                    </td>
+                </tr>
+            }
+        }
+    </table>
+
+        <h3>
+            Thursday, September 28<sup>th</sup>
+        </h3>
+        <table class="table">
+            <tr>
+                <th>
+                    Film Title
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Showtime.Time)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                if (item.Showtime.Date.ToShortDateString() == "9/28/2017")
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Showtime.Film.Title)
+                        </td>
+                        <td>
+                            @item.Showtime.Time.ToShortTimeString()
+                        </td>
+                        <td>
+                            @Html.ActionLink("Details", "Showtimes/Details", new { id = item.ID }) |
+                            @Html.ActionLink("Delete", "CancelSeatReservation", new { id = item.ID })
+                        </td>
+                    </tr>
+                }
+            }
+    </table>
 

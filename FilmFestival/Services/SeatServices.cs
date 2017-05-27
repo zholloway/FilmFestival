@@ -21,7 +21,12 @@ namespace FilmFestival.Services
 
         public List<Seat> GetSeatsForUser(string userID)
         {
-            var seatList = DB.Seats.Where(w => w.UserID == userID).ToList();
+            var seatList = DB.Seats
+                .Include(i => i.Showtime)
+                .Include(i => i.Showtime.Film)
+                .Where(w => w.UserID == userID)
+                .ToList();
+                           
             return seatList;
         }
     }

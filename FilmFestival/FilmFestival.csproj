@@ -499,6 +499,8 @@
     <Content Include="Views\Films\_seatReservationForm.cshtml" />
     <Content Include="Views\Account\UserDashboard.cshtml" />
     <Content Include="Views\Seats\Details.cshtml" />
+    <Content Include="Views\Attend\Buy.cshtml" />
+    <Content Include="Views\Attend\Success.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

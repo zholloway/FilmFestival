@@ -12,8 +12,9 @@ namespace FilmFestival.Services
         {
             var sender = "fantasticfest2017@gmail.com";
             var recipient = "zholloway92@gmail.com";
-            var body = "You did it!";
             var subject = "Guess what?";
+            var body = "You did it!";
+            
 
             MailMessage accountEmail = new MailMessage(sender, recipient, subject, body);
 

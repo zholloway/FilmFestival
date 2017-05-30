@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Purchase Badge";
+}
+
+<p>
+    Please make a selection for which badge you would like to purchase. We will also need your email address to create your user account.
+</p>
+
+<form method="post" action="~/Attend/Success">
+    <input type="radio" name="badgeSelection" value="2nd Half Badge" />
+    <input type="radio" name="badgeSelection" value="Fan Badge" />
+    <input type="radio" name="badgeSelection" value="Superfan Badge" />
+    <input type="text" name="emailAddress" />
+    <input type="submit" onclick="pingAPIandRedirectToSuccessPageView" />
+</form>

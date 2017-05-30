@@ -12,5 +12,15 @@ namespace FilmFestival.Controllers
         {
             return View();
         }
+
+        public ActionResult Buy()
+        {
+            return View();
+        }
+
+        public ActionResult Success()
+        {
+            return View();
+        }
     }
 }

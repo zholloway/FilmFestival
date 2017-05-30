@@ -8,13 +8,14 @@ namespace FilmFestival.Services
 {
     public class EmailServices
     {
-        public void SendAccountEmail()
+        public void SendAccountEmail(int badgeID, string emailAddress)
         {
             var sender = "fantasticfest2017@gmail.com";
-            var recipient = "zholloway92@gmail.com";
-            var subject = "Guess what?";
-            var body = "You did it!";
-            
+            var recipient = emailAddress;
+            var subject = "FantasticFest2017 Purchase Confirmation";
+            var body = $"Thank you for purchasing a badge to Fantastic Fest 2017! " +
+                                    $"Your badge ID# is {badgeID}. " +
+                                    $"Use your email address and your badge ID# as your username and password, respectively.";
 
             MailMessage accountEmail = new MailMessage(sender, recipient, subject, body);
 

@@ -19,6 +19,7 @@ namespace FilmFestival.Models
         }
 
         public ICollection<Seat> Seats { get; set; }
+        public int BadgeID { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
@@ -38,5 +39,6 @@ namespace FilmFestival.Models
         public DbSet<Film> Films { get; set; }
         public DbSet<Showtime> Showtimes { get; set; }
         public DbSet<Seat> Seats { get; set; }
+        public DbSet<Badge> Badges { get; set; }
     }
 }

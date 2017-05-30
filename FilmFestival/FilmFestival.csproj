@@ -259,8 +259,13 @@
     <Compile Include="Migrations\201705261526368_seats connection added to ApplicationUser .Designer.cs">
       <DependentUpon>201705261526368_seats connection added to ApplicationUser .cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705301611178_badges table.cs" />
+    <Compile Include="Migrations\201705301611178_badges table.Designer.cs">
+      <DependentUpon>201705301611178_badges table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Badge.cs" />
     <Compile Include="Models\Film.cs" />
     <Compile Include="Models\Hotel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -274,10 +279,12 @@
     <Compile Include="Models\View_Models\NewsStory.cs" />
     <Compile Include="Models\View_Models\_pageList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\BadgeServices.cs" />
     <Compile Include="Services\EmailServices.cs" />
     <Compile Include="Services\FilmServices.cs" />
     <Compile Include="Services\NewsServices.cs" />
     <Compile Include="Services\SeatServices.cs" />
+    <Compile Include="Services\UserServices.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -554,6 +561,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705261526368_seats connection added to ApplicationUser .resx">
       <DependentUpon>201705261526368_seats connection added to ApplicationUser .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705301611178_badges table.resx">
+      <DependentUpon>201705301611178_badges table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -405,19 +405,6 @@ namespace FilmFestival.Controllers
             return View();
         }
 
-        //this is only for Login redirect url
-        public ActionResult Dashboard()
-        {
-            if (User.IsInRole("admin"))
-            {
-                return RedirectToAction("AdminDashboard");
-            }
-            else
-            {
-                return RedirectToAction("UserDashboard");
-            }
-        }
-
         public ActionResult AdminDashboard()
         {
             return View();

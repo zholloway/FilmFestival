@@ -589,7 +589,6 @@ z-index: 2;
 
 .newsShowtimesTimes {
     font-size: 20px;
-    border: 2px solid pink;
 }
 
 .newsShowtimesTimes a:hover {
@@ -672,7 +671,7 @@ z-index: 2;
     flex-direction: row;
 }
 
-input[type="radio"] {
+.filmInfoSelection input[type="radio"] {
     display: none;
 }
 

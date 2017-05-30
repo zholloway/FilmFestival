@@ -3,7 +3,7 @@
 <div id="seatRowA" class="seatRow">
     @foreach (var seat in Model)
     {
-        <div>
+        <div class="filmInfoSelection">
             @if (seat.Row == "E")
             {
                 if (seat.Reserved == false)
@@ -23,7 +23,7 @@
 <div id="seatRowB" class="seatRow">
     @foreach (var seat in Model)
     {
-        <div>
+        <div class="filmInfoSelection">
             @if (seat.Row == "D")
             {
                 if (seat.Reserved == false)
@@ -43,7 +43,7 @@
 <div id="seatRowC" class="seatRow">
     @foreach (var seat in Model)
     {
-        <div>
+        <div class="filmInfoSelection">
             @if (seat.Row == "C")
             {
                 if (seat.Reserved == false)
@@ -63,7 +63,7 @@
 <div id="seatRowD" class="seatRow">
     @foreach (var seat in Model)
     {
-        <div>
+        <div class="filmInfoSelection">
             @if (seat.Row == "B")
             {
                 if (seat.Reserved == false)
@@ -83,7 +83,7 @@
 <div id="seatRowE" class="seatRow">
     @foreach (var seat in Model)
     {
-        <div>
+        <div class="filmInfoSelection">
             @if (seat.Row == "A")
             {
                 if (seat.Reserved == false)

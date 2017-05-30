@@ -3,13 +3,14 @@
 }
 
 <p>
-    Please make a selection for which badge you would like to purchase. We will also need your email address to create your user account.
+    Please make a selection for which badge you would like to purchase. 
+    We will also need your email address to create your user account.
 </p>
 
 <form method="post" action="~/Attend/Success">
-    <input type="radio" name="badgeSelection" value="2nd Half Badge" />
-    <input type="radio" name="badgeSelection" value="Fan Badge" />
-    <input type="radio" name="badgeSelection" value="Superfan Badge" />
+    <input type="radio" name="badgeSelection" value="2nd Half Badge" /> 2<sup>nd</sup> Half Badge - $225.00 <br />
+    <input type="radio" name="badgeSelection" value="Fan Badge" /> Fan Badge - $425.00 <br />
+    <input type="radio" name="badgeSelection" value="Superfan Badge" /> Superfan Badge - $490.00 <br />
     <input type="text" name="emailAddress" />
-    <input type="submit" onclick="pingAPIandRedirectToSuccessPageView" />
+    <input type="submit" value="Purchase"/>
 </form>

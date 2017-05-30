@@ -4,7 +4,7 @@
     @foreach (var seat in Model)
     {
         <div>
-            @if (seat.Row == "A")
+            @if (seat.Row == "E")
             {
                 if (seat.Reserved == false)
                 {
@@ -13,7 +13,7 @@
                 }
                 else
                 {
-                    <input type="radio" id="reserved-@seat.ID" name="seatID" value="@seat.ID" />
+                    <input type="radio" id="reserved-@seat.ID" name="seatID" value="@seat.ID" disabled/>
                     <label for="reserved-@seat.ID"><span class="reservedSeat"></span></label>
                 }
             }               
@@ -24,7 +24,7 @@
     @foreach (var seat in Model)
     {
         <div>
-            @if (seat.Row == "B")
+            @if (seat.Row == "D")
             {
                 if (seat.Reserved == false)
                 {
@@ -33,7 +33,7 @@
                 }
                 else
                 {
-                    <input type="radio" id="reserved-@seat.ID" name="seatID" value="@seat.ID" />
+                    <input type="radio" id="reserved-@seat.ID" name="seatID" value="@seat.ID" disabled/>
                     <label for="reserved-@seat.ID"><span class="reservedSeat"></span></label>
                 }
             }
@@ -53,7 +53,7 @@
                 }
                 else
                 {
-                    <input type="radio" id="reserved-@seat.ID" name="seatID" value="@seat.ID" />
+                    <input type="radio" id="reserved-@seat.ID" name="seatID" value="@seat.ID" disabled/>
                     <label for="reserved-@seat.ID"><span class="reservedSeat"></span></label>
                 }
             }
@@ -64,7 +64,7 @@
     @foreach (var seat in Model)
     {
         <div>
-            @if (seat.Row == "D")
+            @if (seat.Row == "B")
             {
                 if (seat.Reserved == false)
                 {
@@ -73,7 +73,7 @@
                 }
                 else
                 {
-                    <input type="radio" id="reserved-@seat.ID" name="seatID" value="@seat.ID" />
+                    <input type="radio" id="reserved-@seat.ID" name="seatID" value="@seat.ID" disabled/>
                     <label for="reserved-@seat.ID"><span class="reservedSeat"></span></label>
                 }
             }
@@ -84,7 +84,7 @@
     @foreach (var seat in Model)
     {
         <div>
-            @if (seat.Row == "E")
+            @if (seat.Row == "A")
             {
                 if (seat.Reserved == false)
                 {
@@ -93,11 +93,11 @@
                 }
                 else
                 {
-                    <input type="radio" id="reserved-@seat.ID" name="seatID" value="@seat.ID" />
+                    <input type="radio" id="reserved-@seat.ID" name="seatID" value="@seat.ID" disabled/>
                     <label for="reserved-@seat.ID"><span class="reservedSeat"></span></label>
                 }
             }
         </div>
     }
 </div>
-<input id="seatReserveButton" type="submit" value="Reserve" />
+<input id="seatReserveButton" type="submit" value="Reserve Seat" />

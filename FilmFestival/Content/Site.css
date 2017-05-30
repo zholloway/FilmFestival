@@ -21,6 +21,14 @@ a {
     cursor: pointer;
 }
 
+a:active {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
 .navbar-fixed-top {
     position: fixed;
     left: 0;
@@ -95,7 +103,7 @@ a {
     margin-left: 15%;
     margin-right: 15%;
     width: 69%;
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: white;
     border: 3px solid black;
     border-radius: 5px;
     text-align: center;
@@ -204,13 +212,13 @@ z-index: 2;
     font-family: 'Kanit';
 }
 
-    #homeLogin a {
-        color: white;
-    }
+#homeLogin a {
+    color: white;
+}
 
-        #homeLogin a:hover {
-            color: rgb(179, 19,19);
-        }
+#homeLogin a:hover {
+    color: rgb(179, 19,19);
+}
 
 .homeTextField h1 {
     font-family: 'Piedra';
@@ -274,7 +282,7 @@ z-index: 2;
 
 #year {
     font-family: 'Trade Winds';
-    font-size: 30px;
+    font-size: 40px;
 }
 
 .littleSmaller {
@@ -320,7 +328,6 @@ z-index: 2;
     border-color: darkgrey;
     padding-top: 3px;
     padding-bottom: 3px;
-    width:
 }
 
     .socialMediaBar a {
@@ -565,37 +572,49 @@ z-index: 2;
     flex-flow: nowrap;
 }
 
+.newsShowtimesContainer {
+    width: 300px;
+}
+
 .newsWednesdayShowings {
     margin-bottom: 20px;
 }
 
 .newsShowtimesDate {
     font-size: 20px;
+    border-bottom: 1px solid black;
+    width: 230px;
+    margin-bottom: 10px;
 }
-
-.newsShowtimesTheatre {
-    font-size: 20px;
-    margin-left: 50px;
-    margin-top: 8px;
-}
-
-    .newsShowtimesTheatre span {
-        border-bottom: 1px solid black;
-    }
 
 .newsShowtimesTimes {
     font-size: 20px;
-    margin-left: 50px;
+    border: 2px solid pink;
 }
 
-    .newsShowtimesTimes a:hover {
-        text-decoration: none;
-        color: rgb(179, 19, 19);
-    }
+.newsShowtimesTimes a:hover {
+    text-decoration: none;
+    color: rgb(179, 19, 19);
+}
+
+.newsShowtimesTimes button {
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: rgb(179, 19, 19);
+    background-color: rgb(179, 19, 19); 
+    font-size: 18px;
+    color: white;
+}
+
+.newsShowtimesTimes button:hover {
+    border-color: rgb(119, 19, 19);
+    background-color: rgb(119, 19, 19);
+}
 
 .newsSeatReservation {
     width: 400px;
-    margin-left: 100px;
+    margin-left: 150px;
+    padding-bottom: 50px;
 }
 
     /*
@@ -606,6 +625,18 @@ z-index: 2;
 
 .newsSeatReservation span {
     font-size: 18px;
+}
+
+#floorplanLegend ul{
+    padding-left: 0;
+}
+
+#floorplanLegend span {
+    margin-right: 10px;
+}
+
+#floorplanLegend li {
+    font-size: 16px;
 }
 
 #theatreFloorplan {
@@ -657,13 +688,13 @@ label span{
     background-size: contain;
 }
 
-    .availableSeat:hover {
-        display: block;
-        height: 40px;
-        width: 40px;
-        background-image: url('/Content/Images/cinemaChairDarkGreen.jpg');
-        background-size: contain;
-    }
+.availableSeat:hover {
+    display: block;
+    height: 40px;
+    width: 40px;
+    background-image: url('/Content/Images/cinemaChairDarkGreen.jpg');
+    background-size: contain;
+}
 
 .selected {
     display: block;
@@ -702,10 +733,21 @@ label span{
 }
 
 #seatReserveButton {
-    border: 5px solid pink;
     position: absolute;
-    bottom: -2px;
-    right: 402px;
+    bottom: -50px;
+    right: 0px;
+    border: 2.5px solid rgb(119, 19, 19);
+    border-radius: 6px;
+    background-color: rgb(179,19,19);
+    font-family: 'Kanit';
+    font-size: 20px;
+    color: white;
+}
+
+#seatReserveButton:hover {
+    color: rgb(228, 232, 60);
+    border-color: rgb(179,19,19);
+    background-color: rgb(119,19,19);
 }
 
 /*
@@ -832,7 +874,46 @@ label span{
 
 #loginSubmit {
     background-color: rgb(179, 19,19);
+    border: 3px solid rgb(119,19,19);
     color: white;
+    font-family: 'Kanit';
+    font-size: 15px;
+}
+
+#loginSubmit:hover {
+    background-color: rgb(119, 19,19);
+    border: 3px solid rgb(179,19,19);
+    color: rgb(228, 232, 60);
+}
+
+/*
+    ///
+    AdminDashboard
+    ///
+*/
+#logoutButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#logoutButton input {
+    border: 2.5px solid rgb(119, 19, 19);
+    border-radius: 6px;
+    background-color: rgb(179,19,19);
+    font-family: 'Kanit';
+    font-size: 18px;
+    color: white;
+}
+
+#logoutButton input:hover {
+    color: rgb(228, 232, 60);
+    border-color: rgb(179,19,19);
+    background-color: rgb(119,19,19);
+}
+
+#dashboardContainer {
+    padding-top: 25px;
 }
 
 /*
@@ -1052,5 +1133,20 @@ label span{
 
     #loginImg {
         display: none;
+    }
+}
+
+/* 990px monitor */
+@media (max-width: 990px) {
+    #month {
+        font-size: 30px;
+    }
+
+    #dateRange {
+        font-size: 45px;
+    }
+
+    #year {
+        font-size: 30px;
     }
 }

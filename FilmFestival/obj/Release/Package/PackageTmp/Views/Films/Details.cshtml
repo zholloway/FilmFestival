@@ -1,0 +1,99 @@
+﻿@model FilmFestival.Models.Film
+
+@{
+    ViewBag.Title = "Films";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Director)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Director)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreviewImgPath)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreviewImgPath)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InfoImgPath)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InfoImgPath)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YearReleased)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YearReleased)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Country)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Country)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Runtime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Runtime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BriefSummary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BriefSummary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FullDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayFor(model => model.Showtimes)
+        </dt>
+
+        <dd>
+            @foreach (var showtime in Model.Showtimes)
+            {
+                <span>@showtime.Time</span>
+            }
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

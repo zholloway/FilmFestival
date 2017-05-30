@@ -18,15 +18,63 @@ namespace FilmFestival.Controllers
         FilmServices filmServices = new FilmServices();
 
         // GET: Films
-        public ActionResult Index()
+        public ActionResult Index(int pageIndex = 1, int pageSize = 12, string sortBy = "Title")
         {
-            return View(filmServices.GetAllFilms());
+            ViewBag.PageIndex = pageIndex;
+            return View(filmServices.GetAllFilms(pageIndex, pageSize, sortBy));
         }
 
         [HttpGet]
         public ActionResult Info(int filmID)
         {
-            return View(filmServices.GetIndividualFilm(filmID));
+            var filmInfo = filmServices.GetIndividualFilm(filmID);
+
+            ViewBag.areShowtimes21 = false;
+            ViewBag.areShowtimes22 = false;
+            ViewBag.areShowtimes23 = false;
+            ViewBag.areShowtimes24 = false;
+            ViewBag.areShowtimes25 = false;
+            ViewBag.areShowtimes26 = false;
+            ViewBag.areShowtimes27 = false;
+            ViewBag.areShowtimes28 = false;
+
+            foreach (var showtime in filmInfo.Showtimes)
+            {
+                if (showtime.Date.ToShortDateString() == "9/21/2017")
+                {
+                    ViewBag.areShowtimes21 = true;
+                }
+                if (showtime.Date.ToShortDateString() == "9/22/2017")
+                {
+                    ViewBag.areShowtimes22 = true;
+                }
+                if (showtime.Date.ToShortDateString() == "9/23/2017")
+                {
+                    ViewBag.areShowtimes23 = true;
+                }
+                if (showtime.Date.ToShortDateString() == "9/24/2017")
+                {
+                    ViewBag.areShowtimes24 = true;
+                }
+                if (showtime.Date.ToShortDateString() == "9/25/2017")
+                {
+                    ViewBag.areShowtimes25 = true;
+                }
+                if (showtime.Date.ToShortDateString() == "9/26/2017")
+                {
+                    ViewBag.areShowtimes26 = true;
+                }
+                if (showtime.Date.ToShortDateString() == "9/27/2017")
+                {
+                    ViewBag.areShowtimes27 = true;
+                }
+                if (showtime.Date.ToShortDateString() == "9/28/2017")
+                {
+                    ViewBag.areShowtimes28 = true;
+                }
+            }
+
+            return View(filmInfo);
         }
 
         public ActionResult SeatReservationForm(int showtimeID)

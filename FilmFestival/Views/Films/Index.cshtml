@@ -1,6 +1,9 @@
 ﻿@model IEnumerable<FilmFestival.Models.View_Models.FilmIndex>
 @{
     ViewBag.Title = "Films";
+    var nextPage = ViewBag.PageIndex + 1;
+    var previousPage = ViewBag.PageIndex - 1;
+
 }
 
 <div id="filmList">
@@ -14,5 +17,5 @@
     }       
 </div>
 
-@Html.Partial("_pageList")
+@Html.Partial("_pageList", new FilmFestival.Models.View_Models._pageList { Previous = previousPage, Next = nextPage, ContentType = ViewBag.Title})
 

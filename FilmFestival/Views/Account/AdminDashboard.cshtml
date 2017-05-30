@@ -3,14 +3,15 @@
     ViewBag.Title = "Dashboard";
 }
 
-<div class="col-md-offset-9">
+<div id="logoutButton">
     <form method="POST" action="~/Account/LogOff">
         @Html.AntiForgeryToken()
         <input type="submit" value="Logout" />
     </form>   
 </div>
-   
-<div class="row">
+
+<div id="dashboardContainer">
+    <div class="row">
     <div class="actionCell col-md-3">
         <h2>Film Actions</h2>
         <ul>
@@ -36,3 +37,4 @@
         </ul>
     </div>
 </div>
+</div>   

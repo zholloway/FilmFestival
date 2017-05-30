@@ -3,6 +3,7 @@ using FilmFestival.Models.View_Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Dynamic;
 using System.Web;
 
 namespace FilmFestival.Services
@@ -12,9 +13,13 @@ namespace FilmFestival.Services
         public ApplicationDbContext DB { get; } = new ApplicationDbContext();
 
         //get all films
-        public List<FilmIndex> GetAllFilms()
+        public List<FilmIndex> GetAllFilms(int pageIndex, int pageSize, string sortBy)
         {
-            var filmList = DB.Films;
+            var filmList = DB.Films
+                .OrderBy(sortBy)
+                .Skip((pageIndex - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
 
             var returnList = new List<FilmIndex>();
 

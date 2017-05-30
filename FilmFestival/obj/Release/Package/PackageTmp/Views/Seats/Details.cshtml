@@ -1,0 +1,63 @@
+﻿@model FilmFestival.Models.Seat
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Seat Details</h2>
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            Username
+        </dt>
+
+        <dd>
+            --username here--
+        </dd>
+
+        <dt>
+            Date
+        </dt>
+
+        <dd>
+            @Model.Showtime.Date.ToShortDateString()
+        </dd>
+
+        <dt>
+            Time
+        </dt>
+
+        <dd>
+            @Model.Showtime.Time.ToShortTimeString()
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Showtime.Theatre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Showtime.Theatre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Row)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Row)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SeatNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SeatNumber)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to Dashboard", "UserDashboard", "Account")
+</p>

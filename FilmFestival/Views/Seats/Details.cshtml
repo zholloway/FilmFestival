@@ -14,7 +14,7 @@
         </dt>
 
         <dd>
-            --username here--
+            @Model.ApplicationUser.UserName
         </dd>
 
         <dt>
@@ -58,6 +58,7 @@
         </dd>
     </dl>
 </div>
+
 <p>
     @Html.ActionLink("Back to Dashboard", "UserDashboard", "Account")
 </p>

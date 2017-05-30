@@ -2,67 +2,62 @@
     ViewBag.Title = "Submit";
 }
 
-@Html.Partial("_pageHeading")
+<div class="newsBody">
+    <div class="newsImage">
+        <img src="https://fantasticfest-site.s3.amazonaws.com/images/17609/nacho__main.jpg" />
+    </div>
 
-<div class="pageContent">
+    <h2><strong>Submit Your Film</strong></h2>
 
-    <div class="newsBody">
-        <div class="newsImage">
-            <img src="https://fantasticfest-site.s3.amazonaws.com/images/17609/nacho__main.jpg" />
-        </div>
+    @Html.Partial("_socialMediaBar")
 
-        <h2><strong>Submit Your Film</strong></h2>
+    <div class="newsParagraph">
+        <p>
+            <strong>Submissions for Fantastic Fest 2017 will open on January 18th, 2017.</strong>
+        </p>
+        <p>
+            Fantastic Market and Fantastic Arcade submissions will be open on March 1st, 2017. 
+            Please refer to the <a href="http://fantasticfest.com/market/submissions-info" class="storyLink">Market</a> and <a href="http://fantasticfest.com/arcade/submit-to-arcade" class="storyLink">Arcade</a> submission pages for detailed guidelines.
+        </p>
 
-        @Html.Partial("_socialMediaBar")
+        <h3><strong>FEATURE FILM DEADLINES:</strong></h3>
+        <ul>
+            <li>Earlybird Deadline: February 22, 2017 - $45</li>
+            <li>Regular Deadline: April 26, 2017 - $50</li>
+            <li>Late Deadline: May 31, 2017  - $55</li>
+            <li>WAB Extended Deadline: June 21, 2017 - $70</li>
+        </ul>
 
-        <div class="newsParagraph">
-            <p>
-                <strong>Submissions for Fantastic Fest 2017 will open on January 18th, 2017.</strong>
-            </p>
-            <p>
-                Fantastic Market and Fantastic Arcade submissions will be open on March 1st, 2017. 
-                Please refer to the <a href="http://fantasticfest.com/market/submissions-info" class="storyLink">Market</a> and <a href="http://fantasticfest.com/arcade/submit-to-arcade" class="storyLink">Arcade</a> submission pages for detailed guidelines.
-            </p>
-
-            <h3><strong>FEATURE FILM DEADLINES:</strong></h3>
+        <h3><strong>SHORT FILM DEADLINES</strong></h3>
             <ul>
-                <li>Earlybird Deadline: February 22, 2017 - $45</li>
-                <li>Regular Deadline: April 26, 2017 - $50</li>
-                <li>Late Deadline: May 31, 2017  - $55</li>
-                <li>WAB Extended Deadline: June 21, 2017 - $70</li>
+                <li>Earlybird Deadline: February 22, 2017 - $35</li>
+                <li>Regular Deadline: April 26, 2017 - $40</li>
+                <li>Late Deadline: May 31, 2017  - $45</li>
+                <li>WAB Extended Deadline: June 21, 2017 - $60</li>
             </ul>
 
-            <h3><strong>SHORT FILM DEADLINES</strong></h3>
-                <ul>
-                    <li>Earlybird Deadline: February 22, 2017 - $35</li>
-                    <li>Regular Deadline: April 26, 2017 - $40</li>
-                    <li>Late Deadline: May 31, 2017  - $45</li>
-                    <li>WAB Extended Deadline: June 21, 2017 - $60</li>
-                </ul>
+        <h3><strong>SUBMISSION GUIDELINES</strong></h3>
+        <p>
+            Eligibility Requirements for the feature film and short film competition (jury and audience award):
+        </p>
+        <ul>
+            <li>Running time for all feature films must be 70 minutes or more.</li>
+            <li>Running time for all shorts must be less than 30 minutes.</li>
+            <li>Selected films must be made available in a 35mm composite print, Bluray, or DCP.</li>
+            <li>Film submissions in a foreign language must be subtitled in English.</li>
+            <li>Acceptable screening format is an online screener. We do not accept hardcopy screeners.</li>
+            <li>If submitting more than one film, a separate completed entry is required for each title.</li>
+        </ul>
 
-            <h3><strong>SUBMISSION GUIDELINES</strong></h3>
-            <p>
-                Eligibility Requirements for the feature film and short film competition (jury and audience award):
-            </p>
-            <ul>
-                <li>Running time for all feature films must be 70 minutes or more.</li>
-                <li>Running time for all shorts must be less than 30 minutes.</li>
-                <li>Selected films must be made available in a 35mm composite print, Bluray, or DCP.</li>
-                <li>Film submissions in a foreign language must be subtitled in English.</li>
-                <li>Acceptable screening format is an online screener. We do not accept hardcopy screeners.</li>
-                <li>If submitting more than one film, a separate completed entry is required for each title.</li>
-            </ul>
-
-            <p>
-                <a href="http://www.withoutabox.com/login/5104" class="storyLink">SUBMIT YOUR FILM VIA WITHOUT-A-BOX BY CLICKING HERE!!!</a>
-            </p>
-            <p>
-                <a href="https://filmfreeway.com/festival/FantasticFest" class="storyLink">SUBMIT YOUR FILM VIA FILM FREEWAY BY CLICKING HERE!!!</a>
-            </p>
-            <p id="submitTM">
-                Withoutabox logos are trademarks of Withoutabox, a DBA of IMDb.com Inc. or its affiliates.
-            </p>
-        </div>
+        <p>
+            <a href="http://www.withoutabox.com/login/5104" class="storyLink">SUBMIT YOUR FILM VIA WITHOUT-A-BOX BY CLICKING HERE!!!</a>
+        </p>
+        <p>
+            <a href="https://filmfreeway.com/festival/FantasticFest" class="storyLink">SUBMIT YOUR FILM VIA FILM FREEWAY BY CLICKING HERE!!!</a>
+        </p>
+        <p id="submitTM">
+            Withoutabox logos are trademarks of Withoutabox, a DBA of IMDb.com Inc. or its affiliates.
+        </p>
     </div>
 </div>
 

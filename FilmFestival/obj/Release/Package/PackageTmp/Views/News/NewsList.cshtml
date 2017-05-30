@@ -1,0 +1,50 @@
+﻿@model IEnumerable<FilmFestival.Models.NewsStory>
+
+@{
+    ViewBag.Title = "News";
+}
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Author)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var story in Model)
+{
+    <tr>
+        <td>
+            @story.Title
+        </td>
+        <td>
+            @story.SubTitle
+        </td>
+        <td>
+            @story.Author
+        </td>
+        <td>
+            @story.Date
+        </td>
+        <td>         
+            @Html.ActionLink("Edit", "Edit", new { id = story.ID }) |
+            @Html.ActionLink("Details", "Details", new { id = story.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = story.ID })
+        </td>
+    </tr>
+}
+
+</table>

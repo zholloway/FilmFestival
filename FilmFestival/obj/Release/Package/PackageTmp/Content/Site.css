@@ -21,6 +21,14 @@ a {
     cursor: pointer;
 }
 
+a:active {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
 .navbar-fixed-top {
     position: fixed;
     left: 0;
@@ -72,7 +80,8 @@ a {
 
 .navLoginLink {
     position: absolute;
-    left: 93.8%;
+    text-align: right;
+    right: 1%;
     top: 3px;
 }
 
@@ -94,7 +103,7 @@ a {
     margin-left: 15%;
     margin-right: 15%;
     width: 69%;
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: white;
     border: 3px solid black;
     border-radius: 5px;
     text-align: center;
@@ -139,7 +148,7 @@ a {
     margin-bottom: 4%;
     border: 3px solid black;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: white;
     padding-top: 15px;
     padding-right: 10px;
     padding-left: 10px;
@@ -302,7 +311,7 @@ z-index: 2;
     max-height: 300px;
     max-width: 800px;
 }
-/*//////////////////////////////////////////////////////////////////////////////////////*/
+
 .newsImage img {
     border: 3px solid black;
     border-radius: 5px;
@@ -319,7 +328,6 @@ z-index: 2;
     border-color: darkgrey;
     padding-top: 3px;
     padding-bottom: 3px;
-    width:
 }
 
     .socialMediaBar a {
@@ -396,6 +404,7 @@ z-index: 2;
     margin-left: 25px;
     margin-right: 25px;
     font-family: "Helvetica Neue";
+    font-size: 18px;
 }
 
 .newsBody h2{
@@ -569,27 +578,32 @@ z-index: 2;
 
 .newsShowtimesDate {
     font-size: 20px;
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
 }
-
-.newsShowtimesTheatre {
-    font-size: 20px;
-    margin-left: 50px;
-    margin-top: 8px;
-}
-
-    .newsShowtimesTheatre span {
-        border-bottom: 1px solid black;
-    }
 
 .newsShowtimesTimes {
     font-size: 20px;
-    margin-left: 50px;
 }
 
-    .newsShowtimesTimes a:hover {
-        text-decoration: none;
-        color: rgb(179, 19, 19);
-    }
+.newsShowtimesTimes a:hover {
+    text-decoration: none;
+    color: rgb(179, 19, 19);
+}
+
+.newsShowtimesTimes button {
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: rgb(179, 19, 19);
+    background-color: rgb(179, 19, 19); 
+    font-size: 18px;
+    color: white;
+}
+
+.newsShowtimesTimes button:hover {
+    border-color: rgb(119, 19, 19);
+    background-color: rgb(119, 19, 19);
+}
 
 .newsSeatReservation {
     width: 400px;
@@ -602,60 +616,108 @@ z-index: 2;
     ///
 */
 
-    .newsSeatReservation span {
-        font-size: 18px;
-    }
-
-#holder {
-    height: 200px;
-    width: 500px;
-    background-color: #F5F5F5;
-    border: 1px solid #A4A4A4;
+.newsSeatReservation span {
+    font-size: 18px;
 }
 
-#place {
+#theatreFloorplan {
+    height: 450px;
+    width: 404px;
+    border: 2px solid black;
     position: relative;
-    margin: 7px;
+    background-color: lightslategray;
 }
 
-    #place a {
-        font-size: 0.6em;
-    }
+#filmScreen {
+    width: 402px;
+    height: 50px;
+    background-color: white;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    padding-top: 10px;
+}
 
-    #place li {
-        list-style: none outside none;
-        position: absolute;
-    }
+#seatList {
+    height: 400px;
+    width: 396px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-        #place li:hover {
-            background-color: yellow;
-        }
+.seatRow {
+    display: flex;
+    flex-direction: row;
+}
 
-    #place .seat {
-        background: url("/Content/Images/cinemaChairGreen.jpg") no-repeat scroll 0 0 transparent;
-        height: 33px;
-        width: 33px;
+input[type="radio"] {
+    display: none;
+}
+
+label span{
+    cursor: pointer;
+}
+
+.availableSeat {
+    display: block;
+    height: 40px;
+    width: 40px;
+    background-image: url('/Content/Images/cinemaChairGreen.jpg');
+    background-size: contain;
+}
+
+    .availableSeat:hover {
         display: block;
+        height: 40px;
+        width: 40px;
+        background-image: url('/Content/Images/cinemaChairDarkGreen.jpg');
+        background-size: contain;
     }
 
-    #place .selectedSeat {
-        background-image: url("/Content/Images/cinemaChairRed.jpg");
-    }
+.selected {
+    display: block;
+    height: 40px;
+    width: 40px;
+    background-image: url('/Content/Images/cinemaChairBlue.jpg');
+    background-size: contain;
+}
 
-    #place .selectingSeat {
-        background-image: url("/Content/Images/cinemaChairBlue.jpg");
-    }
+.selected:hover {
+    display: block;
+    height: 40px;
+    width: 40px;
+    background-image: url('/Content/Images/cinemaChairBlue.jpg');
+    background-size: contain;
+}
 
-    #place .row-3, #place .row-4 {
-        margin-top: 10px;
-    }
+.reservedSeat {
+    display: block;
+    height: 40px;
+    width: 40px;
+    background-image: url('/Content/Images/cinemaChairRed.jpg');
+    background-size:contain;
+}
+
+#seatDescription {
+    margin-top: 15px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
 
 #seatDescription li {
-    vertical-align: middle;
-    list-style: none outside none;
-    padding-left: 35px;
-    height: 35px;
-    float: left;
+    display: flex;
+    flex-direction: row;
+}
+
+#seatReserveButton {
+    border: 5px solid pink;
+    position: absolute;
+    bottom: -2px;
+    right: 402px;
 }
 
 /*
@@ -719,7 +781,8 @@ z-index: 2;
 .newsPreviewImage img {
     border: 3px solid black;
     border-radius: 5px;
-    max-width: 84%;
+    height: 300px;
+    width: 84%;
 }
 
 .newsPreviewDateAndAuthor {
@@ -782,6 +845,32 @@ z-index: 2;
 #loginSubmit {
     background-color: rgb(179, 19,19);
     color: white;
+}
+
+/*
+    ///
+    AdminDashboard
+    ///
+*/
+#logoutButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#logoutButton input {
+    background-color: rgb(179, 19,19);
+    border-color: rgb(179, 19,19);
+    color: white;
+}
+
+#logoutButton input:hover {
+    background-color: rgb(119, 19,19);
+    border-color: rgb(119, 19,19);
+}
+
+#dashboardContainer {
+    padding-top: 20px;
 }
 
 /*

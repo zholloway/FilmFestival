@@ -1,0 +1,103 @@
+﻿@model IEnumerable<FilmFestival.Models.Seat>
+
+<div id="seatRowA" class="seatRow">
+    @foreach (var seat in Model)
+    {
+        <div>
+            @if (seat.Row == "A")
+            {
+                if (seat.Reserved == false)
+                {
+                    <input type="radio" id="available-@seat.ID" name="seatID" value="@seat.ID" />
+                    <label for="available-@seat.ID"><span class="availableSeat"></span></label>
+                }
+                else
+                {
+                    <input type="radio" id="reserved-@seat.ID" name="seatID" value="@seat.ID" disabled/>
+                    <label for="reserved-@seat.ID"><span class="reservedSeat"></span></label>
+                }
+            }               
+        </div>
+    }
+</div>
+<div id="seatRowB" class="seatRow">
+    @foreach (var seat in Model)
+    {
+        <div>
+            @if (seat.Row == "B")
+            {
+                if (seat.Reserved == false)
+                {
+                    <input type="radio" id="available-@seat.ID" name="seatID" value="@seat.ID" />
+                    <label for="available-@seat.ID"><span class="availableSeat"></span></label>
+                }
+                else
+                {
+                    <input type="radio" id="reserved-@seat.ID" name="seatID" value="@seat.ID" disabled/>
+                    <label for="reserved-@seat.ID"><span class="reservedSeat"></span></label>
+                }
+            }
+        </div>
+    }
+</div>
+<div id="seatRowC" class="seatRow">
+    @foreach (var seat in Model)
+    {
+        <div>
+            @if (seat.Row == "C")
+            {
+                if (seat.Reserved == false)
+                {
+                    <input type="radio" id="available-@seat.ID" name="seatID" value="@seat.ID" />
+                    <label for="available-@seat.ID"><span class="availableSeat"></span></label>
+                }
+                else
+                {
+                    <input type="radio" id="reserved-@seat.ID" name="seatID" value="@seat.ID" disabled/>
+                    <label for="reserved-@seat.ID"><span class="reservedSeat"></span></label>
+                }
+            }
+        </div>
+    }
+</div>
+<div id="seatRowD" class="seatRow">
+    @foreach (var seat in Model)
+    {
+        <div>
+            @if (seat.Row == "D")
+            {
+                if (seat.Reserved == false)
+                {
+                    <input type="radio" id="available-@seat.ID" name="seatID" value="@seat.ID" />
+                    <label for="available-@seat.ID"><span class="availableSeat"></span></label>
+                }
+                else
+                {
+                    <input type="radio" id="reserved-@seat.ID" name="seatID" value="@seat.ID" disabled/>
+                    <label for="reserved-@seat.ID"><span class="reservedSeat"></span></label>
+                }
+            }
+        </div>
+    }
+</div>
+<div id="seatRowE" class="seatRow">
+    @foreach (var seat in Model)
+    {
+        <div>
+            @if (seat.Row == "E")
+            {
+                if (seat.Reserved == false)
+                {
+                    <input type="radio" id="available-@seat.ID" name="seatID" value="@seat.ID" />
+                    <label for="available-@seat.ID"><span class="availableSeat"></span></label>
+                }
+                else
+                {
+                    <input type="radio" id="reserved-@seat.ID" name="seatID" value="@seat.ID" disabled/>
+                    <label for="reserved-@seat.ID"><span class="reservedSeat"></span></label>
+                }
+            }
+        </div>
+    }
+</div>
+<input id="seatReserveButton" type="submit" value="Reserve" />

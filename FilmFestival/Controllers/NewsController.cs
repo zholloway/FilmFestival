@@ -17,10 +17,10 @@ namespace FilmFestival.Controllers
 
         NewsServices newsServices = new NewsServices();
 
-        // GET: News
-        public ActionResult Index()
+        public ActionResult Index(int pageIndex = 1, int pageSize = 10)
         {
-            return View(newsServices.GetAllNews());
+            ViewBag.PageIndex = pageIndex;
+            return View(newsServices.GetAllNews(pageIndex, pageSize));
         }
 
         public ActionResult Story(int storyID)

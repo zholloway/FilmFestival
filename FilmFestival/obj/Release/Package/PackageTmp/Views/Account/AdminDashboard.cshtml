@@ -1,0 +1,40 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Dashboard";
+}
+
+<div id="logoutButton">
+    <form method="POST" action="~/Account/LogOff">
+        @Html.AntiForgeryToken()
+        <input type="submit" value="Logout" />
+    </form>   
+</div>
+
+<div id="dashboardContainer">
+    <div class="row">
+    <div class="actionCell col-md-3">
+        <h2>Film Actions</h2>
+        <ul>
+            <li><a href="~/Films/FilmList">See All</a></li>
+        </ul>
+    </div>
+    <div class="actionCell col-md-3">
+        <h2>News Actions</h2>
+        <ul>
+            <li><a href="~/News/NewsList">See All</a></li>
+        </ul>
+    </div>
+    <div class="actionCell col-md-3">
+        <h2>Hotel Actions</h2>
+        <ul>
+            <li><a href="~/Hotels/Index">See All</a></li>
+        </ul>
+    </div>
+    <div class="actionCell col-md-3">
+        <h2>Showtimes Actions</h2>
+        <ul>
+            <li><a href="~/Showtimes/Index">See All</a></li>
+        </ul>
+    </div>
+</div>
+</div>   

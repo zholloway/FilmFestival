@@ -3,60 +3,288 @@
     ViewBag.Title = "Dashboard";
 }
 
-<div class="col-md-offset-9">
+<div id="logoutButton">
     <form method="POST" action="~/Account/LogOff">
         @Html.AntiForgeryToken()
         <input type="submit" value="Logout" />
     </form>
 </div>
 
-<p>
-    Welcome to your dashboard! Here you can see what film reservations you've made.
-</p>
-<p>
-    Clicking <strong>Details</strong> will take you to a page with your seat's QR code. 
-    Please show this to the attendant at the theatre door to make the check-in process faster for each movie. 
-</p>
-<p>
-    If you would like to cancel your reservation for a specific showtime, click <strong>Delete</strong>.
-</p>
-
-<h3>
-    Wednesday, September 27<sup>th</sup>
-</h3>
-    <table class="table">
-        <tr>
-            <th>
-                Film Title
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Showtime.Time)
-            </th>
-            <th></th>
-        </tr>
-
-        @foreach (var item in Model)
-        {
-            if (item.Showtime.Date.ToShortDateString() == "9/27/2017")
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Showtime.Film.Title)
-                    </td>
-                    <td>
-                        @item.Showtime.Time.ToShortTimeString()
-                    </td>
-                    <td>
-                        @Html.ActionLink("Details", "Details", "Seats", new { seatID = item.ID }, null) |
-                        @Html.ActionLink("Delete", "CancelSeatReservation", "Seats", new { seatID = item.ID }, null)
-                    </td>
-                </tr>
-            }
-        }
-    </table>
-
+<div id="userDashboardContent">
+    <p>
+        Welcome to your dashboard! Here you can see what film reservations you've made.
+    </p>
+    <p>
+        Clicking <strong>Details</strong> will take you to a page with your seat's QR code.
+        Please show this to the attendant at the theatre door to make the check-in process faster for each movie.
+    </p>
+    <p>
+        If you would like to cancel your reservation for a specific showtime, click <strong>Delete</strong>.
+    </p>
+    
+    @if (ViewBag.areShowtimes21 == true)
+    {
         <h3>
-            Thursday, September 28<sup>th</sup>
+            Friday, September 21<sup>st</sup>
+        </h3>
+        <table class="table">
+            <tr>
+                <th>
+                    Film Title
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Showtime.Time)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                if (item.Showtime.Date.ToShortDateString() == "9/21/2017")
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Showtime.Film.Title)
+                        </td>
+                        <td>
+                            @item.Showtime.Time.ToShortTimeString()
+                        </td>
+                        <td>
+                            @Html.ActionLink("Details", "Details", "Seats", new { seatID = item.ID }, null) |
+                            @Html.ActionLink("Delete", "CancelSeatReservation", "Seats", new { seatID = item.ID }, null)
+                        </td>
+                    </tr>
+                }
+            }
+        </table>
+    } 
+
+    @if (ViewBag.areShowtimes22 == true)
+    {
+        <h3>
+            Saturday, September 22<sup>nd</sup>
+        </h3>
+        <table class="table">
+            <tr>
+                <th>
+                    Film Title
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Showtime.Time)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                if (item.Showtime.Date.ToShortDateString() == "9/22/2017")
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Showtime.Film.Title)
+                        </td>
+                        <td>
+                            @item.Showtime.Time.ToShortTimeString()
+                        </td>
+                        <td>
+                            @Html.ActionLink("Details", "Details", "Seats", new { seatID = item.ID }, null) |
+                            @Html.ActionLink("Delete", "CancelSeatReservation", "Seats", new { seatID = item.ID }, null)
+                        </td>
+                    </tr>
+                }
+            }
+        </table>
+    }
+    
+    @if (ViewBag.areShowtimes23 == true)
+    {
+        <h3>
+            Sunday, September 23<sup>rd</sup>
+        </h3>
+        <table class="table">
+            <tr>
+                <th>
+                    Film Title
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Showtime.Time)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                if (item.Showtime.Date.ToShortDateString() == "9/23/2017")
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Showtime.Film.Title)
+                        </td>
+                        <td>
+                            @item.Showtime.Time.ToShortTimeString()
+                        </td>
+                        <td>
+                            @Html.ActionLink("Details", "Details", "Seats", new { seatID = item.ID }, null) |
+                            @Html.ActionLink("Delete", "CancelSeatReservation", "Seats", new { seatID = item.ID }, null)
+                        </td>
+                    </tr>
+                }
+            }
+        </table>
+    }
+    
+    @if (ViewBag.areShowtimes24 == true)
+    {
+        <h3>
+            Monday, September 24<sup>th</sup>
+        </h3>
+        <table class="table">
+            <tr>
+                <th>
+                    Film Title
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Showtime.Time)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                if (item.Showtime.Date.ToShortDateString() == "9/24/2017")
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Showtime.Film.Title)
+                        </td>
+                        <td>
+                            @item.Showtime.Time.ToShortTimeString()
+                        </td>
+                        <td>
+                            @Html.ActionLink("Details", "Details", "Seats", new { seatID = item.ID }, null) |
+                            @Html.ActionLink("Delete", "CancelSeatReservation", "Seats", new { seatID = item.ID }, null)
+                        </td>
+                    </tr>
+                }
+            }
+        </table>
+    }
+    
+    @if (ViewBag.areShowtimes25 == true)
+    {
+        <h3>
+            Tuesday, September 25<sup>th</sup>
+        </h3>
+        <table class="table">
+            <tr>
+                <th>
+                    Film Title
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Showtime.Time)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                if (item.Showtime.Date.ToShortDateString() == "9/25/2017")
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Showtime.Film.Title)
+                        </td>
+                        <td>
+                            @item.Showtime.Time.ToShortTimeString()
+                        </td>
+                        <td>
+                            @Html.ActionLink("Details", "Details", "Seats", new { seatID = item.ID }, null) |
+                            @Html.ActionLink("Delete", "CancelSeatReservation", "Seats", new { seatID = item.ID }, null)
+                        </td>
+                    </tr>
+                }
+            }
+        </table>
+    }
+    
+    @if (ViewBag.areShowtimes26 == true)
+    {
+        <h3>
+            Wednesday, September 26<sup>th</sup>
+        </h3>
+        <table class="table">
+            <tr>
+                <th>
+                    Film Title
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Showtime.Time)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                if (item.Showtime.Date.ToShortDateString() == "9/26/2017")
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Showtime.Film.Title)
+                        </td>
+                        <td>
+                            @item.Showtime.Time.ToShortTimeString()
+                        </td>
+                        <td>
+                            @Html.ActionLink("Details", "Details", "Seats", new { seatID = item.ID }, null) |
+                            @Html.ActionLink("Delete", "CancelSeatReservation", "Seats", new { seatID = item.ID }, null)
+                        </td>
+                    </tr>
+                }
+            }
+        </table>
+    }   
+
+    @if (ViewBag.areShowtimes27 == true)
+    {
+        <h3>
+            Thursday, September 27<sup>th</sup>
+        </h3>
+        <table class="table">
+            <tr>
+                <th>
+                    Film Title
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Showtime.Time)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                if (item.Showtime.Date.ToShortDateString() == "9/27/2017")
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Showtime.Film.Title)
+                        </td>
+                        <td>
+                            @item.Showtime.Time.ToShortTimeString()
+                        </td>
+                        <td>
+                            @Html.ActionLink("Details", "Details", "Seats", new { seatID = item.ID }, null) |
+                            @Html.ActionLink("Delete", "CancelSeatReservation", "Seats", new { seatID = item.ID }, null)
+                        </td>
+                    </tr>
+                }
+            }
+        </table>
+    }
+
+    @if (ViewBag.areShowtimes28 == true)
+    {
+        <h3>
+            Friday, September 28<sup>th</sup>
         </h3>
         <table class="table">
             <tr>
@@ -87,5 +315,8 @@
                     </tr>
                 }
             }
-    </table>
+        </table>
+    }   
+</div>
+
 

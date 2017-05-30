@@ -917,6 +917,16 @@ label span{
 
 /*
     ///
+    User Dashboard
+    ///
+*/
+
+#userDashboardContent {
+    margin-top: 35px;
+}
+
+/*
+    ///
     Media Queries
     ///
 */

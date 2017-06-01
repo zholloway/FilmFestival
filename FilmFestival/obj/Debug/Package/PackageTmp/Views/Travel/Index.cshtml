@@ -1,0 +1,39 @@
+﻿@model IEnumerable<FilmFestival.Models.Hotel>
+@{
+    ViewBag.Title = "Travel";
+}
+ 
+<div class="newsBody">
+    <div class="newsImage">
+        <img src="~/Content/Images/austinSkyline.jpeg" />
+    </div>
+
+    <h2><strong>Accomodations</strong></h2>
+
+    @Html.Partial("_socialMediaBar")
+
+    <div class="newsParagraph">
+        <p>
+            When making travel plans for Fantastic Fest 2017, we recommend you stay at one of the hotels listed below.
+        </p>
+        <p>
+            The festival shuttle service will not necessarily be traveling to all of these hotels however; 
+            they are all in the same area and are a cheap cab ride, bike ride or bus ride away from the main Fantastic Fest venue, The Alamo South Lamar. 
+            Details on which hotels will have festival shuttle service will also be listed on this page in the upcoming months. 
+            Car2Go is readily available in the downtown area and if you choose to use that system for transportation while you are in Austin, 
+            it is roughly an 8-10 minute drive from any of these hotels to the main festival venue.
+        </p>
+            
+        <div id="hotelList">
+            @foreach (var hotel in Model)
+            {
+                <div class="hotelCell">
+                    <span class="hotelName"><strong>@hotel.Name</strong></span>
+                    <span>@hotel.Street</span>
+                    <span>@hotel.City @hotel.StateAbbreviation @hotel.ZipCode</span>
+                    <span>@hotel.PhoneNumber</span>
+                </div>
+            }
+        </div>
+    </div>      
+</div>  

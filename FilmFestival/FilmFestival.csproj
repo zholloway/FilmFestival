@@ -262,6 +262,10 @@
     <Compile Include="Migrations\201705301611178_badges table.Designer.cs">
       <DependentUpon>201705301611178_badges table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705301920431_theatre changed to int.cs" />
+    <Compile Include="Migrations\201705301920431_theatre changed to int.Designer.cs">
+      <DependentUpon>201705301920431_theatre changed to int.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Badge.cs" />
@@ -563,6 +567,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705301611178_badges table.resx">
       <DependentUpon>201705301611178_badges table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705301920431_theatre changed to int.resx">
+      <DependentUpon>201705301920431_theatre changed to int.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

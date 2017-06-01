@@ -31,10 +31,10 @@
             @Html.DisplayFor(modelItem => item.Film.Title)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Date)
+            @item.Date.ToShortDateString()
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Time)
+            @item.Time.ToShortTimeString()
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Theatre)

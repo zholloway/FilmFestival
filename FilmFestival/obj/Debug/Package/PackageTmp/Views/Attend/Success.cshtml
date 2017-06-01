@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Badge Purchase";
+}
+
+<div class="newsBody">
+    <h2>Success!</h2>
+
+    <p>
+        Your badge has been successfully purchased! 
+        <strong>Your badge ID number is @ViewBag.badgeID.</strong>
+        An email has been sent to @ViewBag.emailAddress that confirms your purchase and contains your login information.      
+        Use the email you provided as your username and your badge ID# as your password when logging in.
+    </p>
+    <p>
+        <a href="~/Account/Login" class="storyLink">Go ahead and log in!</a>
+        You can now starting reserving seats by going to any film's info page. 
+        We'll see you at the festival!
+    </p>
+</div>
+
+

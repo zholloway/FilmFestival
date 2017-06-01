@@ -28,11 +28,33 @@ namespace FilmFestival.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
             Showtime showtime = db.Showtimes.Include(i => i.Film).First(f => f.ID == id);
+
             if (showtime == null)
             {
                 return HttpNotFound();
             }
+
+            List<string> users = db.Seats
+                .Include(i => i.ApplicationUser)
+                .Where(w => w.ShowtimeID == id)
+                .OrderBy(o => o.ApplicationUser.UserName)
+                .Select(s => s.ApplicationUser.UserName)
+                .ToList();
+
+            var vbList = new List<string>();
+
+            foreach (var user in users)
+            {
+                if (user != null)
+                {
+                    vbList.Add(user);
+                }
+            }
+
+            ViewBag.UserList = vbList;
+
             return View(showtime);
         }
 

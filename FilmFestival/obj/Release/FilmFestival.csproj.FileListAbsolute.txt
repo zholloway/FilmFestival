@@ -112,3 +112,6 @@ C:\Users\Zack Holloway\Documents\Visual Studio 2017\Projects\FilmFestival\FilmFe
 C:\Users\Zack Holloway\Documents\Visual Studio 2017\Projects\FilmFestival\FilmFestival\obj\Release\FilmFestival.Migrations.updateSeat.resources
 C:\Users\Zack Holloway\Documents\Visual Studio 2017\Projects\FilmFestival\FilmFestival\obj\Release\FilmFestival.Migrations.addseatstousers.resources
 C:\Users\Zack Holloway\Documents\Visual Studio 2017\Projects\FilmFestival\FilmFestival\obj\Release\FilmFestival.Migrations.seatsconnectionaddedtoApplicationUser.resources
+C:\Users\Zack Holloway\Documents\Visual Studio 2017\Projects\FilmFestival\FilmFestival\bin\System.Linq.Dynamic.dll
+C:\Users\Zack Holloway\Documents\Visual Studio 2017\Projects\FilmFestival\FilmFestival\obj\Release\FilmFestival.Migrations.badgestable.resources
+C:\Users\Zack Holloway\Documents\Visual Studio 2017\Projects\FilmFestival\FilmFestival\obj\Release\FilmFestival.Migrations.theatrechangedtoint.resources

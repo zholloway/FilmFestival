@@ -1,0 +1,31 @@
+﻿@model FilmFestival.Models.View_Models.NewsStory
+@{
+    ViewBag.Title = "News";
+}
+
+<div class="newsBody">
+    <div class="newsImage">
+        <img src="@Model.StoryImgPath" />
+    </div>
+
+    <div class="storyHeading">
+        <div id="dateAndAuthor">
+            <span>@Model.Date.ToShortDateString() || @Model.Author</span>
+        </div>          
+        <h2><strong>@Model.Title</strong></h2>
+        <div id="subHeading">
+            <span class="subHeading">@Model.SubTitle</span>
+        </div>       
+    </div>       
+
+    @Html.Partial("_socialMediaBar")
+
+    <div class="newsParagraph">
+        @Html.Raw(Model.StoryBody)
+
+        <hr />
+
+        <h3>Comments</h3>
+        <span>Discus stuff here.</span>
+    </div>
+</div>

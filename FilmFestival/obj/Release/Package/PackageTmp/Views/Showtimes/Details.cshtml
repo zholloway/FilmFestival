@@ -22,7 +22,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Date)
+            @Model.Date.ToShortDateString()
         </dd>
 
         <dt>
@@ -30,7 +30,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Time)
+            @Model.Time.ToShortTimeString()
         </dd>
 
         <dt>
@@ -41,6 +41,20 @@
             @Html.DisplayFor(model => model.Theatre)
         </dd>
 
+        <dt>
+            Reserve List
+        </dt>
+
+        <dd>
+            <ul>
+                @foreach (var item in ViewBag.UserList)
+                {
+                    <li>
+                        @item
+                    </li>
+                }
+            </ul>           
+        </dd>
     </dl>
 </div>
 <p>

@@ -46,11 +46,15 @@ a:visited {
 .navbar-fixed-top h1 {
     font-family: Piedra;
     font-size: 56px;
+    font-size: 350%;
+    width: 35%;
     color: rgb(179, 19,19);
     margin-top: 20px;
     margin-left: 15px;
     margin-right: 0px;
     padding-right: 0px;
+    text-wrap: avoid;
+    border: 2px solid pink;
 }
 
 .navbar-fixed-top ul {
@@ -100,6 +104,7 @@ a:visited {
     left: 0;
     z-index: 1;
     margin-top: 120px;
+    margin-top: 8.5%;
     margin-left: 15%;
     margin-right: 15%;
     width: 69%;
@@ -145,6 +150,7 @@ a:visited {
     margin-left: 15%;
     margin-right: 15.8%;
     margin-top: 220px;
+    margin-top: 15.5%;
     margin-bottom: 4%;
     border: 3px solid black;
     border-radius: 5px;
@@ -212,13 +218,13 @@ z-index: 2;
     font-family: 'Kanit';
 }
 
-    #homeLogin a {
-        color: white;
-    }
+#homeLogin a {
+    color: white;
+}
 
-        #homeLogin a:hover {
-            color: rgb(179, 19,19);
-        }
+#homeLogin a:hover {
+    color: rgb(179, 19,19);
+}
 
 .homeTextField h1 {
     font-family: 'Piedra';
@@ -266,7 +272,7 @@ z-index: 2;
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 75px;
 }
 
 #month {
@@ -282,7 +288,7 @@ z-index: 2;
 
 #year {
     font-family: 'Trade Winds';
-    font-size: 30px;
+    font-size: 40px;
 }
 
 .littleSmaller {
@@ -572,6 +578,10 @@ z-index: 2;
     flex-flow: nowrap;
 }
 
+.newsShowtimesContainer {
+    width: 300px;
+}
+
 .newsWednesdayShowings {
     margin-bottom: 20px;
 }
@@ -579,6 +589,7 @@ z-index: 2;
 .newsShowtimesDate {
     font-size: 20px;
     border-bottom: 1px solid black;
+    width: 230px;
     margin-bottom: 10px;
 }
 
@@ -607,7 +618,8 @@ z-index: 2;
 
 .newsSeatReservation {
     width: 400px;
-    margin-left: 100px;
+    margin-left: 150px;
+    padding-bottom: 50px;
 }
 
     /*
@@ -620,12 +632,24 @@ z-index: 2;
     font-size: 18px;
 }
 
+#floorplanLegend ul{
+    padding-left: 0;
+}
+
+#floorplanLegend span {
+    margin-right: 10px;
+}
+
+#floorplanLegend li {
+    font-size: 16px;
+}
+
 #theatreFloorplan {
     height: 450px;
     width: 404px;
     border: 2px solid black;
     position: relative;
-    background-color: lightslategray;
+    background-color: darkgray;
 }
 
 #filmScreen {
@@ -637,7 +661,9 @@ z-index: 2;
     position: absolute;
     bottom: 0;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 5px;
+    font-family: 'Kanit';
+    font-size: 25px;
 }
 
 #seatList {
@@ -653,7 +679,7 @@ z-index: 2;
     flex-direction: row;
 }
 
-input[type="radio"] {
+.filmInfoSelection input[type="radio"] {
     display: none;
 }
 
@@ -669,13 +695,13 @@ label span{
     background-size: contain;
 }
 
-    .availableSeat:hover {
-        display: block;
-        height: 40px;
-        width: 40px;
-        background-image: url('/Content/Images/cinemaChairDarkGreen.jpg');
-        background-size: contain;
-    }
+.availableSeat:hover {
+    display: block;
+    height: 40px;
+    width: 40px;
+    background-image: url('/Content/Images/cinemaChairDarkGreen.jpg');
+    background-size: contain;
+}
 
 .selected {
     display: block;
@@ -714,10 +740,21 @@ label span{
 }
 
 #seatReserveButton {
-    border: 5px solid pink;
     position: absolute;
-    bottom: -2px;
-    right: 402px;
+    bottom: -50px;
+    right: 0px;
+    border: 2.5px solid rgb(119, 19, 19);
+    border-radius: 6px;
+    background-color: rgb(179,19,19);
+    font-family: 'Kanit';
+    font-size: 20px;
+    color: white;
+}
+
+#seatReserveButton:hover {
+    color: rgb(228, 232, 60);
+    border-color: rgb(179,19,19);
+    background-color: rgb(119,19,19);
 }
 
 /*
@@ -844,7 +881,16 @@ label span{
 
 #loginSubmit {
     background-color: rgb(179, 19,19);
+    border: 3px solid rgb(119,19,19);
     color: white;
+    font-family: 'Kanit';
+    font-size: 15px;
+}
+
+#loginSubmit:hover {
+    background-color: rgb(119, 19,19);
+    border: 3px solid rgb(179,19,19);
+    color: rgb(228, 232, 60);
 }
 
 /*
@@ -852,6 +898,15 @@ label span{
     AdminDashboard
     ///
 */
+#adminDashboardContent {
+    margin-top: 35px;
+}
+
+#adminDashboardContent p{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
 #logoutButton {
     position: absolute;
     top: 10px;
@@ -859,18 +914,63 @@ label span{
 }
 
 #logoutButton input {
-    background-color: rgb(179, 19,19);
-    border-color: rgb(179, 19,19);
+    border: 2.5px solid rgb(119, 19, 19);
+    border-radius: 6px;
+    background-color: rgb(179,19,19);
+    font-family: 'Kanit';
+    font-size: 18px;
     color: white;
 }
 
 #logoutButton input:hover {
-    background-color: rgb(119, 19,19);
-    border-color: rgb(119, 19,19);
+    color: rgb(228, 232, 60);
+    border-color: rgb(179,19,19);
+    background-color: rgb(119,19,19);
 }
 
-#dashboardContainer {
-    padding-top: 20px;
+#adminCrudLinks {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+#adminCrudLinks a:hover {
+    color: rgb(119,19,19);
+    border-bottom: 2px solid rgb(119,19,19);
+}
+
+/*
+    ///
+    User Dashboard
+    ///
+*/
+
+#userDashboardContent {
+    margin-top: 35px;
+}
+
+/*
+    ///
+    Badges Buy
+    ///
+*/
+#purchaseButton {
+    border: 2.5px solid rgb(119, 19, 19);
+    border-radius: 6px;
+    background-color: rgb(179,19,19);
+    font-family: 'Kanit';
+    font-size: 18px;
+    color: white;
+}
+
+#purchaseButton:hover {
+    color: rgb(228, 232, 60);
+    border-color: rgb(179,19,19);
+    background-color: rgb(119,19,19);
 }
 
 /*

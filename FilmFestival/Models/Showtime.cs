@@ -15,7 +15,7 @@ namespace FilmFestival.Models
 
         public DateTime Time { get; set; }
 
-        public string Theatre { get; set; }
+        public int Theatre { get; set; }
 
         public ICollection<Seat> Seats { get; set; }
 

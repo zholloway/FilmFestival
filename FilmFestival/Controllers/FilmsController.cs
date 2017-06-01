@@ -79,6 +79,9 @@ namespace FilmFestival.Controllers
 
         public ActionResult SeatReservationForm(int showtimeID)
         {
+            //public ActionResult
+            //List<List<Long>>> coordinates = graphServices.GetCoordinates();
+            //return PartialView("_GraphPartial", coordinates);
             List<Seat> seats = db.Seats.Where(w => w.ShowtimeID == showtimeID).ToList();
             return PartialView("_seatReservationForm", seats);
         }

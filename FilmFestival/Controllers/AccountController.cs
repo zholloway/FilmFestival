@@ -426,35 +426,35 @@ namespace FilmFestival.Controllers
 
             foreach(var seat in list)
             {
-                if (seat.Showtime.Date.ToShortDateString() == "9/21/2017")
+                if (seat.Showtime.DateAndTime.ToShortDateString() == "9/21/2017")
                 {
                     ViewBag.areShowtimes21 = true;
                 }
-                if (seat.Showtime.Date.ToShortDateString() == "9/22/2017")
+                if (seat.Showtime.DateAndTime.ToShortDateString() == "9/22/2017")
                 {
                     ViewBag.areShowtimes22 = true;
                 }
-                if (seat.Showtime.Date.ToShortDateString() == "9/23/2017")
+                if (seat.Showtime.DateAndTime.ToShortDateString() == "9/23/2017")
                 {
                     ViewBag.areShowtimes23 = true;
                 }
-                if (seat.Showtime.Date.ToShortDateString() == "9/24/2017")
+                if (seat.Showtime.DateAndTime.ToShortDateString() == "9/24/2017")
                 {
                     ViewBag.areShowtimes24 = true;
                 }
-                if (seat.Showtime.Date.ToShortDateString() == "9/25/2017")
+                if (seat.Showtime.DateAndTime.ToShortDateString() == "9/25/2017")
                 {
                     ViewBag.areShowtimes25 = true;
                 }
-                if (seat.Showtime.Date.ToShortDateString() == "9/26/2017")
+                if (seat.Showtime.DateAndTime.ToShortDateString() == "9/26/2017")
                 {
                     ViewBag.areShowtimes26 = true;
                 }
-                if (seat.Showtime.Date.ToShortDateString() == "9/27/2017")
+                if (seat.Showtime.DateAndTime.ToShortDateString() == "9/27/2017")
                 {
                     ViewBag.areShowtimes27 = true;
                 }
-                if (seat.Showtime.Date.ToShortDateString() == "9/28/2017")
+                if (seat.Showtime.DateAndTime.ToShortDateString() == "9/28/2017")
                 {
                     ViewBag.areShowtimes28 = true;
                 }

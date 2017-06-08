@@ -70,7 +70,7 @@ namespace FilmFestival.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Date,Time,Theatre,FilmID")] Showtime showtime)
+        public ActionResult Create([Bind(Include = "ID,DateAndTime,Theatre,FilmID")] Showtime showtime)
         {
             if (ModelState.IsValid)
             {
@@ -123,7 +123,7 @@ namespace FilmFestival.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Showtime showtime = db.Showtimes.Find(id);
+            Showtime showtime = db.Showtimes.Include(i => i.Film).First(f => f.ID == id);
             if (showtime == null)
             {
                 return HttpNotFound();

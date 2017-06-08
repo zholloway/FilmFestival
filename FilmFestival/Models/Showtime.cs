@@ -11,9 +11,7 @@ namespace FilmFestival.Models
     {
         public int ID { get; set; }
 
-        public DateTime Date { get; set; }
-
-        public DateTime Time { get; set; }
+        public DateTime DateAndTime { get; set; }
 
         public int Theatre { get; set; }
 

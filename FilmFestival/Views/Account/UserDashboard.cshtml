@@ -21,7 +21,19 @@
     <p>
         If you would like to cancel your reservation for a specific showtime, click <strong>Delete</strong>.
     </p>
-    
+
+    @if(ViewBag.areShowtimes21 != true &&
+        ViewBag.areShowtimes22 != true &&
+        ViewBag.areShowtimes23 != true &&
+        ViewBag.areShowtimes24 != true &&
+        ViewBag.areShowtimes25 != true &&
+        ViewBag.areShowtimes26 != true &&
+        ViewBag.areShowtimes27 != true &&
+        ViewBag.areShowtimes28 != true)
+    {
+        <strong>You have no reservations! Head over to a Film's Info page to reserve your seat.</strong>
+    }
+
     @if (ViewBag.areShowtimes21 == true)
     {
         <h3>
@@ -33,21 +45,21 @@
                     Film Title
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Showtime.Time)
+                    Time
                 </th>
                 <th></th>
             </tr>
 
             @foreach (var item in Model)
             {
-                if (item.Showtime.Date.ToShortDateString() == "9/21/2017")
+                if (item.Showtime.DateAndTime.ToShortDateString() == "9/21/2017")
                 {
                     <tr>
                         <td>
                             @Html.DisplayFor(modelItem => item.Showtime.Film.Title)
                         </td>
                         <td>
-                            @item.Showtime.Time.ToShortTimeString()
+                            @item.Showtime.DateAndTime.ToShortTimeString()
                         </td>
                         <td>
                             @Html.ActionLink("Details", "Details", "Seats", new { seatID = item.ID }, null) |
@@ -70,21 +82,21 @@
                     Film Title
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Showtime.Time)
+                    Time
                 </th>
                 <th></th>
             </tr>
 
             @foreach (var item in Model)
             {
-                if (item.Showtime.Date.ToShortDateString() == "9/22/2017")
+                if (item.Showtime.DateAndTime.ToShortDateString() == "9/22/2017")
                 {
                     <tr>
                         <td>
                             @Html.DisplayFor(modelItem => item.Showtime.Film.Title)
                         </td>
                         <td>
-                            @item.Showtime.Time.ToShortTimeString()
+                            @item.Showtime.DateAndTime.ToShortTimeString()
                         </td>
                         <td>
                             @Html.ActionLink("Details", "Details", "Seats", new { seatID = item.ID }, null) |
@@ -107,21 +119,21 @@
                     Film Title
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Showtime.Time)
+                    Time
                 </th>
                 <th></th>
             </tr>
 
             @foreach (var item in Model)
             {
-                if (item.Showtime.Date.ToShortDateString() == "9/23/2017")
+                if (item.Showtime.DateAndTime.ToShortDateString() == "9/23/2017")
                 {
                     <tr>
                         <td>
                             @Html.DisplayFor(modelItem => item.Showtime.Film.Title)
                         </td>
                         <td>
-                            @item.Showtime.Time.ToShortTimeString()
+                            @item.Showtime.DateAndTime.ToShortTimeString()
                         </td>
                         <td>
                             @Html.ActionLink("Details", "Details", "Seats", new { seatID = item.ID }, null) |
@@ -144,21 +156,21 @@
                     Film Title
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Showtime.Time)
+                    Time
                 </th>
                 <th></th>
             </tr>
 
             @foreach (var item in Model)
             {
-                if (item.Showtime.Date.ToShortDateString() == "9/24/2017")
+                if (item.Showtime.DateAndTime.ToShortDateString() == "9/24/2017")
                 {
                     <tr>
                         <td>
                             @Html.DisplayFor(modelItem => item.Showtime.Film.Title)
                         </td>
                         <td>
-                            @item.Showtime.Time.ToShortTimeString()
+                            @item.Showtime.DateAndTime.ToShortTimeString()
                         </td>
                         <td>
                             @Html.ActionLink("Details", "Details", "Seats", new { seatID = item.ID }, null) |
@@ -181,21 +193,21 @@
                     Film Title
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Showtime.Time)
+                    Time
                 </th>
                 <th></th>
             </tr>
 
             @foreach (var item in Model)
             {
-                if (item.Showtime.Date.ToShortDateString() == "9/25/2017")
+                if (item.Showtime.DateAndTime.ToShortDateString() == "9/25/2017")
                 {
                     <tr>
                         <td>
                             @Html.DisplayFor(modelItem => item.Showtime.Film.Title)
                         </td>
                         <td>
-                            @item.Showtime.Time.ToShortTimeString()
+                            @item.Showtime.DateAndTime.ToShortTimeString()
                         </td>
                         <td>
                             @Html.ActionLink("Details", "Details", "Seats", new { seatID = item.ID }, null) |
@@ -218,21 +230,21 @@
                     Film Title
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Showtime.Time)
+                    Time
                 </th>
                 <th></th>
             </tr>
 
             @foreach (var item in Model)
             {
-                if (item.Showtime.Date.ToShortDateString() == "9/26/2017")
+                if (item.Showtime.DateAndTime.ToShortDateString() == "9/26/2017")
                 {
                     <tr>
                         <td>
                             @Html.DisplayFor(modelItem => item.Showtime.Film.Title)
                         </td>
                         <td>
-                            @item.Showtime.Time.ToShortTimeString()
+                            @item.Showtime.DateAndTime.ToShortTimeString()
                         </td>
                         <td>
                             @Html.ActionLink("Details", "Details", "Seats", new { seatID = item.ID }, null) |
@@ -255,21 +267,21 @@
                     Film Title
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Showtime.Time)
+                    Time
                 </th>
                 <th></th>
             </tr>
 
             @foreach (var item in Model)
             {
-                if (item.Showtime.Date.ToShortDateString() == "9/27/2017")
+                if (item.Showtime.DateAndTime.ToShortDateString() == "9/27/2017")
                 {
                     <tr>
                         <td>
                             @Html.DisplayFor(modelItem => item.Showtime.Film.Title)
                         </td>
                         <td>
-                            @item.Showtime.Time.ToShortTimeString()
+                            @item.Showtime.DateAndTime.ToShortTimeString()
                         </td>
                         <td>
                             @Html.ActionLink("Details", "Details", "Seats", new { seatID = item.ID }, null) |
@@ -292,21 +304,21 @@
                     Film Title
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Showtime.Time)
+                    Time
                 </th>
                 <th></th>
             </tr>
 
             @foreach (var item in Model)
             {
-                if (item.Showtime.Date.ToShortDateString() == "9/28/2017")
+                if (item.Showtime.DateAndTime.ToShortDateString() == "9/28/2017")
                 {
                     <tr>
                         <td>
                             @Html.DisplayFor(modelItem => item.Showtime.Film.Title)
                         </td>
                         <td>
-                            @item.Showtime.Time.ToShortTimeString()
+                            @item.Showtime.DateAndTime.ToShortTimeString()
                         </td>
                         <td>
                             @Html.ActionLink("Details", "Details", "Seats", new { seatID = item.ID }, null) |

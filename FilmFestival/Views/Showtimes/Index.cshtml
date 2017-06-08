@@ -14,10 +14,10 @@
             @Html.DisplayNameFor(model => model.Film.Title)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Date)
+            @Html.DisplayNameFor(model => model.DateAndTime)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Time)
+            @Html.DisplayNameFor(model => model.DateAndTime)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Theatre)
@@ -31,10 +31,10 @@
             @Html.DisplayFor(modelItem => item.Film.Title)
         </td>
         <td>
-            @item.Date.ToShortDateString()
+            @item.DateAndTime.ToShortDateString()
         </td>
         <td>
-            @item.Time.ToShortTimeString()
+            @item.DateAndTime.ToShortTimeString()
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Theatre)

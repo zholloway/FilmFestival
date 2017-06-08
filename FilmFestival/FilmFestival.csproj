@@ -266,6 +266,11 @@
     <Compile Include="Migrations\201705301920431_theatre changed to int.Designer.cs">
       <DependentUpon>201705301920431_theatre changed to int.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706081736183_showtime date\time merged.cs" />
+    <Compile Include="Migrations\201706081736520_db.cs" />
+    <Compile Include="Migrations\201706081736520_db.Designer.cs">
+      <DependentUpon>201706081736520_db.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Badge.cs" />
@@ -570,6 +575,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705301920431_theatre changed to int.resx">
       <DependentUpon>201705301920431_theatre changed to int.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706081736520_db.resx">
+      <DependentUpon>201706081736520_db.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

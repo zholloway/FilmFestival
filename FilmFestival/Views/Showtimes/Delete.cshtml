@@ -15,23 +15,23 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Film.Title)
+            @Model.Film.Title
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Date)
+            Date
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Date)
+            @Model.DateAndTime.ToShortDateString()
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Time)
+            Time
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Time)
+           @Model.DateAndTime.ToShortTimeString()
         </dd>
 
         <dt>

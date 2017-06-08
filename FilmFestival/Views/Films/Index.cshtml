@@ -10,7 +10,12 @@
     @foreach (var film in Model)
     {
         <div class="filmCell">
-            <img src="@film.PreviewImgPath" />
+            <div class="filmCellImage">
+                <img src="@film.PreviewImgPath" />
+                <div class="popUp">
+                    <p>@Html.Raw(film.BriefSummary)</p>
+                </div>
+            </div>           
             <h2><a href="/Films/Info?filmID=@film.ID"><strong>@film.Title</strong></a></h2>
             <span>Dir. - @film.Director</span>
         </div>

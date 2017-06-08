@@ -29,7 +29,8 @@ namespace FilmFestival.Services
                     Director = film.Director,
                     ID = film.ID,
                     PreviewImgPath = film.PreviewImgPath,
-                    Title = film.Title
+                    Title = film.Title,
+                    BriefSummary = film.BriefSummary
                 };
 
                 returnList.Add(returnFilm);

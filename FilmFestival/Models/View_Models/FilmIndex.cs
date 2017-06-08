@@ -14,5 +14,7 @@ namespace FilmFestival.Models.View_Models
         public string Title { get; set; }
 
         public string Director { get; set; }
+
+        public string BriefSummary { get; set; }
     }
 }

@@ -37,8 +37,6 @@ namespace FilmFestival.Controllers
             var chargeID = stripeServices.ProcessPayment(charge);
 
             //Save the Stripe's transaction ID to the charge and add to database
-            charge.StripeTransactionID = chargeID.ToString();
-            stripeServices.AddStripeCharge(charge);
 
             //Pass required data to Success method
             var model = new Attend_Success_DataModel(charge.Amount, charge.CardHolderEmail);

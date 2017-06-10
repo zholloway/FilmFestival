@@ -16,7 +16,6 @@ namespace FilmFestival.Models
         [Required]
         public double Amount { get; set; }
 
-        [Required]
         public string StripeTransactionID { get; set; }
 
         [Required]

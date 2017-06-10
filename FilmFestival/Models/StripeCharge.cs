@@ -17,6 +17,9 @@ namespace FilmFestival.Models
         public double Amount { get; set; }
 
         [Required]
+        public string StripeTransactionID { get; set; }
+
+        [Required]
         public string CardHolderName { get; set; }
 
         // These fields are optional and are not 

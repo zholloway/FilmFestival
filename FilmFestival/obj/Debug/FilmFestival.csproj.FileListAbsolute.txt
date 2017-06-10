@@ -119,3 +119,4 @@ C:\Users\Zack Holloway\Documents\Visual Studio 2017\Projects\FilmFestival\FilmFe
 C:\Users\Zack Holloway\Documents\Visual Studio 2017\Projects\FilmFestival\FilmFestival\bin\Stripe.net.dll
 C:\Users\Zack Holloway\Documents\Visual Studio 2017\Projects\FilmFestival\FilmFestival\obj\Debug\FilmFestival.Migrations.addingStripeChargestable.resources
 C:\Users\Zack Holloway\Documents\Visual Studio 2017\Projects\FilmFestival\FilmFestival\obj\Debug\FilmFestival.Migrations.emailaddedtoStripeCharges.resources
+C:\Users\Zack Holloway\Documents\Visual Studio 2017\Projects\FilmFestival\FilmFestival\obj\Debug\FilmFestival.Migrations.stripeTransactionIDaddedtoStripeCharges.resources

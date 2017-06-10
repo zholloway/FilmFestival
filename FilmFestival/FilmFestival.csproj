@@ -282,6 +282,10 @@
     <Compile Include="Migrations\201706101837241_email added to StripeCharges.Designer.cs">
       <DependentUpon>201706101837241_email added to StripeCharges.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706102021446_stripeTransactionID added to StripeCharges.cs" />
+    <Compile Include="Migrations\201706102021446_stripeTransactionID added to StripeCharges.Designer.cs">
+      <DependentUpon>201706102021446_stripeTransactionID added to StripeCharges.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Attend_Success_DataModel.cs" />
@@ -598,6 +602,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706101837241_email added to StripeCharges.resx">
       <DependentUpon>201706101837241_email added to StripeCharges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706102021446_stripeTransactionID added to StripeCharges.resx">
+      <DependentUpon>201706102021446_stripeTransactionID added to StripeCharges.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

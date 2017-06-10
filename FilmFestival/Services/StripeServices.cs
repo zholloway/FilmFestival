@@ -10,6 +10,8 @@ namespace FilmFestival.Services
 {
     public class StripeServices
     {
+        public ApplicationDbContext DB { get; } = new ApplicationDbContext();
+
         public async Task<string> ProcessPayment(Models.StripeCharge charge)
         {
             return await Task.Run(() =>
@@ -28,6 +30,12 @@ namespace FilmFestival.Services
 
                 return stripeCharge.Id;
             });
+        }
+
+        public void AddStripeCharge(Models.StripeCharge charge)
+        {
+            DB.StripeCharges.Add(charge);
+            DB.SaveChanges();
         }
     }
 }

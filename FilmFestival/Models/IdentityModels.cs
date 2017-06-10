@@ -40,5 +40,6 @@ namespace FilmFestival.Models
         public DbSet<Showtime> Showtimes { get; set; }
         public DbSet<Seat> Seats { get; set; }
         public DbSet<Badge> Badges { get; set; }
+        public DbSet<StripeCharge> StripeCharges { get; set; }
     }
 }

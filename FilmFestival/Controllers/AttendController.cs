@@ -1,4 +1,5 @@
-﻿using FilmFestival.Services;
+﻿using FilmFestival.Models;
+using FilmFestival.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace FilmFestival.Controllers
         EmailServices emailServices = new EmailServices();
         BadgeServices badgeServices = new BadgeServices();
         UserServices userServices = new UserServices();
+        StripeServices stripeServices = new StripeServices();
 
         public ActionResult Index()
         {
@@ -20,18 +22,34 @@ namespace FilmFestival.Controllers
 
         public ActionResult Buy()
         {
-            return View();
+            return View(new StripeCharge());
         }
 
-        public ActionResult Success(string badgeSelection, string emailAddress)
+        [HttpPost]
+        public ActionResult Buy(StripeCharge charge)
         {
-            int badgeID = badgeServices.Create(badgeSelection);
-            string userID = userServices.Create(emailAddress,badgeID);
+            if (!ModelState.IsValid)
+            {
+                return View(charge);
+            }
+
+            var chargeId = stripeServices.ProcessPayment(charge);
+            // chargeID currently not used
+
+            var model = new Attend_Success_DataModel(charge.Amount, charge.CardHolderEmail);
+
+            return RedirectToAction("Success", model);
+        }
+
+        public ActionResult Success(string BadgeLevel, string CardHolderEmailAddress)
+        {
+            int badgeID = badgeServices.Create(BadgeLevel);
+            string userID = userServices.Create(CardHolderEmailAddress,badgeID);
             badgeServices.AssignBadgeToUser(badgeID, userID);
-            emailServices.SendAccountEmail(badgeID, emailAddress);
+            emailServices.SendAccountEmail(badgeID, CardHolderEmailAddress);
 
             ViewBag.badgeID = badgeID;
-            ViewBag.emailAddress = emailAddress;
+            ViewBag.emailAddress = CardHolderEmailAddress;
 
             return View();
         }

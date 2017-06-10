@@ -66,5 +66,7 @@
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/ckeditor")
     @RenderSection("scripts", required: false)
+    <!--The below script includes Stripe.js so tokens can be generated for credit card payments-->
+    <script src="https://js.stripe.com/v3/"></script>
 </body>
 </html>

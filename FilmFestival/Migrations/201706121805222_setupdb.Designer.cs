@@ -7,13 +7,13 @@ namespace FilmFestival.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class stripeTransactionIDaddedtoStripeCharges : IMigrationMetadata
+    public sealed partial class setupdb : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(stripeTransactionIDaddedtoStripeCharges));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(setupdb));
         
         string IMigrationMetadata.Id
         {
-            get { return "201706102021446_stripeTransactionID added to StripeCharges"; }
+            get { return "201706121805222_setupdb"; }
         }
         
         string IMigrationMetadata.Source

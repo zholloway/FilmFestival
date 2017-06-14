@@ -30,7 +30,7 @@ namespace FilmFestival.Controllers
 
         public ActionResult NewsList()
         {
-            return View(db.NewsStories);
+            return View(db.NewsStories.OrderByDescending(o => o.Date).ToList());
         }
 
         // GET: News/Details/5

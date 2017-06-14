@@ -217,78 +217,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201705202056090_db create.cs" />
-    <Compile Include="Migrations\201705202056090_db create.Designer.cs">
-      <DependentUpon>201705202056090_db create.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705221439583_NewsStory previewImg deleted and Body to varcharMAX.cs" />
-    <Compile Include="Migrations\201705221439583_NewsStory previewImg deleted and Body to varcharMAX.Designer.cs">
-      <DependentUpon>201705221439583_NewsStory previewImg deleted and Body to varcharMAX.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705221446171_newsStory body set to nvarchar.cs" />
-    <Compile Include="Migrations\201705221446171_newsStory body set to nvarchar.Designer.cs">
-      <DependentUpon>201705221446171_newsStory body set to nvarchar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705221743117_user and admin roles creation.cs" />
-    <Compile Include="Migrations\201705221743117_user and admin roles creation.Designer.cs">
-      <DependentUpon>201705221743117_user and admin roles creation.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705232006410_allowHtml for films and news.cs" />
-    <Compile Include="Migrations\201705232006410_allowHtml for films and news.Designer.cs">
-      <DependentUpon>201705232006410_allowHtml for films and news.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705250346131_Seat table creation.cs" />
-    <Compile Include="Migrations\201705250346131_Seat table creation.Designer.cs">
-      <DependentUpon>201705250346131_Seat table creation.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705250349013_seats to icollection.cs" />
-    <Compile Include="Migrations\201705250349013_seats to icollection.Designer.cs">
-      <DependentUpon>201705250349013_seats to icollection.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705251425136_showtime FK.cs" />
-    <Compile Include="Migrations\201705251425136_showtime FK.Designer.cs">
-      <DependentUpon>201705251425136_showtime FK.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705251853394_update Seat.cs" />
-    <Compile Include="Migrations\201705251853394_update Seat.Designer.cs">
-      <DependentUpon>201705251853394_update Seat.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705251902540_add seats to users.cs" />
-    <Compile Include="Migrations\201705251902540_add seats to users.Designer.cs">
-      <DependentUpon>201705251902540_add seats to users.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705261526368_seats connection added to ApplicationUser .cs" />
-    <Compile Include="Migrations\201705261526368_seats connection added to ApplicationUser .Designer.cs">
-      <DependentUpon>201705261526368_seats connection added to ApplicationUser .cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705301611178_badges table.cs" />
-    <Compile Include="Migrations\201705301611178_badges table.Designer.cs">
-      <DependentUpon>201705301611178_badges table.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705301920431_theatre changed to int.cs" />
-    <Compile Include="Migrations\201705301920431_theatre changed to int.Designer.cs">
-      <DependentUpon>201705301920431_theatre changed to int.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706081736183_showtime date\time merged.cs" />
-    <Compile Include="Migrations\201706081736520_db.cs" />
-    <Compile Include="Migrations\201706081736520_db.Designer.cs">
-      <DependentUpon>201706081736520_db.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706101829077_adding StripeCharges table.cs" />
-    <Compile Include="Migrations\201706101829077_adding StripeCharges table.Designer.cs">
-      <DependentUpon>201706101829077_adding StripeCharges table.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706101837241_email added to StripeCharges.cs" />
-    <Compile Include="Migrations\201706101837241_email added to StripeCharges.Designer.cs">
-      <DependentUpon>201706101837241_email added to StripeCharges.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706102021446_stripeTransactionID added to StripeCharges.cs" />
-    <Compile Include="Migrations\201706102021446_stripeTransactionID added to StripeCharges.Designer.cs">
-      <DependentUpon>201706102021446_stripeTransactionID added to StripeCharges.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706102025377_remove required.cs" />
-    <Compile Include="Migrations\201706102025377_remove required.Designer.cs">
-      <DependentUpon>201706102025377_remove required.cs</DependentUpon>
+    <Compile Include="Migrations\201706121805222_setupdb.cs" />
+    <Compile Include="Migrations\201706121805222_setupdb.Designer.cs">
+      <DependentUpon>201706121805222_setupdb.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -559,59 +490,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201705202056090_db create.resx">
-      <DependentUpon>201705202056090_db create.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705221439583_NewsStory previewImg deleted and Body to varcharMAX.resx">
-      <DependentUpon>201705221439583_NewsStory previewImg deleted and Body to varcharMAX.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705221446171_newsStory body set to nvarchar.resx">
-      <DependentUpon>201705221446171_newsStory body set to nvarchar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705221743117_user and admin roles creation.resx">
-      <DependentUpon>201705221743117_user and admin roles creation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705232006410_allowHtml for films and news.resx">
-      <DependentUpon>201705232006410_allowHtml for films and news.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705250346131_Seat table creation.resx">
-      <DependentUpon>201705250346131_Seat table creation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705250349013_seats to icollection.resx">
-      <DependentUpon>201705250349013_seats to icollection.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705251425136_showtime FK.resx">
-      <DependentUpon>201705251425136_showtime FK.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705251853394_update Seat.resx">
-      <DependentUpon>201705251853394_update Seat.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705251902540_add seats to users.resx">
-      <DependentUpon>201705251902540_add seats to users.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705261526368_seats connection added to ApplicationUser .resx">
-      <DependentUpon>201705261526368_seats connection added to ApplicationUser .cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705301611178_badges table.resx">
-      <DependentUpon>201705301611178_badges table.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705301920431_theatre changed to int.resx">
-      <DependentUpon>201705301920431_theatre changed to int.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706081736520_db.resx">
-      <DependentUpon>201706081736520_db.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706101829077_adding StripeCharges table.resx">
-      <DependentUpon>201706101829077_adding StripeCharges table.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706101837241_email added to StripeCharges.resx">
-      <DependentUpon>201706101837241_email added to StripeCharges.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706102021446_stripeTransactionID added to StripeCharges.resx">
-      <DependentUpon>201706102021446_stripeTransactionID added to StripeCharges.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706102025377_remove required.resx">
-      <DependentUpon>201706102025377_remove required.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706121805222_setupdb.resx">
+      <DependentUpon>201706121805222_setupdb.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

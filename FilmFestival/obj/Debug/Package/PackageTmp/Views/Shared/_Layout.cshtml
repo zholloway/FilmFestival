@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Trade+Winds" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <div class="body-content">
@@ -64,5 +66,7 @@
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/ckeditor")
     @RenderSection("scripts", required: false)
+    <!--The below script includes Stripe.js so tokens can be generated for credit card payments-->
+    <script src="https://js.stripe.com/v3/"></script>
 </body>
 </html>

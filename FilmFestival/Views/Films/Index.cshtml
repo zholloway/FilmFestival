@@ -13,7 +13,7 @@
             <div class="filmCellImage">
                 <img src="@film.PreviewImgPath" />
                 <div class="popUp">
-                    <p>@Html.Raw(film.BriefSummary)</p>
+                    @Html.Raw(film.BriefSummary)
                 </div>
             </div>           
             <h2><a href="/Films/Info?filmID=@film.ID"><strong>@film.Title</strong></a></h2>

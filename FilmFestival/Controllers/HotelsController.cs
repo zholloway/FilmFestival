@@ -17,7 +17,7 @@ namespace FilmFestival.Controllers
         // GET: Hotels
         public ActionResult Index()
         {
-            return View(db.Hotels.ToList());
+            return View(db.Hotels.OrderBy(o => o.Name).ToList());
         }
 
         // GET: Hotels/Details/5

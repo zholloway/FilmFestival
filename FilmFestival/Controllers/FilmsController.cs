@@ -88,7 +88,7 @@ namespace FilmFestival.Controllers
 
         public ActionResult FilmList()
         {
-            var filmList = db.Films.Include(i => i.Showtimes).ToList();
+            var filmList = db.Films.Include(i => i.Showtimes).OrderBy(o => o.Title).ToList();
             return View(filmList);
         }
 

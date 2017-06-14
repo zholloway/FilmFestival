@@ -17,7 +17,7 @@ namespace FilmFestival.Controllers
         // GET: Showtimes
         public ActionResult Index()
         {
-            var showtimes = db.Showtimes.Include(s => s.Film);
+            var showtimes = db.Showtimes.Include(s => s.Film).OrderByDescending(o => o.DateAndTime);
             return View(showtimes.ToList());
         }
 

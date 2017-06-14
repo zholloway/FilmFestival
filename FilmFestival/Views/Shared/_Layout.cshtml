@@ -18,38 +18,40 @@
 <body>
     <div class="body-content">
         <div class="navbar-fixed-top">
-            <h1>
-                Fantastic Fest
-            </h1>
+            <a href="~/Home/Index">
+                <h1>
+                    Fantastic Fest
+                </h1>
+            </a>
 
-            <ul class="navList">
-                <li><a href="~/Home/Index">Home</a></li>
-                <li><a href="~/Home/About">About</a></li>
-                <li><a href="~/Attend">Badges</a></li>
-                <li><a href="~/Films">Films</a></li>
-                <li><a href="~/News">News</a></li>
-                <li><a href="~/Home/Submit">Submit</a></li>
-                <li><a href="~/Travel">Travel</a></li>
-            </ul>
+                <ul class="navList">
+                    <li><a href="~/Home/Index">Home</a></li>
+                    <li><a href="~/Home/About">About</a></li>
+                    <li><a href="~/Attend">Badges</a></li>
+                    <li><a href="~/Films">Films</a></li>
+                    <li><a href="~/News">News</a></li>
+                    <li><a href="~/Home/Submit">Submit</a></li>
+                    <li><a href="~/Travel">Travel</a></li>
+                </ul>
 
-            <div class="navLoginLink">
-                @if (User.Identity.IsAuthenticated)
-                {
-                    if (User.IsInRole("user"))
+                <div class="navLoginLink">
+                    @if (User.Identity.IsAuthenticated)
                     {
-                        <a href="~/Account/UserDashboard/@User.Identity.GetUserId()">@User.Identity.GetUserName()</a>
+                        if (User.IsInRole("user"))
+                        {
+                            <a href="~/Account/UserDashboard/@User.Identity.GetUserId()">@User.Identity.GetUserName()</a>
+                        }
+                        else
+                        {
+                            <a href="~/Account/AdminDashboard">@User.Identity.GetUserName()</a>
+                        }
                     }
                     else
                     {
-                        <a href="~/Account/AdminDashboard">@User.Identity.GetUserName()</a>
+                        <a href="~/Account/Login">[ Login ]</a>
                     }
-                }
-                else
-                {
-                    <a href="~/Account/Login">[ Login ]</a>
-                }                
-            </div>
-        </div>     
+                </div>
+</div>     
 
         @Html.Partial("_pageHeading")
 
@@ -61,10 +63,10 @@
     
     <footer>
     </footer>
-
+    
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    @Scripts.Render("~/bundles/ckeditor")
+    <script src="~/Scripts/ckeditor/ckeditor.js"></script>
     @RenderSection("scripts", required: false)
     <!--The below script includes Stripe.js so tokens can be generated for credit card payments-->
     <script src="https://js.stripe.com/v3/"></script>

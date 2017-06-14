@@ -1,21 +1,174 @@
-﻿@{
+﻿@model FilmFestival.Models.StripeCharge
+@{
     ViewBag.Title = "Purchase Badge";
 }
 
 <div class="newsBody">
     <p>
-        Please make a selection for which badge you would like to purchase.
-    </p>
-    <p>
-        We will also need your email address to create your user account and send confirmation of your badge purchase.
+        Please fill out your payment information and select a badge to purchase. Required fields are marked with *.
+        <hr />
     </p>
 
-    <form method="post" action="~/Attend/Success">
-        <input type="radio" name="badgeSelection" value="2nd Half Badge" /> 2<sup>nd</sup> Half Badge - $225.00 <br />
-        <input type="radio" name="badgeSelection" value="Fan Badge" /> Fan Badge - $425.00 <br />
-        <input type="radio" name="badgeSelection" value="Superfan Badge" disabled /> Superfan Badge - $490.00 - <strong>SOLD OUT</strong><br /> <br />
-        <strong>Email Address: </strong><input type="text" name="emailAddress" /> <br /> <br />
-        <input id="purchaseButton" type="submit" value="Purchase" />
-    </form>
+    <div>
+        <dl class="dl-horizontal">
+            <dt>
+                <label for="txtCardNumber">Card Number *</label>
+            </dt>
+
+            <dd>
+                <input type="text" id="txtCardNumber" placeholder="Card Number e.g 1234..." />
+            </dd>
+
+            <dt>
+                <label for="txtCvc">CVC *</label>
+            </dt>
+
+            <dd>
+                <input type="text" id="txtCvc" placeholder="Security Code e.g 987" />
+            </dd>
+
+            <dt>
+                <label for="txtExpiryMonth">Expiry Month (MM) *</label>
+            </dt>
+
+            <dd>
+                <input type="text" id="txtExpiryMonth" placeholder="01" />
+            </dd>
+
+            <dt>
+                <label for="txtExpiryYear">Expiry Year (YYYY) *</label>
+            </dt>
+
+            <dd>
+                <input type="text" id="txtExpiryYear" placeholder="2015" />
+            </dd>
+        </dl>
+    </div>
+    @using (Html.BeginForm("Buy", "Attend", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form", id = "frmCharge" }))
+    {
+        @Html.AntiForgeryToken()
+        <dl class="dl-horizontal">
+            <dt>
+               Cardholder Name
+            </dt>
+
+            <dd>
+                @Html.TextBoxFor(model => model.CardHolderName, new { id = "txtCardHolderName" })
+            </dd>
+
+            <dt>
+                Email Address
+            </dt>
+
+            <dd>
+                @Html.TextBoxFor(model => model.CardHolderEmail, new { id = "txtCardHolderEmail" })
+            </dd>
+
+            <dt>
+                Address Line 1
+            </dt>
+
+            <dd>
+                @Html.TextBoxFor(model => model.AddressLine1, new { id = "txtAddress1" })
+            </dd>
+
+            <dt>
+                Address Line 2
+            </dt>
+
+            <dd>
+                @Html.TextBoxFor(model => model.AddressLine2, new { id = "txtAddress2" })
+            </dd>
+
+            <dt>
+                City
+            </dt>
+
+            <dd>
+                @Html.TextBoxFor(model => model.AddressCity, new { id = "txtCity" })
+            </dd>
+
+            <dt>
+                ZIP Code
+            </dt>
+
+            <dd>
+                @Html.TextBoxFor(model => model.AddressPostcode, new { id = "txtPostcode" })
+            </dd>
+
+            <dt>
+                Country
+            </dt>
+
+            <dd>
+                @Html.TextBoxFor(model => model.AddressCountry, new { id = "txtCountry" })
+            </dd>
+
+            <dt>
+                Badge Level
+            </dt>
+
+            <dd>
+                <div class="badgeSelection">
+                    <div>
+                        <input type="radio" id="HalfBadge" name="Amount" value="225.00" />
+                        <label for="HalfBadge"><span>Half Badge -- $225.00</span></label>
+                    </div>
+                    <div>
+                        <input type="radio" id="FanBadge" name="Amount" value="425.00" />
+                        <label for="FanBadge"><span>Fan Badge -- $425.00</span></label>
+                    </div>
+                    <div>
+                        <input type="radio" id="SuperfanBadge" name="Amount" value="490.00" disabled />
+                        <label for="FanBadge"><span>Superfan Badge -- SOLD OUT</span></label>
+                    </div>                  
+                </div>              
+            </dd>
+        </dl>        
+        <p>
+            @Html.HiddenFor(model => model.Token, new { id = "hdnToken" })
+            @Html.ActionLink("Process Payment", "Buy", "Attend", null, new { id = "btnCharge" })          
+        </p>
+    }
 </div>
+
+
+
+@section Scripts {
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+
+    <script type="text/javascript">
+        $('document').ready(function() {
+            Stripe.setPublishableKey('pk_test_M7L6bi1hLuAnsX7CtdeyYM4E');
+
+            $('#btnCharge').on('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                Stripe.card.createToken({
+                    number: $('#txtCardNumber').val(),
+                    cvc: $('#txtCvc').val(),
+                    exp_month: $('#txtExpiryMonth').val(),
+                    exp_year: $('#txtExpiryYear').val()
+                }, stripeResponseHandler);
+            });
+
+            function stripeResponseHandler(status, response) {
+                var $form = $('#frmCharge');
+
+                if (response.error) {
+                    // Show the errors on the form
+                    alert(response.error.message);
+                } else {
+                    // response contains id and card, which contains additional card details
+                    var token = response.id;
+                    // Insert the token into the form so it gets submitted to the server
+                    $('#hdnToken').val(token);
+                    // and submit
+                    $form.get(0).submit();
+                }
+            }
+        });
+    </script>
+}
 

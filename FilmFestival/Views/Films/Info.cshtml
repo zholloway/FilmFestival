@@ -5,184 +5,186 @@
 }
 
 <div class="newsBody">
-    <div class="newsImage">
-        <img src="@Model.InfoImgPath" />
-    </div>
-
-    <h2 class="newsFilmTitle"><strong>@Model.Title</strong></h2>
-    <div class="filmDetails">
-        <span><strong>@Model.YearReleased || DIR. - @Model.Director.ToUpper() || @Model.Country.ToUpper() || @Model.Runtime MIN.</strong></span>
-    </div>
-
-    @Html.Partial("_socialMediaBar")
-
-    <div class="newsParagraph">
-        <h3>Brief Summary</h3>
-        @Html.Raw(Model.BriefSummary)
-
-        <h3>Full Description</h3>
-        @Html.Raw(Model.FullDescription)
-    </div>
-
-    <h3 id="newsShowtimesHeader">Showtimes</h3>
-    @if (User.IsInRole("user"))
-    {
-        <p>
-            -- CLICK A SHOWTIME TO SEE AVAILABLE SEATS --
-        </p>
-
-        <div class="showtimesAndReservationsContainer">
-            <div class="newsShowtimesContainer">
-
-                @if (ViewBag.areShowtimes21 == true)
-                {
-                    <div class="newsShowtimesDate">
-                        <span><strong>Friday, September 21<sup>st</sup></strong></span>
-                    </div>
-                    <div class="newsWednesdayShowings">
-                        <div class="newsShowtimesTimes">
-                            @foreach (var showtime in Model.Showtimes.Where(w => w.DateAndTime.ToShortDateString() == "9/21/2017"))
-                            {
-                                <button id="@showtime.ID" class="showtimeButton" onclick="">@showtime.DateAndTime.ToShortTimeString()</button>
-                            }
-                        </div>
-                    </div>
-                }
-
-                @if (ViewBag.areShowtimes22 == true)
-                {
-                    <div class="newsShowtimesDate">
-                        <span><strong>Saturday, September 22<sup>nd</sup></strong></span>
-                    </div>
-                    <div class="newsWednesdayShowings">
-                        <div class="newsShowtimesTimes">
-                            @foreach (var showtime in Model.Showtimes.Where(w => w.DateAndTime.ToShortDateString() == "9/22/2017"))
-                            {
-                                <button id="@showtime.ID" class="showtimeButton" onclick="">@showtime.DateAndTime.ToShortTimeString()</button>
-                            }
-                        </div>
-                    </div>
-                }
-
-                @if (ViewBag.areShowtimes23 == true)
-                {
-                    <div class="newsShowtimesDate">
-                        <span><strong>Sunday, September 23<sup>rd</sup></strong></span>
-                    </div>
-                    <div class="newsWednesdayShowings">
-                        <div class="newsShowtimesTimes">
-                            @foreach (var showtime in Model.Showtimes.Where(w => w.DateAndTime.ToShortDateString() == "9/23/2017"))
-                            {
-                                <button id="@showtime.ID" class="showtimeButton" onclick="">@showtime.DateAndTime.ToShortTimeString()</button>
-                            }
-                        </div>
-                    </div>
-                }
-
-                @if (ViewBag.areShowtimes24 == true)
-                {
-                    <div class="newsShowtimesDate">
-                        <span><strong>Monday, September 24<sup>th</sup></strong></span>
-                    </div>
-                    <div class="newsWednesdayShowings">
-                        <div class="newsShowtimesTimes">
-                            @foreach (var showtime in Model.Showtimes.Where(w => w.DateAndTime.ToShortDateString() == "9/24/2017"))
-                            {
-                                <button id="@showtime.ID" class="showtimeButton" onclick="">@showtime.DateAndTime.ToShortTimeString()</button>
-                            }
-                        </div>
-                    </div>
-                }
-
-                @if (ViewBag.areShowtimes25 == true)
-                {
-                    <div class="newsShowtimesDate">
-                        <span><strong>Tuesday, September 25<sup>th</sup></strong></span>
-                    </div>
-                    <div class="newsWednesdayShowings">
-                        <div class="newsShowtimesTimes">
-                            @foreach (var showtime in Model.Showtimes.Where(w => w.DateAndTime.ToShortDateString() == "9/25/2017"))
-                            {
-                                <button id="@showtime.ID" class="showtimeButton" onclick="">@showtime.DateAndTime.ToShortTimeString()</button>
-                            }
-                        </div>
-                    </div>
-                }
-
-                @if (ViewBag.areShowtimes26 == true)
-                {
-                    <div class="newsShowtimesDate">
-                        <span><strong>Wednesday, September 26<sup>th</sup></strong></span>
-                    </div>
-
-                    <div class="newsWednesdayShowings">
-                        <div class="newsShowtimesTimes">
-                            @foreach (var showtime in Model.Showtimes.Where(w => w.DateAndTime.ToShortDateString() == "9/26/2017"))
-                            {
-                                <button id="@showtime.ID" class="showtimeButton" onclick="">@showtime.DateAndTime.ToShortTimeString()</button>
-                            }
-                        </div>
-                    </div>
-                }
-
-                @if (ViewBag.areShowtimes27 == true)
-                {
-                    <div class="newsShowtimesDate">
-                        <span><strong>Thursday, September 27<sup>th</sup></strong></span>
-                    </div>
-
-                    <div class="newsWednesdayShowings">
-                        <div class="newsShowtimesTimes">
-                            @foreach (var showtime in Model.Showtimes.Where(w => w.DateAndTime.ToShortDateString() == "9/27/2017"))
-                            {
-                                <button id="@showtime.ID" class="showtimeButton" onclick="">@showtime.DateAndTime.ToShortTimeString()</button>
-                            }
-                        </div>
-                    </div>
-                }
-
-                @if (ViewBag.areShowtimes28 == true)
-                {
-                    <div class="newsShowtimesDate">
-                        <span><strong>Friday, September 28<sup>th</sup></strong></span>
-                    </div>
-                    <div class="newsThursdayShowings">
-                        <div class="newsShowtimesTimes">
-                            @foreach (var showtime in Model.Showtimes.Where(w => w.DateAndTime.ToShortDateString() == "9/28/2017"))
-                            {
-                                <button id="@showtime.ID" class="showtimeButton" onclick="">@showtime.DateAndTime.ToShortTimeString()</button>
-                            }
-                        </div>
-                    </div>
-                }
-            </div>
-            <div class="newsSeatReservation">
-                <span><strong>Choose your desired seat and click 'Reserve Seat' below the theatre diagram.</strong></span>
-                <div id="floorplanLegend">
-                    <ul id="seatDescription">
-                        <li><span class="availableSeat"></span> Available Seat</li>
-                        <li><span class="reservedSeat"></span> Reserved Seat</li>
-                        <li><span class="selected"></span> Selected Seat</li>
-                    </ul>
-                </div>
-                <div id="theatreFloorplan">
-                    <form id="seatList" method="post" action="~/Account/SeatReserve">
-                        <!-- _seatReservationForm will be rendered here using ajax -->
-                    </form>
-
-                    <span id="filmScreen">-- FILM SCREEN --</span>
-                </div>
-            </div>
+    <div class="newsImageDivContainer">
+        <div class="newsImage">
+            <img src="@Model.InfoImgPath" />
         </div>
-    }
-    else
-    {
-        <p>
-            Sorry! You must be logged in to reserve a seat.
-            If you've purchased a badge, you can <a href="~/Account/Login" class="storyLink">log in here</a>.
-        </p>
-    }
-</div>
+    </div>
+
+        <h2 class="newsFilmTitle"><strong>@Model.Title</strong></h2>
+        <div class="filmDetails">
+            <span><strong>@Model.YearReleased || DIR. - @Model.Director.ToUpper() || @Model.Country.ToUpper() || @Model.Runtime MIN.</strong></span>
+        </div>
+
+        @Html.Partial("_socialMediaBar")
+
+        <div class="newsParagraph">
+            <h3>Brief Summary</h3>
+            @Html.Raw(Model.BriefSummary)
+
+            <h3>Full Description</h3>
+            @Html.Raw(Model.FullDescription)
+        </div>
+
+        <h3 id="newsShowtimesHeader">Showtimes</h3>
+        @if (User.IsInRole("user"))
+        {
+            <p>
+                -- CLICK A SHOWTIME TO SEE AVAILABLE SEATS --
+            </p>
+
+            <div class="showtimesAndReservationsContainer">
+                <div class="newsShowtimesContainer">
+
+                    @if (ViewBag.areShowtimes21 == true)
+                {
+                        <div class="newsShowtimesDate">
+                            <span><strong>Friday, September 21<sup>st</sup></strong></span>
+                        </div>
+                        <div class="newsWednesdayShowings">
+                            <div class="newsShowtimesTimes">
+                                @foreach (var showtime in Model.Showtimes.Where(w => w.DateAndTime.ToShortDateString() == "9/21/2017"))
+                                {
+                                    <button id="@showtime.ID" class="showtimeButton" onclick="">@showtime.DateAndTime.ToShortTimeString()</button>
+                                }
+                            </div>
+                        </div>
+                    }
+
+                    @if (ViewBag.areShowtimes22 == true)
+                {
+                        <div class="newsShowtimesDate">
+                            <span><strong>Saturday, September 22<sup>nd</sup></strong></span>
+                        </div>
+                        <div class="newsWednesdayShowings">
+                            <div class="newsShowtimesTimes">
+                                @foreach (var showtime in Model.Showtimes.Where(w => w.DateAndTime.ToShortDateString() == "9/22/2017"))
+                                {
+                                    <button id="@showtime.ID" class="showtimeButton" onclick="">@showtime.DateAndTime.ToShortTimeString()</button>
+                                }
+                            </div>
+                        </div>
+                    }
+
+                    @if (ViewBag.areShowtimes23 == true)
+                {
+                        <div class="newsShowtimesDate">
+                            <span><strong>Sunday, September 23<sup>rd</sup></strong></span>
+                        </div>
+                        <div class="newsWednesdayShowings">
+                            <div class="newsShowtimesTimes">
+                                @foreach (var showtime in Model.Showtimes.Where(w => w.DateAndTime.ToShortDateString() == "9/23/2017"))
+                                {
+                                    <button id="@showtime.ID" class="showtimeButton" onclick="">@showtime.DateAndTime.ToShortTimeString()</button>
+                                }
+                            </div>
+                        </div>
+                    }
+
+                    @if (ViewBag.areShowtimes24 == true)
+                {
+                        <div class="newsShowtimesDate">
+                            <span><strong>Monday, September 24<sup>th</sup></strong></span>
+                        </div>
+                        <div class="newsWednesdayShowings">
+                            <div class="newsShowtimesTimes">
+                                @foreach (var showtime in Model.Showtimes.Where(w => w.DateAndTime.ToShortDateString() == "9/24/2017"))
+                                {
+                                    <button id="@showtime.ID" class="showtimeButton" onclick="">@showtime.DateAndTime.ToShortTimeString()</button>
+                                }
+                            </div>
+                        </div>
+                    }
+
+                    @if (ViewBag.areShowtimes25 == true)
+                {
+                        <div class="newsShowtimesDate">
+                            <span><strong>Tuesday, September 25<sup>th</sup></strong></span>
+                        </div>
+                        <div class="newsWednesdayShowings">
+                            <div class="newsShowtimesTimes">
+                                @foreach (var showtime in Model.Showtimes.Where(w => w.DateAndTime.ToShortDateString() == "9/25/2017"))
+                                {
+                                    <button id="@showtime.ID" class="showtimeButton" onclick="">@showtime.DateAndTime.ToShortTimeString()</button>
+                                }
+                            </div>
+                        </div>
+                    }
+
+                    @if (ViewBag.areShowtimes26 == true)
+                {
+                        <div class="newsShowtimesDate">
+                            <span><strong>Wednesday, September 26<sup>th</sup></strong></span>
+                        </div>
+
+                        <div class="newsWednesdayShowings">
+                            <div class="newsShowtimesTimes">
+                                @foreach (var showtime in Model.Showtimes.Where(w => w.DateAndTime.ToShortDateString() == "9/26/2017"))
+                                {
+                                    <button id="@showtime.ID" class="showtimeButton" onclick="">@showtime.DateAndTime.ToShortTimeString()</button>
+                                }
+                            </div>
+                        </div>
+                    }
+
+                    @if (ViewBag.areShowtimes27 == true)
+                {
+                        <div class="newsShowtimesDate">
+                            <span><strong>Thursday, September 27<sup>th</sup></strong></span>
+                        </div>
+
+                        <div class="newsWednesdayShowings">
+                            <div class="newsShowtimesTimes">
+                                @foreach (var showtime in Model.Showtimes.Where(w => w.DateAndTime.ToShortDateString() == "9/27/2017"))
+                                {
+                                    <button id="@showtime.ID" class="showtimeButton" onclick="">@showtime.DateAndTime.ToShortTimeString()</button>
+                                }
+                            </div>
+                        </div>
+                    }
+
+                    @if (ViewBag.areShowtimes28 == true)
+                {
+                        <div class="newsShowtimesDate">
+                            <span><strong>Friday, September 28<sup>th</sup></strong></span>
+                        </div>
+                        <div class="newsThursdayShowings">
+                            <div class="newsShowtimesTimes">
+                                @foreach (var showtime in Model.Showtimes.Where(w => w.DateAndTime.ToShortDateString() == "9/28/2017"))
+                                {
+                                    <button id="@showtime.ID" class="showtimeButton" onclick="">@showtime.DateAndTime.ToShortTimeString()</button>
+                                }
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="newsSeatReservation">
+                    <span><strong>Choose your desired seat and click 'Reserve Seat' below the theatre diagram.</strong></span>
+                    <div id="floorplanLegend">
+                        <ul id="seatDescription">
+                            <li><span class="availableSeat"></span> Available Seat</li>
+                            <li><span class="reservedSeat"></span> Reserved Seat</li>
+                            <li><span class="selected"></span> Selected Seat</li>
+                        </ul>
+                    </div>
+                    <div id="theatreFloorplan">
+                        <form id="seatList" method="post" action="~/Account/SeatReserve">
+                            <!-- _seatReservationForm will be rendered here using ajax -->
+                        </form>
+
+                        <span id="filmScreen">-- FILM SCREEN --</span>
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <p>
+                Sorry! You must be logged in to reserve a seat.
+                If you've purchased a badge, you can <a href="~/Account/Login" class="storyLink">log in here</a>.
+            </p>
+        }
+    </div>
 
 @section scripts{
     <script type="text/javascript">

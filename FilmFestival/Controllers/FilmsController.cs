@@ -18,7 +18,7 @@ namespace FilmFestival.Controllers
         FilmServices filmServices = new FilmServices();
 
         // GET: Films
-        public ActionResult Index(int pageIndex = 1, int pageSize = 12, string sortBy = "Title")
+        public ActionResult Index(int pageIndex = 1, int pageSize = 9, string sortBy = "Title")
         {
             ViewBag.PageIndex = pageIndex;
             return View(filmServices.GetAllFilms(pageIndex, pageSize, sortBy));

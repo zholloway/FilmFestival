@@ -17,7 +17,7 @@ namespace FilmFestival.Controllers
 
         NewsServices newsServices = new NewsServices();
 
-        public ActionResult Index(int pageIndex = 1, int pageSize = 10)
+        public ActionResult Index(int pageIndex = 1, int pageSize = 6)
         {
             ViewBag.PageIndex = pageIndex;
             return View(newsServices.GetAllNews(pageIndex, pageSize));

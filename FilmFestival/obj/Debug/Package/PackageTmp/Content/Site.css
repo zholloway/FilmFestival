@@ -352,11 +352,13 @@ z-index: 2;
     background-color: deepskyblue;
     margin-left: 10px;
     margin-right: 5px;
+    width: 70px;
 }
 
     #tweetButton img {
         margin-left: 5px;
         margin-right: 5px;
+        width: 30%;
     }
 
     #tweetButton span {
@@ -494,7 +496,7 @@ z-index: 2;
     position: absolute;
     top: 0;
     pointer-events: none;
-    padding: 5px 8px 5px 8px;
+    padding: 10px;
 }
 
 .filmCell img {
@@ -503,7 +505,7 @@ z-index: 2;
 }
 
 .filmCell img:hover{
-    filter: blur(2px) brightness(50%);
+    filter: blur(2px) brightness(20%);
 }
 
 .filmCell h2 {
@@ -581,7 +583,7 @@ z-index: 2;
 }
 
 .newsFilmTitle {
-    margin-top: 50px;
+    margin-top: 20px;
     font-family: "Kanit";
     font-size: 35px;
 }
@@ -843,7 +845,7 @@ label span{
     border: 3px solid black;
     border-radius: 5px;
     height: 300px;
-    width: 84%;
+    width: 61%;
 }
 
 .newsPreviewDateAndAuthor {
